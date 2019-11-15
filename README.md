@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/danielzmbp/wsgups/master)
+
 # WSGUPS
 A pipeline for Whole-genome Screening of Genes Under Positive Selection.
 ## Instructions
