@@ -24,6 +24,6 @@ A pipeline for Whole-genome Screening of Genes Under Positive Selection.
 * Run interproscan on .faa files
     * Use `interproscansnake file`
 * Run GO enrichment
-
+    * Using go_BP notebook
 
 
