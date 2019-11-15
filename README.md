@@ -3,8 +3,8 @@ A pipeline for Whole-genome Screening of Genes Under Positive Selection.
 ## Instructions
 * Download cds_from_genomic and protein files, as well as the .gff
 * Use the program proteinortho with the protein and .gff to find the ortholog groups
-    * Synteny option on
-    * 
+    * Synteny option on and diamond blast algorithm
+    * `proteinortho -project=fungi -cpus=2 -p=diamond -synteny .`
 * Pool all protein and cds sequences into one file using cat 
     * AA.faa
     * NT.fna
@@ -22,6 +22,8 @@ A pipeline for Whole-genome Screening of Genes Under Positive Selection.
     * Run through ipython directly on the server
 * Download families and use “absrel_results” notebooks to analyse the results
 * Run interproscan on .faa files
+    * Use `interproscansnake file`
+* Run GO enrichment
 
 
 
