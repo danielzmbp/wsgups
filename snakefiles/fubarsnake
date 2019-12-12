@@ -9,6 +9,21 @@ FAM, = glob_wildcards("families/family_{fam}.faa")
 rule final:
     input:
         expand("families/family_{fam}.aln.codon.FUBAR.json", fam= FAM)
+rule clean_fna:
+    input:
+        "families/family_{fam}.fna"
+    output:
+        "families/family_{fam}.fna.cleaned"   
+    run:
+        new_sequences = []
+        
+        for record in SeqIO.parse(input[0],"fasta")
+            if len(record.seq) %3 !=0:
+                record.seq = record.seq + "N"
+		new_sequences.append(record)
+	    else:
+		new_sequences.append(record)
+        SeqIO.write(new_sequences,output[0],"fasta")
 
 rule mafft:
     input:
@@ -29,7 +44,7 @@ rule fasttree:
 rule codonaln:
     input:
         pro_align = "families/family_{fam}.aln",
-        nucl_seqs = "families/family_{fam}.fna"
+        nucl_seqs = "families/family_{fam}.fna.cleaned"
     output:
         alignment = "families/family_{fam}.aln.codon"
     run:
