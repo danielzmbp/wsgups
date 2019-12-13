@@ -3,6 +3,11 @@ from Bio import codonalign
 from Bio import AlignIO
 from Bio.Alphabet import generic_dna
 from Bio.Alphabet import generic_protein
+import os
+
+wd = os.getcwd()
+
+hyphy_dir=  "/home-link/bbpgo01/.conda/envs/python3/lib/hyphy"
 
 FAM, = glob_wildcards("families/family_{fam}.faa")
 
@@ -13,10 +18,10 @@ rule clean_fna:
     input:
         "families/family_{fam}.fna"
     output:
-        "families/family_{fam}.fna.cleaned"   
+        "families/family_{fam}.fna.cleaned"
     run:
         new_sequences = []
-        
+
         for record in SeqIO.parse(input[0],"fasta")
             if len(record.seq) %3 !=0:
                 record.seq = record.seq + "N"
@@ -142,7 +147,8 @@ rule hyphy:
     conda:
         "envs/hyphy.yaml"
     shell:
-        "tmpThing=$(find /home-link/bbpgo01/.conda/envs/python3/lib/hyphy -name FUBAR.bf|tail -n 1);(echo 1;echo /home-link/bbpgo01/fungi_genomes/{input.align}; echo /home-link/bbpgo01/fungi_genomes/{input.tree}; echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
+        "tmpThing=$(find "+ hyphy_dir" -name FUBAR.bf|tail -n 1);(echo 1;echo "+wd+"{input.align}; echo "+wd+"{input.tree}; echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
+
 # need to write full path otherwise the srcdir function doesn't work
 # need to change this so that it works from every directory
 
