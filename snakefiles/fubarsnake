@@ -7,13 +7,12 @@ import os
 
 wd = os.getcwd()
 
-#hyphy_dir=  "/home-link/bbpgo01/.conda/envs/python3/lib/hyphy"
-
-FAM, = glob_wildcards("families/family_{fam}.faa")
+FAM, = glob_wildcards("families/family_{fam}.fna")
 
 rule final:
     input:
         expand("families/family_{fam}.aln.codon.FUBAR.json", fam= FAM)
+
 rule clean_fna:
     input:
         "families/family_{fam}.fna"
@@ -21,14 +20,13 @@ rule clean_fna:
         "families/family_{fam}.fna.cleaned"
     run:
         new_sequences = []
-
-        for record in SeqIO.parse(input[0],"fasta")
-            if len(record.seq) %3 !=0:
+        for record in SeqIO.parse(input[0], "fasta"):
+            if len(record.seq) % 3 != 0:
                 record.seq = record.seq + "N"
-		new_sequences.append(record)
-	    else:
-		new_sequences.append(record)
-        SeqIO.write(new_sequences,output[0],"fasta")
+                new_sequences.append(record)
+            else:
+                new_sequences.append(record)
+        SeqIO.write(new_sequences, output[0], "fasta")
 
 rule mafft:
     input:
@@ -147,10 +145,7 @@ rule hyphy:
     conda:
         "envs/hyphy.yaml"
     shell:
-        "tmpThing=$(find "+ wd" -name FUBAR.bf|tail -n 1);(echo 1;echo "+wd+"{input.align}; echo "+wd+"{input.tree}; echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
-
-# need to write full path otherwise the srcdir function doesn't work
-# need to change this so that it works from every directory
+        "tmpThing=$(find "+ wd +"/.. -name FUBAR.bf|tail -n 1);(echo 1;echo "+wd+"/{input.align}; echo "+wd+"/{input.tree}; echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
 
 rule finalStatistics:
     input:
@@ -165,9 +160,7 @@ rule finalStatistics:
                 with open(currentFile) as f:
                     for line in f:
                         if "## FUBAR" in line:
-
                             if "no" not in line:
                                 result = re.search('inferred(.*)sites', line)
-
                                 out.write(currentFile.split(
                                     "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
