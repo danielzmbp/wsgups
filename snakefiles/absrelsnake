@@ -1,3 +1,9 @@
+import os
+
+wd = os.getcwd()
+
+hyphy_dir=  "/home-link/bbpgo01/.conda/envs/python3/lib/hyphy"
+
 FAM, = glob_wildcards("families_fubar/family_{fam}.faa")
 
 rule final:
@@ -14,4 +20,4 @@ rule hyphy:
     conda:
         "envs/hyphy.yaml"
     shell:
-        "tmpThing=$(find /home-link/bbpgo01/.conda/envs/python3/lib/hyphy -name aBSREL.bf|tail -n 1);(echo /home-link/bbpgo01/ncbi_genomes/{input.align}; echo /home-link/bbpgo01/ncbi_genomes/{input.tree})|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
+        "tmpThing=$(find "+hyphy_dir+" -name aBSREL.bf|tail -n 1);(echo "+wd+"{input.align}; echo "+wd+"{input.tree})|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
