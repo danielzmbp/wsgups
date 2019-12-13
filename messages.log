@@ -82,8 +82,8 @@ Variable 'MARKDOWN_OUTPUT' was not initialized prior to being used
 Loaded 'modules/grid_compute.ibf' from '/Users/danielgomezperez/bioinf_tools/workflows/wsgups/../wsgups/.snakemake/conda/3e838fe3/lib/hyphy/TemplateBatchFiles/SelectionAnalyses/modules/grid_compute.ibf'
 Already loaded 'libv3/convenience/matrix.bf' from /Users/danielgomezperez/miniconda3/envs/sm/lib/hyphy/TemplateBatchFiles/libv3/convenience/matrix.bf
 Already loaded 'libv3/UtilityFunctions.bf' from /Users/danielgomezperez/miniconda3/envs/sm/lib/hyphy/TemplateBatchFiles/libv3/UtilityFunctions.bf
-Variable 'CKyrWLsE.skipCodeSelectionStep' was not initialized prior to being used
-Variable 'FAAZiteW.PROMPT_FOR_FILE' was not initialized prior to being used
+Variable 'oDtBGxsU.skipCodeSelectionStep' was not initialized prior to being used
+Variable 'MioHeBii.PROMPT_FOR_FILE' was not initialized prior to being used
 Variable 'DATA_FILE_PARTITION_MATRIX' was not initialized prior to being used
 Row and/or column partition is empty. All the data will be used by default.
 Variable 'NEXUS_FILE_TREE_MATRIX' was not initialized prior to being used
@@ -104,82 +104,34 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.Map.CB'
 Overwritten previously defined function:'utility.Map.CB'
 Overwritten previously defined function:'utility.Map.CB'
-Variable 'kpjGspgC.cache' was not initialized prior to being used
+Variable 'ZoBwGhBD.cache' was not initialized prior to being used
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Row and/or column partition is empty. All the data will be used by default.
 Variable 'COUNT_GAPS_IN_FREQUENCIES' was not initialized prior to being used
-Variable 'pbvJAuNr.model_pi' was not initialized prior to being used
-Model 'pbvJAuNr.model' assigned to 'RAW25751_1'
-Model 'pbvJAuNr.model' assigned to 'XP_008907322_1'
-Model 'pbvJAuNr.model' assigned to 'XP_002997681_1'
-Model 'pbvJAuNr.model' assigned to 'RQM12194_1'
-Model 'pbvJAuNr.model' assigned to 'RLN53356_1'
-Model 'pbvJAuNr.model' assigned to 'Node7'
-Model 'pbvJAuNr.model' assigned to 'XP_009514855_1'
-Model 'pbvJAuNr.model' assigned to 'Node6'
-Model 'pbvJAuNr.model' assigned to 'RLN56410_1'
-Model 'pbvJAuNr.model' assigned to 'CCI44489_1'
-Model 'pbvJAuNr.model' assigned to 'XP_009832320_1'
-Model 'pbvJAuNr.model' assigned to 'XP_008872867_1'
-Model 'pbvJAuNr.model' assigned to 'Node19'
-Model 'pbvJAuNr.model' assigned to 'OQS02085_1'
-Model 'pbvJAuNr.model' assigned to 'OQR87585_1'
-Model 'pbvJAuNr.model' assigned to 'XP_012206199_1'
-Model 'pbvJAuNr.model' assigned to 'XP_008610220_1'
-Model 'pbvJAuNr.model' assigned to 'Node26'
-Model 'pbvJAuNr.model' assigned to 'Node24'
-Model 'pbvJAuNr.model' assigned to 'Node22'
-Model 'pbvJAuNr.model' assigned to 'Node18'
-Model 'pbvJAuNr.model' assigned to 'Node16'
-Model 'pbvJAuNr.model' assigned to 'GAX99122_1'
-Model 'pbvJAuNr.model' assigned to 'TMW60416_1'
-Model 'pbvJAuNr.model' assigned to 'Node29'
-Model 'pbvJAuNr.model' assigned to 'Node15'
-Model 'pbvJAuNr.model' assigned to 'Node13'
-Model 'pbvJAuNr.model' assigned to 'XP_024572728_1'
-Model 'pbvJAuNr.model' assigned to 'Node12'
-Model 'pbvJAuNr.model' assigned to 'OWZ18679_1'
-Model 'pbvJAuNr.model' assigned to 'Node11'
-Model 'pbvJAuNr.model' assigned to 'Node5'
-Model 'pbvJAuNr.model' assigned to 'Node3'
-The tips of the tree:pbvJAuNr.tree_0 were matched with the species names from the data in the following numeric order (0-based) {7,13,10,8,3,11,2,1,15,16,4,5,12,14,0,9,17,6}
+Variable 'NfwB_Twv.model_pi' was not initialized prior to being used
+Model 'NfwB_Twv.model' assigned to 'XP_002894708_1'
+Model 'NfwB_Twv.model' assigned to 'KUF81346_1'
+Model 'NfwB_Twv.model' assigned to 'XP_008892750_1'
+Model 'NfwB_Twv.model' assigned to 'Node2'
+Model 'NfwB_Twv.model' assigned to 'RAW37985_1'
+Model 'NfwB_Twv.model' assigned to 'OWZ23310_1'
+Model 'NfwB_Twv.model' assigned to 'XP_009526695_1'
+Model 'NfwB_Twv.model' assigned to 'Node7'
+Model 'NfwB_Twv.model' assigned to 'Node5'
+The tips of the tree:NfwB_Twv.tree_0 were matched with the species names from the data in the following numeric order (0-based) {3,0,5,2,1,4}
 
-Pseudo-optimal path's cost 26516 vs 34986 for 1..k=> a 1.31943 x improvement
+Pseudo-optimal path's cost 1329 vs 1945 for 1..k=> a 1.46351 x improvement
 Partition 0 reversible model flag computed as 1
 Variable 'USE_LAST_RESULTS' was not initialized prior to being used
-models.generic.SetBranchLength: pbvJAuNr.tree_0.RAW25751_1.t=0.02695200913342782
-models.generic.SetBranchLength: pbvJAuNr.tree_0.XP_008907322_1.t=0.07816989908983303
-models.generic.SetBranchLength: pbvJAuNr.tree_0.XP_002997681_1.t=0.09401424056850312
-models.generic.SetBranchLength: pbvJAuNr.tree_0.RQM12194_1.t=0.481801354404236
-models.generic.SetBranchLength: pbvJAuNr.tree_0.RLN53356_1.t=0.1873288679943008
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node7.t=0.03833480192335952
-models.generic.SetBranchLength: pbvJAuNr.tree_0.XP_009514855_1.t=0.07240613718120069
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node6.t=0.03183626145244541
-models.generic.SetBranchLength: pbvJAuNr.tree_0.RLN56410_1.t=0.196056806174645
-models.generic.SetBranchLength: pbvJAuNr.tree_0.CCI44489_1.t=1.549260366209116
-models.generic.SetBranchLength: pbvJAuNr.tree_0.XP_009832320_1.t=0.1859553604253654
-models.generic.SetBranchLength: pbvJAuNr.tree_0.XP_008872867_1.t=0.1550806172491954
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node19.t=0.6815330734189153
-models.generic.SetBranchLength: pbvJAuNr.tree_0.OQS02085_1.t=0.4850913046731307
-models.generic.SetBranchLength: pbvJAuNr.tree_0.OQR87585_1.t=0.2706738271420197
-models.generic.SetBranchLength: pbvJAuNr.tree_0.XP_012206199_1.t=0.0148046174192899
-models.generic.SetBranchLength: pbvJAuNr.tree_0.XP_008610220_1.t=0.08696367621546236
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node26.t=0.2374339067204008
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node24.t=0.1445930920108882
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node22.t=0.2198086760028442
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node18.t=0.6873499575571203
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node16.t=0.4797058145937838
-models.generic.SetBranchLength: pbvJAuNr.tree_0.GAX99122_1.t=0.4051737116823152
-models.generic.SetBranchLength: pbvJAuNr.tree_0.TMW60416_1.t=0.5208055965391156
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node29.t=0.1612612936546684
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node15.t=0.3929958536778357
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node13.t=0.1702151156938537
-models.generic.SetBranchLength: pbvJAuNr.tree_0.XP_024572728_1.t=0.4818332121320429
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node12.t=0.03472539429892814
-models.generic.SetBranchLength: pbvJAuNr.tree_0.OWZ18679_1.t=0.1008303705852811
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node11.t=0.008444695878061632
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node5.t=0.02946972237458357
-models.generic.SetBranchLength: pbvJAuNr.tree_0.Node3.t=1.34568420236722e-08
+models.generic.SetBranchLength: NfwB_Twv.tree_0.XP_002894708_1.t=0.7236924508892707
+models.generic.SetBranchLength: NfwB_Twv.tree_0.KUF81346_1.t=1.341181929987621e-08
+models.generic.SetBranchLength: NfwB_Twv.tree_0.XP_008892750_1.t=1.341181929987621e-08
+models.generic.SetBranchLength: NfwB_Twv.tree_0.Node2.t=0.4018877350253686
+models.generic.SetBranchLength: NfwB_Twv.tree_0.RAW37985_1.t=0.7153812752226028
+models.generic.SetBranchLength: NfwB_Twv.tree_0.OWZ23310_1.t=0.8634061863357703
+models.generic.SetBranchLength: NfwB_Twv.tree_0.XP_009526695_1.t=1.715332228199423
+models.generic.SetBranchLength: NfwB_Twv.tree_0.Node7.t=0.3948334131336582
+models.generic.SetBranchLength: NfwB_Twv.tree_0.Node5.t=0.1547214646779621
 Variable 'SAVE_OPT_STATUS_TO' was not initialized prior to being used
 Optimization settings:
 	OPTIMIZATION_METHOD = hybrid
@@ -188,49 +140,25 @@ Optimization settings:
 
 Initial parameter values
 
-pbvJAuNr.model.theta_GT = 0.25
-pbvJAuNr.model.theta_CT = 1
-pbvJAuNr.model.theta_AC = 0.25
-pbvJAuNr.model.theta_CG = 0.25
-pbvJAuNr.model.theta_AT = 0.25
-pbvJAuNr.tree_0.RAW25751_1.t = 0.02695200913342782
-pbvJAuNr.tree_0.XP_008907322_1.t = 0.07816989908983303
-pbvJAuNr.tree_0.XP_002997681_1.t = 0.09401424056850312
-pbvJAuNr.tree_0.RQM12194_1.t = 0.481801354404236
-pbvJAuNr.tree_0.RLN53356_1.t = 0.1873288679943008
-pbvJAuNr.tree_0.Node7.t = 0.03833480192335952
-pbvJAuNr.tree_0.XP_009514855_1.t = 0.07240613718120069
-pbvJAuNr.tree_0.Node6.t = 0.03183626145244541
-pbvJAuNr.tree_0.RLN56410_1.t = 0.196056806174645
-pbvJAuNr.tree_0.CCI44489_1.t = 1.549260366209116
-pbvJAuNr.tree_0.XP_009832320_1.t = 0.1859553604253654
-pbvJAuNr.tree_0.XP_008872867_1.t = 0.1550806172491954
-pbvJAuNr.tree_0.Node19.t = 0.6815330734189153
-pbvJAuNr.tree_0.OQS02085_1.t = 0.4850913046731307
-pbvJAuNr.tree_0.OQR87585_1.t = 0.2706738271420197
-pbvJAuNr.tree_0.XP_012206199_1.t = 0.0148046174192899
-pbvJAuNr.tree_0.XP_008610220_1.t = 0.08696367621546236
-pbvJAuNr.tree_0.Node26.t = 0.2374339067204008
-pbvJAuNr.tree_0.Node24.t = 0.1445930920108882
-pbvJAuNr.tree_0.Node22.t = 0.2198086760028442
-pbvJAuNr.tree_0.Node18.t = 0.6873499575571203
-pbvJAuNr.tree_0.Node16.t = 0.4797058145937838
-pbvJAuNr.tree_0.GAX99122_1.t = 0.4051737116823152
-pbvJAuNr.tree_0.TMW60416_1.t = 0.5208055965391156
-pbvJAuNr.tree_0.Node29.t = 0.1612612936546684
-pbvJAuNr.tree_0.Node15.t = 0.3929958536778357
-pbvJAuNr.tree_0.Node13.t = 0.1702151156938537
-pbvJAuNr.tree_0.XP_024572728_1.t = 0.4818332121320429
-pbvJAuNr.tree_0.Node12.t = 0.03472539429892814
-pbvJAuNr.tree_0.OWZ18679_1.t = 0.1008303705852811
-pbvJAuNr.tree_0.Node11.t = 0.008444695878061632
-pbvJAuNr.tree_0.Node5.t = 0.02946972237458357
-pbvJAuNr.tree_0.Node3.t = 1.34568420236722e-08
-Optimization finished in 28 loop passes.
-2585 likelihood evaluation calls and 20172 matrix exponentiations calls were made
+NfwB_Twv.model.theta_CT = 1
+NfwB_Twv.model.theta_GT = 0.25
+NfwB_Twv.model.theta_CG = 0.25
+NfwB_Twv.model.theta_AC = 0.25
+NfwB_Twv.model.theta_AT = 0.25
+NfwB_Twv.tree_0.XP_002894708_1.t = 0.7236924508892707
+NfwB_Twv.tree_0.KUF81346_1.t = 1.341181929987621e-08
+NfwB_Twv.tree_0.XP_008892750_1.t = 1.341181929987621e-08
+NfwB_Twv.tree_0.Node2.t = 0.4018877350253686
+NfwB_Twv.tree_0.RAW37985_1.t = 0.7153812752226028
+NfwB_Twv.tree_0.OWZ23310_1.t = 0.8634061863357703
+NfwB_Twv.tree_0.XP_009526695_1.t = 1.715332228199423
+NfwB_Twv.tree_0.Node7.t = 0.3948334131336582
+NfwB_Twv.tree_0.Node5.t = 0.1547214646779621
+Optimization finished in 22 loop passes.
+1053 likelihood evaluation calls and 5376 matrix exponentiations calls were made
 
 Variable 'BRANCH_LENGTH_STENCIL' was not initialized prior to being used
-Variable 'pbvJAuNr.option' was not initialized prior to being used
+Variable 'NfwB_Twv.option' was not initialized prior to being used
 Overwritten previously defined function:'utility.Map.CB'
 Overwritten previously defined function:'utility.Map.CB'
 Variable 'fubar.terms.json.nucleotide_gtr' was not initialized prior to being used
@@ -243,64 +171,40 @@ Optimization settings:
 
 Initial parameter values
 
-frequencies._aux.CF3x4.p0_0 = 0.238198354265916
-frequencies._aux.CF3x4.p0_1 = 0.3004548038658329
-frequencies._aux.CF3x4.p0_2 = 0.6332791548151159
-frequencies._aux.CF3x4.p1_0 = 0.214595062797748
-frequencies._aux.CF3x4.p1_1 = 0.3216156603253377
-frequencies._aux.CF3x4.p1_2 = 0.3078642552326764
-frequencies._aux.CF3x4.p2_0 = 0.1140374621048073
-frequencies._aux.CF3x4.p2_1 = 0.4434022791848707
-frequencies._aux.CF3x4.p2_2 = 0.630200900208585
-Optimization finished in 5 loop passes.
-209 likelihood evaluation calls and 0 matrix exponentiations calls were made
+frequencies._aux.CF3x4.p0_0 = 0.3204419889502763
+frequencies._aux.CF3x4.p0_1 = 0.2536585365853659
+frequencies._aux.CF3x4.p0_2 = 0.5860566448801744
+frequencies._aux.CF3x4.p1_0 = 0.2972375690607735
+frequencies._aux.CF3x4.p1_1 = 0.4323899371069183
+frequencies._aux.CF3x4.p1_2 = 0.4321329639889196
+frequencies._aux.CF3x4.p2_0 = 0.1701657458563536
+frequencies._aux.CF3x4.p2_1 = 0.4340878828229028
+frequencies._aux.CF3x4.p2_2 = 0.5552941176470588
+Optimization finished in 7 loop passes.
+306 likelihood evaluation calls and 0 matrix exponentiations calls were made
 
 Overwritten previously defined function:'utility.Map.CB'
 Variable 'fubar.codon_model_pi' was not initialized prior to being used
 Overwritten previously defined function:'utility.Map.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Model 'fubar.codon_model' assigned to 'RAW25751_1'
-Model 'fubar.codon_model' assigned to 'XP_008907322_1'
-Model 'fubar.codon_model' assigned to 'XP_002997681_1'
-Model 'fubar.codon_model' assigned to 'RQM12194_1'
-Model 'fubar.codon_model' assigned to 'RLN53356_1'
+Model 'fubar.codon_model' assigned to 'XP_002894708_1'
+Model 'fubar.codon_model' assigned to 'KUF81346_1'
+Model 'fubar.codon_model' assigned to 'XP_008892750_1'
+Model 'fubar.codon_model' assigned to 'Node2'
+Model 'fubar.codon_model' assigned to 'RAW37985_1'
+Model 'fubar.codon_model' assigned to 'OWZ23310_1'
+Model 'fubar.codon_model' assigned to 'XP_009526695_1'
 Model 'fubar.codon_model' assigned to 'Node7'
-Model 'fubar.codon_model' assigned to 'XP_009514855_1'
-Model 'fubar.codon_model' assigned to 'Node6'
-Model 'fubar.codon_model' assigned to 'RLN56410_1'
-Model 'fubar.codon_model' assigned to 'CCI44489_1'
-Model 'fubar.codon_model' assigned to 'XP_009832320_1'
-Model 'fubar.codon_model' assigned to 'XP_008872867_1'
-Model 'fubar.codon_model' assigned to 'Node19'
-Model 'fubar.codon_model' assigned to 'OQS02085_1'
-Model 'fubar.codon_model' assigned to 'OQR87585_1'
-Model 'fubar.codon_model' assigned to 'XP_012206199_1'
-Model 'fubar.codon_model' assigned to 'XP_008610220_1'
-Model 'fubar.codon_model' assigned to 'Node26'
-Model 'fubar.codon_model' assigned to 'Node24'
-Model 'fubar.codon_model' assigned to 'Node22'
-Model 'fubar.codon_model' assigned to 'Node18'
-Model 'fubar.codon_model' assigned to 'Node16'
-Model 'fubar.codon_model' assigned to 'GAX99122_1'
-Model 'fubar.codon_model' assigned to 'TMW60416_1'
-Model 'fubar.codon_model' assigned to 'Node29'
-Model 'fubar.codon_model' assigned to 'Node15'
-Model 'fubar.codon_model' assigned to 'Node13'
-Model 'fubar.codon_model' assigned to 'XP_024572728_1'
-Model 'fubar.codon_model' assigned to 'Node12'
-Model 'fubar.codon_model' assigned to 'OWZ18679_1'
-Model 'fubar.codon_model' assigned to 'Node11'
 Model 'fubar.codon_model' assigned to 'Node5'
-Model 'fubar.codon_model' assigned to 'Node3'
-The tips of the tree:fubar.codon_tree_1 were matched with the species names from the data in the following numeric order (0-based) {7,13,10,8,3,11,2,1,15,16,4,5,12,14,0,9,17,6}
+The tips of the tree:fubar.codon_tree_1 were matched with the species names from the data in the following numeric order (0-based) {3,0,5,2,1,4}
 
-Pseudo-optimal path's cost 16812 vs 18406 for 1..k=> a 1.09481 x improvement
+Pseudo-optimal path's cost 1298 vs 1500 for 1..k=> a 1.15562 x improvement
 Partition 0 reversible model flag computed as 1
 fubar.codon_model.theta_AG was already constrained in estimators.SetGlobals2
 Overwritten previously defined function:'utility.Map.CB'
 Variable 'MPI_NODE_COUNT' was not initialized prior to being used
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -321,7 +225,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -342,7 +246,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -363,7 +267,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -384,7 +288,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -405,7 +309,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -426,7 +330,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -447,7 +351,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -468,7 +372,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -489,7 +393,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -510,7 +414,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -531,7 +435,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -552,7 +456,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -573,7 +477,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -594,7 +498,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -615,7 +519,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -636,7 +540,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -657,7 +561,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -678,7 +582,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -699,7 +603,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Site 98 evaluated to a 0 probability in ComputeTreeBlockByBranch
+Site 2 evaluated to a 0 probability in ComputeTreeBlockByBranch
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
@@ -1124,7 +1028,7 @@ Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
 Overwritten previously defined function:'utility.ForEachPair.CB'
-Variable 'fubar.JrqenRKZ.fubar.JrqenRKZ.k' was not initialized prior to being used
+Variable 'fubar.SdTcVlRG.fubar.SdTcVlRG.k' was not initialized prior to being used
 Variable 'fubar.terms.fubar.cache.posterior' was not initialized prior to being used
 Variable 'fubar.chains' was not initialized prior to being used
 Variable 'USE_JSON_FOR_MATRIX' was not initialized prior to being used
