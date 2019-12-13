@@ -1,0 +1,5 @@
+==> 2019-12-13 11:26:16 <==
+# cmd: /Users/danielgomezperez/miniconda3/bin/conda-env create --file /Users/danielgomezperez/bioinf_tools/workflows/wsgups/snakefiles/envs/fasttree.yaml --prefix /Users/danielgomezperez/bioinf_tools/workflows/wsgups/.snakemake/conda/d9340002
+# conda version: 4.8.0
++bioconda::fasttree-2.1.10-h1de35cc_3
+# update specs: ['fasttree']

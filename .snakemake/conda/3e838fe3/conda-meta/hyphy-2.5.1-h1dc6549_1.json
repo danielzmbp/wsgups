@@ -1,0 +1,3535 @@
+{
+  "build": "h1dc6549_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/bioconda/osx-64",
+  "constrains": [],
+  "depends": [
+    "curl >=7.64.1,<8.0a0",
+    "libcxx >=4.0.1"
+  ],
+  "extracted_package_dir": "/Users/danielgomezperez/miniconda3/pkgs/hyphy-2.5.1-h1dc6549_1",
+  "features": "",
+  "files": [
+    "bin/hyphy",
+    "lib/hyphy/GeneticCodes/Alt_Yeast_Nuclear.cod",
+    "lib/hyphy/GeneticCodes/Ascidian_mtDNA.cod",
+    "lib/hyphy/GeneticCodes/Blepharisma_Nuclear.cod",
+    "lib/hyphy/GeneticCodes/Ciliate.cod",
+    "lib/hyphy/GeneticCodes/Echinoderm_mtDNA.cod",
+    "lib/hyphy/GeneticCodes/Euplotid_Nuclear.cod",
+    "lib/hyphy/GeneticCodes/Flatworm_mtDNA.cod",
+    "lib/hyphy/GeneticCodes/Invertebrate_mtDNA.cod",
+    "lib/hyphy/GeneticCodes/Mold_mtDNA.cod",
+    "lib/hyphy/GeneticCodes/Thraustochytrium_mtDNA.cod",
+    "lib/hyphy/GeneticCodes/Vertebratemtdna.cod",
+    "lib/hyphy/GeneticCodes/Yeast_mtDNA.cod",
+    "lib/hyphy/SubstitutionClasses/AAEFV/Equal",
+    "lib/hyphy/SubstitutionClasses/AAEFV/Estimated",
+    "lib/hyphy/SubstitutionClasses/AAEFV/Observed In Data Set",
+    "lib/hyphy/SubstitutionClasses/AAEFV/Observed In Partition",
+    "lib/hyphy/SubstitutionClasses/CodonEFV/Equal",
+    "lib/hyphy/SubstitutionClasses/CodonEFV/Observed Codon",
+    "lib/hyphy/SubstitutionClasses/CodonEFV/Observed Nuc 3 params.",
+    "lib/hyphy/SubstitutionClasses/CodonEFV/Observed Nuc 9 params.",
+    "lib/hyphy/SubstitutionClasses/Heterogeneity/2 Bin Discrete",
+    "lib/hyphy/SubstitutionClasses/Heterogeneity/Beta",
+    "lib/hyphy/SubstitutionClasses/Heterogeneity/Beta-Gamma",
+    "lib/hyphy/SubstitutionClasses/Heterogeneity/General Discrete",
+    "lib/hyphy/SubstitutionClasses/Heterogeneity/Half Normal",
+    "lib/hyphy/SubstitutionClasses/Heterogeneity/Lognormal",
+    "lib/hyphy/SubstitutionClasses/NucEFV/Equal",
+    "lib/hyphy/SubstitutionClasses/NucEFV/Estimated",
+    "lib/hyphy/SubstitutionClasses/NucEFV/Observed In Data Set",
+    "lib/hyphy/SubstitutionClasses/NucEFV/Observed In Partition",
+    "lib/hyphy/SubstitutionClasses/aa.bf",
+    "lib/hyphy/SubstitutionClasses/codon.bf",
+    "lib/hyphy/SubstitutionClasses/dinuc.bf",
+    "lib/hyphy/SubstitutionClasses/nuc.bf",
+    "lib/hyphy/SubstitutionModels/Aminoacid/Dayhoff.mdl",
+    "lib/hyphy/SubstitutionModels/Aminoacid/EIAA.mdl",
+    "lib/hyphy/SubstitutionModels/Aminoacid/Fitness.mdl",
+    "lib/hyphy/SubstitutionModels/Aminoacid/Jones.mdl",
+    "lib/hyphy/SubstitutionModels/Aminoacid/mtREV.mdl",
+    "lib/hyphy/SubstitutionModels/Binary/F81.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/GY94_3x4.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/Lineage_MG94xHKY85.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/MG94.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/MG94REVOmegaCF3x4.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/MG94_3x4.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/MG94_HKY85x3_4.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/MG94_REV_3x4.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/MG94xHKY85_3x4_2Rates.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/MG94xREV_3x4_DualRV.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/MG94xREV_3x4_DualRV_GDD.mdl",
+    "lib/hyphy/SubstitutionModels/Codon/MG94xTN93_3x4.mdl",
+    "lib/hyphy/SubstitutionModels/Nucleotide/EFVEstimated.ibf",
+    "lib/hyphy/SubstitutionModels/Nucleotide/F81.mdl",
+    "lib/hyphy/SubstitutionModels/Nucleotide/HKY85.mdl",
+    "lib/hyphy/SubstitutionModels/Nucleotide/REV.mdl",
+    "lib/hyphy/SubstitutionModels/Nucleotide/REVBetaGamma.mdl",
+    "lib/hyphy/SubstitutionModels/Nucleotide/TrN.mdl",
+    "lib/hyphy/SubstitutionModels/User/Nucleotide/JC69",
+    "lib/hyphy/SubstitutionModels/User/Nucleotide/K2P",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/GY94.mdl",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/MG94GY94xREV_PARRIS_syn3.mdl",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/MG94xREV.mdl",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/MG94xREVxBivariate.mdl",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/MG94xREVxBivariate_Multirate.mdl",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_M1.def",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_M2.def",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_M3.def",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_syn3.def",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_synvar.def",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/discreteGenerator.bf",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/discreteGeneratorNoPS.bf",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/gamma1.def",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/gamma2+Inv.def",
+    "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/gamma2.def",
+    "lib/hyphy/TemplateBatchFiles/AAModelComparison.bf",
+    "lib/hyphy/TemplateBatchFiles/AddABias.ibf",
+    "lib/hyphy/TemplateBatchFiles/AnalyzeCodonData.bf",
+    "lib/hyphy/TemplateBatchFiles/AnalyzeDiNucData.bf",
+    "lib/hyphy/TemplateBatchFiles/AnalyzeNucDataFreq.bf",
+    "lib/hyphy/TemplateBatchFiles/AnalyzeNucProtData.bf",
+    "lib/hyphy/TemplateBatchFiles/BGM.bf",
+    "lib/hyphy/TemplateBatchFiles/BivariateCodonRateAnalysis.bf",
+    "lib/hyphy/TemplateBatchFiles/BranchSiteREL.bf",
+    "lib/hyphy/TemplateBatchFiles/BranchSiteRELMultiModel.bf",
+    "lib/hyphy/TemplateBatchFiles/CleanGaps.bf",
+    "lib/hyphy/TemplateBatchFiles/CleanStopCodons.bf",
+    "lib/hyphy/TemplateBatchFiles/ClusterAnalysis.bf",
+    "lib/hyphy/TemplateBatchFiles/ClusterByDistanceRange.bf",
+    "lib/hyphy/TemplateBatchFiles/CodonBivariateRateProcessor.bf",
+    "lib/hyphy/TemplateBatchFiles/CodonModelCompare.bf",
+    "lib/hyphy/TemplateBatchFiles/CodonToProtein.bf",
+    "lib/hyphy/TemplateBatchFiles/ConvertDataFile.bf",
+    "lib/hyphy/TemplateBatchFiles/DistanceMatrix.bf",
+    "lib/hyphy/TemplateBatchFiles/Distances/CodonTools.def",
+    "lib/hyphy/TemplateBatchFiles/Distances/CodonTools2.def",
+    "lib/hyphy/TemplateBatchFiles/Distances/CodonToolsMain.def",
+    "lib/hyphy/TemplateBatchFiles/Distances/JC69",
+    "lib/hyphy/TemplateBatchFiles/Distances/K2P",
+    "lib/hyphy/TemplateBatchFiles/Distances/K2P_RV",
+    "lib/hyphy/TemplateBatchFiles/Distances/Modified_Nei_Gojobori",
+    "lib/hyphy/TemplateBatchFiles/Distances/Nei_Gojobori",
+    "lib/hyphy/TemplateBatchFiles/Distances/PC",
+    "lib/hyphy/TemplateBatchFiles/Distances/PC_MH",
+    "lib/hyphy/TemplateBatchFiles/Distances/PC_RV",
+    "lib/hyphy/TemplateBatchFiles/Distances/T3P",
+    "lib/hyphy/TemplateBatchFiles/Distances/TN84",
+    "lib/hyphy/TemplateBatchFiles/Distances/TN93",
+    "lib/hyphy/TemplateBatchFiles/Distances/TN93_RV",
+    "lib/hyphy/TemplateBatchFiles/Distances/Unaligned_LZ",
+    "lib/hyphy/TemplateBatchFiles/Distances/Unaligned_LZ_FR",
+    "lib/hyphy/TemplateBatchFiles/Distances/p_Distance",
+    "lib/hyphy/TemplateBatchFiles/Distances/p_Distance_aa",
+    "lib/hyphy/TemplateBatchFiles/Distances/p_Distance_binary",
+    "lib/hyphy/TemplateBatchFiles/Distances/p_Distance_codon",
+    "lib/hyphy/TemplateBatchFiles/F_ST.bf",
+    "lib/hyphy/TemplateBatchFiles/FitnessAAModels.bf",
+    "lib/hyphy/TemplateBatchFiles/GARD.bf",
+    "lib/hyphy/TemplateBatchFiles/GARDProcessor.bf",
+    "lib/hyphy/TemplateBatchFiles/GARD_GA_CHC.ibf",
+    "lib/hyphy/TemplateBatchFiles/GARD_old_v2.3.bf",
+    "lib/hyphy/TemplateBatchFiles/GA_CHC.ibf",
+    "lib/hyphy/TemplateBatchFiles/GA_CHC_Binary.ibf",
+    "lib/hyphy/TemplateBatchFiles/GUI/crayolaColors.def",
+    "lib/hyphy/TemplateBatchFiles/Gateaux.bf",
+    "lib/hyphy/TemplateBatchFiles/GateauxMR.bf",
+    "lib/hyphy/TemplateBatchFiles/KHTest.bf",
+    "lib/hyphy/TemplateBatchFiles/LEISR.bf",
+    "lib/hyphy/TemplateBatchFiles/LHT.bf",
+    "lib/hyphy/TemplateBatchFiles/LRTRecombTest.bf",
+    "lib/hyphy/TemplateBatchFiles/LZ_Complexity.bf",
+    "lib/hyphy/TemplateBatchFiles/LocalMolClock.bf",
+    "lib/hyphy/TemplateBatchFiles/MGvsGY.bf",
+    "lib/hyphy/TemplateBatchFiles/MergeSequences.bf",
+    "lib/hyphy/TemplateBatchFiles/MergeSites.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/BranchAPriori.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/CountSubstitutions.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/EffectOfTopology.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/ErrorEstimates.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/LRT.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/LocalvsGlobal.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/NeutralExpectation.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/NucleotideBiases.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/Phylohandbook.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/WhatsInTheMean.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/dSdN.bf",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/datasets/Drosophilia_adh.nex",
+    "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/datasets/H5N1_HA_5.nex",
+    "lib/hyphy/TemplateBatchFiles/ModelTest.bf",
+    "lib/hyphy/TemplateBatchFiles/MolClockAllRoots.bf",
+    "lib/hyphy/TemplateBatchFiles/MolecularClock.bf",
+    "lib/hyphy/TemplateBatchFiles/NeighborJoining.bf",
+    "lib/hyphy/TemplateBatchFiles/NielsenYang.bf",
+    "lib/hyphy/TemplateBatchFiles/NucModelCompare.bf",
+    "lib/hyphy/TemplateBatchFiles/PARRIS.bf",
+    "lib/hyphy/TemplateBatchFiles/PairwiseRelativeRate.bf",
+    "lib/hyphy/TemplateBatchFiles/PairwiseRelativeRatio.bf",
+    "lib/hyphy/TemplateBatchFiles/PartitionDataFile.bf",
+    "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/ProteinGTRFit.bf",
+    "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/ProteinGTRFit_helper.ibf",
+    "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/README_relative_prot_rates.md",
+    "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/plusF_helper.ibf",
+    "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/relative_prot_rates.bf",
+    "lib/hyphy/TemplateBatchFiles/ReduceDataSetMatrix.bf",
+    "lib/hyphy/TemplateBatchFiles/RelativeRate.bf",
+    "lib/hyphy/TemplateBatchFiles/RelativeRatio.bf",
+    "lib/hyphy/TemplateBatchFiles/SGASimProcessor.bf",
+    "lib/hyphy/TemplateBatchFiles/SGEmulator.bf",
+    "lib/hyphy/TemplateBatchFiles/SGEmulator_MF.bf",
+    "lib/hyphy/TemplateBatchFiles/SGIvL.bf",
+    "lib/hyphy/TemplateBatchFiles/SM-2019.bf",
+    "lib/hyphy/TemplateBatchFiles/Samplers/lhc-ErrorEst.bf",
+    "lib/hyphy/TemplateBatchFiles/Samplers/lhc.bf",
+    "lib/hyphy/TemplateBatchFiles/Samplers/lhc_supp.ibf",
+    "lib/hyphy/TemplateBatchFiles/Samplers/sir.bf",
+    "lib/hyphy/TemplateBatchFiles/Samplers/srs-ErrorEst.ibf",
+    "lib/hyphy/TemplateBatchFiles/Samplers/srs.ibf",
+    "lib/hyphy/TemplateBatchFiles/SandNSAmbigs.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/BUSTED.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/BranchSiteREL.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FADE.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FEL-contrast.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FEL.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FUBAR.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FitMultiModel.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/MEME.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/RELAX-Groups.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/RELAX-SRV.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/RELAX.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/SLAC.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/SingleOmega.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/aBSREL.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/modules/grid_compute.ibf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/modules/io_functions.ibf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/modules/selection_lib.ibf",
+    "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/modules/shared-load-file.bf",
+    "lib/hyphy/TemplateBatchFiles/SelectionLRT.bf",
+    "lib/hyphy/TemplateBatchFiles/SeqAlignShared.ibf",
+    "lib/hyphy/TemplateBatchFiles/SeqAlignmentCodon.bf",
+    "lib/hyphy/TemplateBatchFiles/SeqAlignmentCodonShared.ibf",
+    "lib/hyphy/TemplateBatchFiles/SeqAlignmentNucShared.ibf",
+    "lib/hyphy/TemplateBatchFiles/SequentialAddition.bf",
+    "lib/hyphy/TemplateBatchFiles/SequentialAddition.ibf",
+    "lib/hyphy/TemplateBatchFiles/SimilarityPlot.bf",
+    "lib/hyphy/TemplateBatchFiles/SimmondsAI.bf",
+    "lib/hyphy/TemplateBatchFiles/SingleBreakpointRecomb.bf",
+    "lib/hyphy/TemplateBatchFiles/SlidingWindowAnalysis.bf",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/190",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/BranchSiteTemplate.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/CF3x4.bf",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/Custom_AA.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/Custom_AA_empirical.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/Dayhoff.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/Dayhoff_F.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/Default",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM+F+omega.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM+F.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM+F3x4.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM+MLFREQS.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EIAA.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EIAAFreq.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EX.dat",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EX.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/BLOSUM62",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/Dayhoff",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/H5N1",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/HIVBetween",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/HIVWithin",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/IAV",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/JTT",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/LCAP",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/LG",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/MtArt",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/VT",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/WAG",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/cpREV",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/modellist.ibf",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/mtMAM",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/mtREV24",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/rtREV",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalCodon/KHG_ECM",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalCodon/KHG_ECMu",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/F81.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/F81_binary.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/F84.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/F84P.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/GRM.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/GY94.ibf",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/GY94.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/GY94customF3x4.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/GY94w9.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVbetween+F.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVbetween.ibf",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVbetween.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVwithin+F.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVwithin.ibf",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVwithin.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/HKY85.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/JC69.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/JC69_binary.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/Jones.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/Jones_F.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/K2P.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/K3ST.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/LCAP.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MEC.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94custom.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94customCF3x4.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94customF1x4.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94customFreqs.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAA.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAAF61.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAAF61multiple.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAAFreqs.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAAUserFreqs.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wEX.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94with9freqs.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94x2.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MGFreqsEstimator.ibf",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MGwAA.ibf",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/MGwEX.ibf",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/NRM+Freqs.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/NRM.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/PCH",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/RNA16.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/RNA16A",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/RNA16SvH.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAEqualInput",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAF81",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAMuse95.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAREV",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAREV_1",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/S4",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/STGRM.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/TrN.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/UniversalCode.def",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/WAG.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/WAG_F.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/Yang2000Distributions.def",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/chooseGeneticCode.def",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/custm4x4.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/defineGamma.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/defineHM.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/fitness.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters2.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters3.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters4.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters5.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/models.lst",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/mtMAM.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/mtMAM_F.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/mtREV.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/mtREV_24.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/mtREV_24_F.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/reducedREV.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/rtREV.mdl",
+    "lib/hyphy/TemplateBatchFiles/TemplateModels/rtREV_F.mdl",
+    "lib/hyphy/TemplateBatchFiles/TestBranchDNDS.bf",
+    "lib/hyphy/TemplateBatchFiles/TestClade.bf",
+    "lib/hyphy/TemplateBatchFiles/TestCladeMeans.bf",
+    "lib/hyphy/TemplateBatchFiles/TopologySearch.bf",
+    "lib/hyphy/TemplateBatchFiles/TopologySearchConstrained.bf",
+    "lib/hyphy/TemplateBatchFiles/TreeCorrelationCoefficients.bf",
+    "lib/hyphy/TemplateBatchFiles/TreeTools.ibf",
+    "lib/hyphy/TemplateBatchFiles/UpperBound.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/AncestralMapper.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/BranchLengthFitters.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/CoalescentPostProcessor.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/CodonTools.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/DBTools.ibf",
+    "lib/hyphy/TemplateBatchFiles/Utility/DescriptiveStatistics.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/GrabBag.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/HXB2Mapper.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/LocalMGREV.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/LocalMGREVMLFreqs.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/MPITools.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/NJ.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/PS_Plotters.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/PostScript.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/ProbabilityDistributions.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/ReadDelimitedFiles.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/TreeFunctions.bf",
+    "lib/hyphy/TemplateBatchFiles/Utility/WriteDelimitedFiles.bf",
+    "lib/hyphy/TemplateBatchFiles/WANC.bf",
+    "lib/hyphy/TemplateBatchFiles/YangNielsenBranchSite2005.bf",
+    "lib/hyphy/TemplateBatchFiles/_BMS_Aux.ibf",
+    "lib/hyphy/TemplateBatchFiles/_CMS_Aux.ibf",
+    "lib/hyphy/TemplateBatchFiles/_MFReader_.ibf",
+    "lib/hyphy/TemplateBatchFiles/_tipDater.ibf",
+    "lib/hyphy/TemplateBatchFiles/bayesgraph.ibf",
+    "lib/hyphy/TemplateBatchFiles/binomial.ibf",
+    "lib/hyphy/TemplateBatchFiles/branchSwappingFunctions.bf",
+    "lib/hyphy/TemplateBatchFiles/categoryEcho.bf",
+    "lib/hyphy/TemplateBatchFiles/chooseDistanceFormula.def",
+    "lib/hyphy/TemplateBatchFiles/dNdSBivariateRateAnalysis.bf",
+    "lib/hyphy/TemplateBatchFiles/dNdSDistributionComparison.bf",
+    "lib/hyphy/TemplateBatchFiles/dNdSRateAnalysis.bf",
+    "lib/hyphy/TemplateBatchFiles/dNdSResultProcessor.bf",
+    "lib/hyphy/TemplateBatchFiles/dSdNTreeTools.ibf",
+    "lib/hyphy/TemplateBatchFiles/distanceMethodNPBootstrap.bf",
+    "lib/hyphy/TemplateBatchFiles/distanceRMethodNPBootstrap.bf",
+    "lib/hyphy/TemplateBatchFiles/doNNISwap.bf",
+    "lib/hyphy/TemplateBatchFiles/doSPRSwap.bf",
+    "lib/hyphy/TemplateBatchFiles/files.lst",
+    "lib/hyphy/TemplateBatchFiles/globalChecker.ibf",
+    "lib/hyphy/TemplateBatchFiles/heuristicMethodNPBootstrap.bf",
+    "lib/hyphy/TemplateBatchFiles/last.date",
+    "lib/hyphy/TemplateBatchFiles/libv3/IOFunctions.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/UtilityFunctions.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/all-terms.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/convenience/math.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/convenience/matrix.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/convenience/random.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/convenience/regexp.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/function-loader.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/DNA.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/DNA/GTR-MutSel.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/DNA/GTR.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/DNA/HKY85.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/DNA/JC69.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/binary.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/binary/charbinary.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/binary/empirical.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/codon.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/codon/BS_REL.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/codon/MG_REV.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/codon/MG_REV_MH.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/codon/MG_REV_TRIP.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/frequencies.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/model_functions.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/parameters.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/REV.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/empirical.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/HIV.ibf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/JC69.ibf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/JTT.ibf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/LG.ibf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/WAG.ibf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/gcpREV.ibf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/mt.ibf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrix2dict_aux.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/models/rate_variation.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/stats.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/tasks/alignments.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/tasks/ancestral.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/tasks/bayesgraph.ibf",
+    "lib/hyphy/TemplateBatchFiles/libv3/tasks/distances.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/tasks/estimators.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/tasks/genetic_code.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/tasks/mpi.bf",
+    "lib/hyphy/TemplateBatchFiles/libv3/tasks/trees.bf",
+    "lib/hyphy/TemplateBatchFiles/molclockBootstrap.bf",
+    "lib/hyphy/TemplateBatchFiles/pairwiseDistanceEstimator.ibf",
+    "lib/hyphy/TemplateBatchFiles/pairwiseDistanceEstimatorCounter.ibf",
+    "lib/hyphy/TemplateBatchFiles/partitionSequences.ibf",
+    "lib/hyphy/TemplateBatchFiles/posteriors.ibf",
+    "lib/hyphy/TemplateBatchFiles/qndhelper1.ibf",
+    "lib/hyphy/TemplateBatchFiles/qndhelper1_mf.ibf",
+    "lib/hyphy/TemplateBatchFiles/qndhelper2.ibf",
+    "lib/hyphy/TemplateBatchFiles/qndhelper2_mf.ibf",
+    "lib/hyphy/TemplateBatchFiles/qndhelper3.ibf",
+    "lib/hyphy/TemplateBatchFiles/qndhelper4.ibf",
+    "lib/hyphy/TemplateBatchFiles/queryTree.bf",
+    "lib/hyphy/TemplateBatchFiles/readIndexFile.bf",
+    "lib/hyphy/TemplateBatchFiles/relative_nucleotide_rates.bf",
+    "lib/hyphy/TemplateBatchFiles/relrateBootstrap.bf",
+    "lib/hyphy/TemplateBatchFiles/relratioBootstrap.bf",
+    "lib/hyphy/TemplateBatchFiles/selectModelParameters.bf",
+    "lib/hyphy/TemplateBatchFiles/simpleBootstrap.bf",
+    "lib/hyphy/data/brown.nuc",
+    "lib/hyphy/data/integrase_BDA.nex",
+    "lib/hyphy/data/p51.aa",
+    "lib/hyphy/data/p51.nex"
+  ],
+  "fn": "hyphy-2.5.1-h1dc6549_1.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/Users/danielgomezperez/miniconda3/pkgs/hyphy-2.5.1-h1dc6549_1",
+    "type": 1
+  },
+  "md5": "dacaf6f9182e0c660babdef85d717c26",
+  "name": "hyphy",
+  "package_tarball_full_path": "/Users/danielgomezperez/miniconda3/pkgs/hyphy-2.5.1-h1dc6549_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/hyphy",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/runner/miniconda/envs/bioconda/conda-bld/hyphy_1572343472324/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "0c8a49ab5cfcbd40268e73c202a06f116a0a354efde043cf9b2c7156c07d9678",
+        "sha256_in_prefix": "b7db70b9806b110c44e65b20f60530b9dc3aac683d4b33b2a4eb57361e3a08e4",
+        "size_in_bytes": 3762820
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Alt_Yeast_Nuclear.cod",
+        "path_type": "hardlink",
+        "sha256": "48521a35836bd8022c3d5beed279a811fafb50f7e53200de1fddd15e8965123e",
+        "sha256_in_prefix": "48521a35836bd8022c3d5beed279a811fafb50f7e53200de1fddd15e8965123e",
+        "size_in_bytes": 808
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Ascidian_mtDNA.cod",
+        "path_type": "hardlink",
+        "sha256": "2af0522bf6adeb2870ec8d560790ecf87635aff2ae5282d80cc883efd8618279",
+        "sha256_in_prefix": "2af0522bf6adeb2870ec8d560790ecf87635aff2ae5282d80cc883efd8618279",
+        "size_in_bytes": 802
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Blepharisma_Nuclear.cod",
+        "path_type": "hardlink",
+        "sha256": "3fbcd6a1c686c91d492be6fa784acb52b34d7de14ca53fcf2c9d9c58597cf737",
+        "sha256_in_prefix": "3fbcd6a1c686c91d492be6fa784acb52b34d7de14ca53fcf2c9d9c58597cf737",
+        "size_in_bytes": 782
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Ciliate.cod",
+        "path_type": "hardlink",
+        "sha256": "29b2ed747d596b863e1490a81dd1ae7048141cfb457f20c5c397f83bd99c27b7",
+        "sha256_in_prefix": "29b2ed747d596b863e1490a81dd1ae7048141cfb457f20c5c397f83bd99c27b7",
+        "size_in_bytes": 816
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Echinoderm_mtDNA.cod",
+        "path_type": "hardlink",
+        "sha256": "021c011a5d1cfd9037b1421285c01767227b05ea7ebcb8e741ad69158d3d679b",
+        "sha256_in_prefix": "021c011a5d1cfd9037b1421285c01767227b05ea7ebcb8e741ad69158d3d679b",
+        "size_in_bytes": 804
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Euplotid_Nuclear.cod",
+        "path_type": "hardlink",
+        "sha256": "41c2560433660ddb784db5fe0ef3153bd2c7ca55f921441ca1143f0298b5688d",
+        "sha256_in_prefix": "41c2560433660ddb784db5fe0ef3153bd2c7ca55f921441ca1143f0298b5688d",
+        "size_in_bytes": 799
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Flatworm_mtDNA.cod",
+        "path_type": "hardlink",
+        "sha256": "05424a2fcf15b96f95c7cc678f013aa1a26f05fd23565adaa7cdd25dc3ff345b",
+        "sha256_in_prefix": "05424a2fcf15b96f95c7cc678f013aa1a26f05fd23565adaa7cdd25dc3ff345b",
+        "size_in_bytes": 800
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Invertebrate_mtDNA.cod",
+        "path_type": "hardlink",
+        "sha256": "cd8a105bedb384faf66bc9540824f596a3fa20948d7b0d8ba3eec4f38614046d",
+        "sha256_in_prefix": "cd8a105bedb384faf66bc9540824f596a3fa20948d7b0d8ba3eec4f38614046d",
+        "size_in_bytes": 807
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Mold_mtDNA.cod",
+        "path_type": "hardlink",
+        "sha256": "ee623912f53dfd7c79ef8b69d86b15f1db300b78c5569987fe3dd7041d982927",
+        "sha256_in_prefix": "ee623912f53dfd7c79ef8b69d86b15f1db300b78c5569987fe3dd7041d982927",
+        "size_in_bytes": 786
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Thraustochytrium_mtDNA.cod",
+        "path_type": "hardlink",
+        "sha256": "f78f23ff86d0b95b270273ce3d8e862756e871834dfa9248eaac608011ebd733",
+        "sha256_in_prefix": "f78f23ff86d0b95b270273ce3d8e862756e871834dfa9248eaac608011ebd733",
+        "size_in_bytes": 818
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Vertebratemtdna.cod",
+        "path_type": "hardlink",
+        "sha256": "b7348ff83ab0777f4aed1e2294a56ed5c6ca914a5fbc6c0cb34da0865beb958e",
+        "sha256_in_prefix": "b7348ff83ab0777f4aed1e2294a56ed5c6ca914a5fbc6c0cb34da0865beb958e",
+        "size_in_bytes": 1343
+      },
+      {
+        "_path": "lib/hyphy/GeneticCodes/Yeast_mtDNA.cod",
+        "path_type": "hardlink",
+        "sha256": "db8b47f8a24d9d4e3ad5797bab4d1324ea3262ab7d1bccb406431dd512debcb0",
+        "sha256_in_prefix": "db8b47f8a24d9d4e3ad5797bab4d1324ea3262ab7d1bccb406431dd512debcb0",
+        "size_in_bytes": 762
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/AAEFV/Equal",
+        "path_type": "hardlink",
+        "sha256": "05f276ac859e916d9207e6a821e07e87d2db093af926c4fd0d1f42d3b150bf65",
+        "sha256_in_prefix": "05f276ac859e916d9207e6a821e07e87d2db093af926c4fd0d1f42d3b150bf65",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/AAEFV/Estimated",
+        "path_type": "hardlink",
+        "sha256": "66c4defaef4ec32ffec96ccf5c169e12a721baabe852f2436fd78d3905b6af42",
+        "sha256_in_prefix": "66c4defaef4ec32ffec96ccf5c169e12a721baabe852f2436fd78d3905b6af42",
+        "size_in_bytes": 10410
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/AAEFV/Observed In Data Set",
+        "path_type": "hardlink",
+        "sha256": "c421e75b462be149b11535a5d65fb900a0f63117697b050cb27a1c0cd8ea6a7b",
+        "sha256_in_prefix": "c421e75b462be149b11535a5d65fb900a0f63117697b050cb27a1c0cd8ea6a7b",
+        "size_in_bytes": 158
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/AAEFV/Observed In Partition",
+        "path_type": "hardlink",
+        "sha256": "b0b86c0da67c86ade27dc6cd02b9ac0bb8c124c9606fe54242948fc28ebf4320",
+        "sha256_in_prefix": "b0b86c0da67c86ade27dc6cd02b9ac0bb8c124c9606fe54242948fc28ebf4320",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/CodonEFV/Equal",
+        "path_type": "hardlink",
+        "sha256": "3eb183a70e807f37343d3fe0abb3f50b53b0053c43d741d842886e7d5c4fc478",
+        "sha256_in_prefix": "3eb183a70e807f37343d3fe0abb3f50b53b0053c43d741d842886e7d5c4fc478",
+        "size_in_bytes": 302
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/CodonEFV/Observed Codon",
+        "path_type": "hardlink",
+        "sha256": "aa6624cd08b5e94a4aed46477eb250224d654922bb36f6362452fca30b4d6ca7",
+        "sha256_in_prefix": "aa6624cd08b5e94a4aed46477eb250224d654922bb36f6362452fca30b4d6ca7",
+        "size_in_bytes": 1834
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/CodonEFV/Observed Nuc 3 params.",
+        "path_type": "hardlink",
+        "sha256": "e805a4fffec1587cb5b6f246baf3c7fd8f59b48e4280d5573f40fd8459cd705e",
+        "sha256_in_prefix": "e805a4fffec1587cb5b6f246baf3c7fd8f59b48e4280d5573f40fd8459cd705e",
+        "size_in_bytes": 2236
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/CodonEFV/Observed Nuc 9 params.",
+        "path_type": "hardlink",
+        "sha256": "37d71a3f00828aa0eefc4803498f39bf93f9eb5ff8b77fedd0e65c19bee581a2",
+        "sha256_in_prefix": "37d71a3f00828aa0eefc4803498f39bf93f9eb5ff8b77fedd0e65c19bee581a2",
+        "size_in_bytes": 2314
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/Heterogeneity/2 Bin Discrete",
+        "path_type": "hardlink",
+        "sha256": "d0c8c98246bf6cb6d716eab093c592b66bb2801a9c485caa95d7b4d05995533d",
+        "sha256_in_prefix": "d0c8c98246bf6cb6d716eab093c592b66bb2801a9c485caa95d7b4d05995533d",
+        "size_in_bytes": 392
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/Heterogeneity/Beta",
+        "path_type": "hardlink",
+        "sha256": "1b8457c4f2e1da1e15d63edf342d0b01a9039387d9241fd8adc86aaf09409ded",
+        "sha256_in_prefix": "1b8457c4f2e1da1e15d63edf342d0b01a9039387d9241fd8adc86aaf09409ded",
+        "size_in_bytes": 559
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/Heterogeneity/Beta-Gamma",
+        "path_type": "hardlink",
+        "sha256": "1402faae11ac2df537f2b231add32aebbf4fe3ffb7ffd49a0065ca7193f621dd",
+        "sha256_in_prefix": "1402faae11ac2df537f2b231add32aebbf4fe3ffb7ffd49a0065ca7193f621dd",
+        "size_in_bytes": 983
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/Heterogeneity/General Discrete",
+        "path_type": "hardlink",
+        "sha256": "50667a2323be6f4ab8ab390b64433296213cba3c8ca46759516e6c8e494d141c",
+        "sha256_in_prefix": "50667a2323be6f4ab8ab390b64433296213cba3c8ca46759516e6c8e494d141c",
+        "size_in_bytes": 2033
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/Heterogeneity/Half Normal",
+        "path_type": "hardlink",
+        "sha256": "06ea078f390a38d968fc844ea226d2ba19c90d10fca1edf482d440f3a0222f0f",
+        "sha256_in_prefix": "06ea078f390a38d968fc844ea226d2ba19c90d10fca1edf482d440f3a0222f0f",
+        "size_in_bytes": 973
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/Heterogeneity/Lognormal",
+        "path_type": "hardlink",
+        "sha256": "83ccdb5a213638690edcd55f34fa929accd080675209f44e12c522199b800c21",
+        "sha256_in_prefix": "83ccdb5a213638690edcd55f34fa929accd080675209f44e12c522199b800c21",
+        "size_in_bytes": 546
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/NucEFV/Equal",
+        "path_type": "hardlink",
+        "sha256": "a8beba8013542603b0a7267f87eed80ad5a5c9deef1380912c9c2a1e349e703a",
+        "sha256_in_prefix": "a8beba8013542603b0a7267f87eed80ad5a5c9deef1380912c9c2a1e349e703a",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/NucEFV/Estimated",
+        "path_type": "hardlink",
+        "sha256": "2e6bc30efb9d22c0dc4656510ad64b1341b758e638a883711554c622d677d856",
+        "sha256_in_prefix": "2e6bc30efb9d22c0dc4656510ad64b1341b758e638a883711554c622d677d856",
+        "size_in_bytes": 743
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/NucEFV/Observed In Data Set",
+        "path_type": "hardlink",
+        "sha256": "de9ce6b347e13fc2b9df9bc5a5684e0c4f94dc28b29ed1dfb2b5f8f7a6910843",
+        "sha256_in_prefix": "de9ce6b347e13fc2b9df9bc5a5684e0c4f94dc28b29ed1dfb2b5f8f7a6910843",
+        "size_in_bytes": 157
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/NucEFV/Observed In Partition",
+        "path_type": "hardlink",
+        "sha256": "b0b86c0da67c86ade27dc6cd02b9ac0bb8c124c9606fe54242948fc28ebf4320",
+        "sha256_in_prefix": "b0b86c0da67c86ade27dc6cd02b9ac0bb8c124c9606fe54242948fc28ebf4320",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/aa.bf",
+        "path_type": "hardlink",
+        "sha256": "a21254695ec147142d59dab0fcc334aec66646924cde90fac99d9923db8c3431",
+        "sha256_in_prefix": "a21254695ec147142d59dab0fcc334aec66646924cde90fac99d9923db8c3431",
+        "size_in_bytes": 2138
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/codon.bf",
+        "path_type": "hardlink",
+        "sha256": "c7c0d0f2ee451945aaec8c5dbd6698afe96dc700088e047f09883c6ae5c8696c",
+        "sha256_in_prefix": "c7c0d0f2ee451945aaec8c5dbd6698afe96dc700088e047f09883c6ae5c8696c",
+        "size_in_bytes": 6237
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/dinuc.bf",
+        "path_type": "hardlink",
+        "sha256": "3851938762b377d901149b7ffa707f27e8987459fb1007b93370157d21cde63f",
+        "sha256_in_prefix": "3851938762b377d901149b7ffa707f27e8987459fb1007b93370157d21cde63f",
+        "size_in_bytes": 1486
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionClasses/nuc.bf",
+        "path_type": "hardlink",
+        "sha256": "3fc2194e611ab5a80471806bdbefbdf75e4020e47c6dd9cbe9e6afa830ec4613",
+        "sha256_in_prefix": "3fc2194e611ab5a80471806bdbefbdf75e4020e47c6dd9cbe9e6afa830ec4613",
+        "size_in_bytes": 467
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Aminoacid/Dayhoff.mdl",
+        "path_type": "hardlink",
+        "sha256": "6d200a72b4acf9420c8bb0a23d288f931f243fe849d5f8a5140f33beec97dded",
+        "sha256_in_prefix": "6d200a72b4acf9420c8bb0a23d288f931f243fe849d5f8a5140f33beec97dded",
+        "size_in_bytes": 11493
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Aminoacid/EIAA.mdl",
+        "path_type": "hardlink",
+        "sha256": "0a3cb22e676f7d72752830cea22ae76372ce6f1dca83fb90c6c07444d958e4ce",
+        "sha256_in_prefix": "0a3cb22e676f7d72752830cea22ae76372ce6f1dca83fb90c6c07444d958e4ce",
+        "size_in_bytes": 11447
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Aminoacid/Fitness.mdl",
+        "path_type": "hardlink",
+        "sha256": "26e1a0cdcd2a8a55cac45af62e8667100195d67ea7808335e63597a0e8433529",
+        "sha256_in_prefix": "26e1a0cdcd2a8a55cac45af62e8667100195d67ea7808335e63597a0e8433529",
+        "size_in_bytes": 2186
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Aminoacid/Jones.mdl",
+        "path_type": "hardlink",
+        "sha256": "20a58a7003403d4da1f70f3b625a73b061e383c0cc736689531f9c36394b9534",
+        "sha256_in_prefix": "20a58a7003403d4da1f70f3b625a73b061e383c0cc736689531f9c36394b9534",
+        "size_in_bytes": 34336
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Aminoacid/mtREV.mdl",
+        "path_type": "hardlink",
+        "sha256": "be0ef0f24e6bdd0afb7c21690dc2b3abcf7ca72b938db3b564bf101f6e19be47",
+        "sha256_in_prefix": "be0ef0f24e6bdd0afb7c21690dc2b3abcf7ca72b938db3b564bf101f6e19be47",
+        "size_in_bytes": 65577
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Binary/F81.mdl",
+        "path_type": "hardlink",
+        "sha256": "eaea5189612e9d98708581ac9647118ce721c6186d08a4a5af1c13a7afa874b0",
+        "sha256_in_prefix": "eaea5189612e9d98708581ac9647118ce721c6186d08a4a5af1c13a7afa874b0",
+        "size_in_bytes": 1143
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/GY94_3x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "89141937fbec4926d98ad043cd74264eafeecce9abd635cb7b163bb49fe34768",
+        "sha256_in_prefix": "89141937fbec4926d98ad043cd74264eafeecce9abd635cb7b163bb49fe34768",
+        "size_in_bytes": 6405
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/Lineage_MG94xHKY85.mdl",
+        "path_type": "hardlink",
+        "sha256": "da838cbe3b902a4c30bb5a2cf0d82610eeab2a7b2d2ed0c84a7121f340c3a2c4",
+        "sha256_in_prefix": "da838cbe3b902a4c30bb5a2cf0d82610eeab2a7b2d2ed0c84a7121f340c3a2c4",
+        "size_in_bytes": 6966
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/MG94.mdl",
+        "path_type": "hardlink",
+        "sha256": "88118f117d7225ca3eac639698c74303573326d29a28379800b30d205388b318",
+        "sha256_in_prefix": "88118f117d7225ca3eac639698c74303573326d29a28379800b30d205388b318",
+        "size_in_bytes": 5187
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/MG94REVOmegaCF3x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "382688a7472159b56ed6e6992d95a30164ae5af37af3507387db4532530de5fa",
+        "sha256_in_prefix": "382688a7472159b56ed6e6992d95a30164ae5af37af3507387db4532530de5fa",
+        "size_in_bytes": 13893
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/MG94_3x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "be8a6c88b60024aa60002ff948d94c1785f64b934434652eafee9b68a217e096",
+        "sha256_in_prefix": "be8a6c88b60024aa60002ff948d94c1785f64b934434652eafee9b68a217e096",
+        "size_in_bytes": 5317
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/MG94_HKY85x3_4.mdl",
+        "path_type": "hardlink",
+        "sha256": "15998241baccd4f73bb5bfe496f68cfc02adfeeecaac3419db0a3adf4437da75",
+        "sha256_in_prefix": "15998241baccd4f73bb5bfe496f68cfc02adfeeecaac3419db0a3adf4437da75",
+        "size_in_bytes": 6785
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/MG94_REV_3x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "d48998260932777e4fef01c43f8c9953a0b824a26752d1212bb31bbd57da9fcd",
+        "sha256_in_prefix": "d48998260932777e4fef01c43f8c9953a0b824a26752d1212bb31bbd57da9fcd",
+        "size_in_bytes": 13590
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/MG94xHKY85_3x4_2Rates.mdl",
+        "path_type": "hardlink",
+        "sha256": "84b25bd104b5b0e66afb0dd5a687ef894734103a4e1e8528f0f03cc68319db88",
+        "sha256_in_prefix": "84b25bd104b5b0e66afb0dd5a687ef894734103a4e1e8528f0f03cc68319db88",
+        "size_in_bytes": 6331
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/MG94xREV_3x4_DualRV.mdl",
+        "path_type": "hardlink",
+        "sha256": "64b34aa45853f5434b9d597401105f9a741527aee561edd47cd0947972fb9b49",
+        "sha256_in_prefix": "64b34aa45853f5434b9d597401105f9a741527aee561edd47cd0947972fb9b49",
+        "size_in_bytes": 11704
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/MG94xREV_3x4_DualRV_GDD.mdl",
+        "path_type": "hardlink",
+        "sha256": "ac78a1b17b5036e5ddbe395c7e6a1b37935befdf81e0f62b253d14e77b2e5c73",
+        "sha256_in_prefix": "ac78a1b17b5036e5ddbe395c7e6a1b37935befdf81e0f62b253d14e77b2e5c73",
+        "size_in_bytes": 16141
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Codon/MG94xTN93_3x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "9c2da788c2f1869c3f6b64f6046ffd53d73643a130685a8b71ec3d332b6b14eb",
+        "sha256_in_prefix": "9c2da788c2f1869c3f6b64f6046ffd53d73643a130685a8b71ec3d332b6b14eb",
+        "size_in_bytes": 13510
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Nucleotide/EFVEstimated.ibf",
+        "path_type": "hardlink",
+        "sha256": "e5a31a998b904d5a3e7249fa5cbbb3e7e32402fec5f12f551a5607a460ad8909",
+        "sha256_in_prefix": "e5a31a998b904d5a3e7249fa5cbbb3e7e32402fec5f12f551a5607a460ad8909",
+        "size_in_bytes": 896
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Nucleotide/F81.mdl",
+        "path_type": "hardlink",
+        "sha256": "08e2fe7649dd82ee68074a241f5857a7b91da93e20ca3d77acf6c687892efb11",
+        "sha256_in_prefix": "08e2fe7649dd82ee68074a241f5857a7b91da93e20ca3d77acf6c687892efb11",
+        "size_in_bytes": 1908
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Nucleotide/HKY85.mdl",
+        "path_type": "hardlink",
+        "sha256": "9b5d15ae6fe8dc8994e09bebcf4a0af3ba785092e735528d17356db830721b57",
+        "sha256_in_prefix": "9b5d15ae6fe8dc8994e09bebcf4a0af3ba785092e735528d17356db830721b57",
+        "size_in_bytes": 2421
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Nucleotide/REV.mdl",
+        "path_type": "hardlink",
+        "sha256": "b2a16402211907297c078507b2166ae19316a746522a8e183b0500ff42e4ef5b",
+        "sha256_in_prefix": "b2a16402211907297c078507b2166ae19316a746522a8e183b0500ff42e4ef5b",
+        "size_in_bytes": 2470
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Nucleotide/REVBetaGamma.mdl",
+        "path_type": "hardlink",
+        "sha256": "3d0089783d77fd219419ba436699e611611e1d1b832b513352d6c0fc57255914",
+        "sha256_in_prefix": "3d0089783d77fd219419ba436699e611611e1d1b832b513352d6c0fc57255914",
+        "size_in_bytes": 3137
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/Nucleotide/TrN.mdl",
+        "path_type": "hardlink",
+        "sha256": "1bf43b9fe54f029795323d4355807e0c36fee45d7634c7a0f0203b73b0a01795",
+        "sha256_in_prefix": "1bf43b9fe54f029795323d4355807e0c36fee45d7634c7a0f0203b73b0a01795",
+        "size_in_bytes": 2202
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/User/Nucleotide/JC69",
+        "path_type": "hardlink",
+        "sha256": "111b9fc0dc27352b6226b35a18e57165e7eed62d50f0ba27faa80dea10da521d",
+        "sha256_in_prefix": "111b9fc0dc27352b6226b35a18e57165e7eed62d50f0ba27faa80dea10da521d",
+        "size_in_bytes": 586
+      },
+      {
+        "_path": "lib/hyphy/SubstitutionModels/User/Nucleotide/K2P",
+        "path_type": "hardlink",
+        "sha256": "5ba7b33fcee33793fabb9c65bbe07a3a4072a3863ff7b74188c60fa3786c0ff6",
+        "sha256_in_prefix": "5ba7b33fcee33793fabb9c65bbe07a3a4072a3863ff7b74188c60fa3786c0ff6",
+        "size_in_bytes": 585
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/GY94.mdl",
+        "path_type": "hardlink",
+        "sha256": "8895a1f8d90ef646dabc00a8c8aff87f17022ca10ac319b1f0bfd1179d98e319",
+        "sha256_in_prefix": "8895a1f8d90ef646dabc00a8c8aff87f17022ca10ac319b1f0bfd1179d98e319",
+        "size_in_bytes": 8050
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/MG94GY94xREV_PARRIS_syn3.mdl",
+        "path_type": "hardlink",
+        "sha256": "ab87991cb2f66915764d887df9568de46ee24a861d6bd0f7959e2c2fed70d623",
+        "sha256_in_prefix": "ab87991cb2f66915764d887df9568de46ee24a861d6bd0f7959e2c2fed70d623",
+        "size_in_bytes": 8503
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/MG94xREV.mdl",
+        "path_type": "hardlink",
+        "sha256": "1175f04b4e3fd77ca30ff450a5ae49e39eec6b60a181ade59896fd8ac34d84e6",
+        "sha256_in_prefix": "1175f04b4e3fd77ca30ff450a5ae49e39eec6b60a181ade59896fd8ac34d84e6",
+        "size_in_bytes": 5011
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/MG94xREVxBivariate.mdl",
+        "path_type": "hardlink",
+        "sha256": "b37943869c6fcc361ecd3f2d1b057705895b9715b9a17ae4af2a15418341a957",
+        "sha256_in_prefix": "b37943869c6fcc361ecd3f2d1b057705895b9715b9a17ae4af2a15418341a957",
+        "size_in_bytes": 3921
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/MG94xREVxBivariate_Multirate.mdl",
+        "path_type": "hardlink",
+        "sha256": "b921daac81cdd8324d762d098ed1b116bcccc44e3209136a22e7dba6cba02959",
+        "sha256_in_prefix": "b921daac81cdd8324d762d098ed1b116bcccc44e3209136a22e7dba6cba02959",
+        "size_in_bytes": 4608
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_M1.def",
+        "path_type": "hardlink",
+        "sha256": "3c80a258f709572d253089a2a07a66aedfb6fe7756c8f1b0b7b02ad5d05e90a7",
+        "sha256_in_prefix": "3c80a258f709572d253089a2a07a66aedfb6fe7756c8f1b0b7b02ad5d05e90a7",
+        "size_in_bytes": 327
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_M2.def",
+        "path_type": "hardlink",
+        "sha256": "05459821635b0bd149a0ee4743125e99435f095b38567804bb0b2d7d6d4f7e19",
+        "sha256_in_prefix": "05459821635b0bd149a0ee4743125e99435f095b38567804bb0b2d7d6d4f7e19",
+        "size_in_bytes": 490
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_M3.def",
+        "path_type": "hardlink",
+        "sha256": "2cba00b7ba47c6f1bbddbff743baeb672314818d6052df0771a8a454918aa0a0",
+        "sha256_in_prefix": "2cba00b7ba47c6f1bbddbff743baeb672314818d6052df0771a8a454918aa0a0",
+        "size_in_bytes": 558
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_syn3.def",
+        "path_type": "hardlink",
+        "sha256": "c8903fd89cc9e5d3642a3453dba54f91790635d193a4c3edf6951df0a60b26f3",
+        "sha256_in_prefix": "c8903fd89cc9e5d3642a3453dba54f91790635d193a4c3edf6951df0a60b26f3",
+        "size_in_bytes": 758
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/PARRIS_synvar.def",
+        "path_type": "hardlink",
+        "sha256": "d0b6037d676d356e134654e0736582e0642d7e780b709edf71d9563e2181566f",
+        "sha256_in_prefix": "d0b6037d676d356e134654e0736582e0642d7e780b709edf71d9563e2181566f",
+        "size_in_bytes": 611
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/discreteGenerator.bf",
+        "path_type": "hardlink",
+        "sha256": "3bd2f746db7451b3e7fabdf5e03819c540eb0afd3f4ca101213f09a3a14ff88f",
+        "sha256_in_prefix": "3bd2f746db7451b3e7fabdf5e03819c540eb0afd3f4ca101213f09a3a14ff88f",
+        "size_in_bytes": 5319
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/discreteGeneratorNoPS.bf",
+        "path_type": "hardlink",
+        "sha256": "0bf6c8a93df2352e4d7d67e9d90cdfae6ad9e1fa9d75a2b2d8a3a984d5d8e6c4",
+        "sha256_in_prefix": "0bf6c8a93df2352e4d7d67e9d90cdfae6ad9e1fa9d75a2b2d8a3a984d5d8e6c4",
+        "size_in_bytes": 3582
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/gamma1.def",
+        "path_type": "hardlink",
+        "sha256": "86fec30d777ac2eb4118d52663338ad44972da1068ed14caaecbae4d9f9958c3",
+        "sha256_in_prefix": "86fec30d777ac2eb4118d52663338ad44972da1068ed14caaecbae4d9f9958c3",
+        "size_in_bytes": 532
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/gamma2+Inv.def",
+        "path_type": "hardlink",
+        "sha256": "09590aaff41bc99af32c82104f65d1993bafad1f730b179b82647dee2efe3a3b",
+        "sha256_in_prefix": "09590aaff41bc99af32c82104f65d1993bafad1f730b179b82647dee2efe3a3b",
+        "size_in_bytes": 929
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/2RatesAnalyses/gamma2.def",
+        "path_type": "hardlink",
+        "sha256": "c63f63671edbcff5c7ee115987f2021ab4c3a1b55559717455f3b0403ae88b90",
+        "sha256_in_prefix": "c63f63671edbcff5c7ee115987f2021ab4c3a1b55559717455f3b0403ae88b90",
+        "size_in_bytes": 521
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/AAModelComparison.bf",
+        "path_type": "hardlink",
+        "sha256": "35593165ceba2e9a8be30b9aaa8dc4531946940600150ceb673adecfb897073a",
+        "sha256_in_prefix": "35593165ceba2e9a8be30b9aaa8dc4531946940600150ceb673adecfb897073a",
+        "size_in_bytes": 5464
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/AddABias.ibf",
+        "path_type": "hardlink",
+        "sha256": "fa9cae597d324cf3ceb501055abace01b537d202fdb1602578f2ebb7acfacc55",
+        "sha256_in_prefix": "fa9cae597d324cf3ceb501055abace01b537d202fdb1602578f2ebb7acfacc55",
+        "size_in_bytes": 8889
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/AnalyzeCodonData.bf",
+        "path_type": "hardlink",
+        "sha256": "98c9a8c66884ed74f7e088c3a762a98a8411cb6b5fb9aa8fc84a2ee3c0b0c471",
+        "sha256_in_prefix": "98c9a8c66884ed74f7e088c3a762a98a8411cb6b5fb9aa8fc84a2ee3c0b0c471",
+        "size_in_bytes": 1273
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/AnalyzeDiNucData.bf",
+        "path_type": "hardlink",
+        "sha256": "1fa2931891028bbb8f518628404bae07bb903705074d6644b3f123600e02f72e",
+        "sha256_in_prefix": "1fa2931891028bbb8f518628404bae07bb903705074d6644b3f123600e02f72e",
+        "size_in_bytes": 661
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/AnalyzeNucDataFreq.bf",
+        "path_type": "hardlink",
+        "sha256": "d9e2ee51d83c1b1b48220a932aa2d3c3948fae51d755560fa71f15e476eca370",
+        "sha256_in_prefix": "d9e2ee51d83c1b1b48220a932aa2d3c3948fae51d755560fa71f15e476eca370",
+        "size_in_bytes": 869
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/AnalyzeNucProtData.bf",
+        "path_type": "hardlink",
+        "sha256": "8036b04f6c21e4eb488d315e31c8825278dc39b76944518112bf6a26ceb88847",
+        "sha256_in_prefix": "8036b04f6c21e4eb488d315e31c8825278dc39b76944518112bf6a26ceb88847",
+        "size_in_bytes": 868
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/BGM.bf",
+        "path_type": "hardlink",
+        "sha256": "2cc7bebf79f33b813756dbaa0dfa86f71e25e84dffed4abb7c9c1e45f047b029",
+        "sha256_in_prefix": "2cc7bebf79f33b813756dbaa0dfa86f71e25e84dffed4abb7c9c1e45f047b029",
+        "size_in_bytes": 20331
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/BivariateCodonRateAnalysis.bf",
+        "path_type": "hardlink",
+        "sha256": "2a0879cbff5c9464575459c1ac6c31af56680af7684a9fdc164ae69d5b892801",
+        "sha256_in_prefix": "2a0879cbff5c9464575459c1ac6c31af56680af7684a9fdc164ae69d5b892801",
+        "size_in_bytes": 3040
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/BranchSiteREL.bf",
+        "path_type": "hardlink",
+        "sha256": "1b15f0e52fc0d83c88b4025b1de7a837137f0469e34c0d44d73f7ef106c89269",
+        "sha256_in_prefix": "1b15f0e52fc0d83c88b4025b1de7a837137f0469e34c0d44d73f7ef106c89269",
+        "size_in_bytes": 39143
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/BranchSiteRELMultiModel.bf",
+        "path_type": "hardlink",
+        "sha256": "3b99cc51ef69b6e1ed78ce16e2168d00c2099cff2466f0e89fba189783b5340a",
+        "sha256_in_prefix": "3b99cc51ef69b6e1ed78ce16e2168d00c2099cff2466f0e89fba189783b5340a",
+        "size_in_bytes": 20586
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/CleanGaps.bf",
+        "path_type": "hardlink",
+        "sha256": "92be6cd0668c5162c40d7e91fba0315ba26fd8c0399d43b191a7d5230be5a646",
+        "sha256_in_prefix": "92be6cd0668c5162c40d7e91fba0315ba26fd8c0399d43b191a7d5230be5a646",
+        "size_in_bytes": 3268
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/CleanStopCodons.bf",
+        "path_type": "hardlink",
+        "sha256": "6a5b317a4c67e351ef9a2b42cb310318fce6a6c1bd3702c86bca8488cf4810f4",
+        "sha256_in_prefix": "6a5b317a4c67e351ef9a2b42cb310318fce6a6c1bd3702c86bca8488cf4810f4",
+        "size_in_bytes": 7677
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ClusterAnalysis.bf",
+        "path_type": "hardlink",
+        "sha256": "649719b7ba8fc1a0f73c7bcfbc5494a36901362221054d529bd7051147904c39",
+        "sha256_in_prefix": "649719b7ba8fc1a0f73c7bcfbc5494a36901362221054d529bd7051147904c39",
+        "size_in_bytes": 10610
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ClusterByDistanceRange.bf",
+        "path_type": "hardlink",
+        "sha256": "0e65466a7a7dc4113e8c1def60bcdfa3a2c93f56b22a5035a9fd59ef42f279b2",
+        "sha256_in_prefix": "0e65466a7a7dc4113e8c1def60bcdfa3a2c93f56b22a5035a9fd59ef42f279b2",
+        "size_in_bytes": 13791
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/CodonBivariateRateProcessor.bf",
+        "path_type": "hardlink",
+        "sha256": "502959af9876c62a68b23949175d168896ae01b104dfba447310dd7602e41e93",
+        "sha256_in_prefix": "502959af9876c62a68b23949175d168896ae01b104dfba447310dd7602e41e93",
+        "size_in_bytes": 10971
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/CodonModelCompare.bf",
+        "path_type": "hardlink",
+        "sha256": "937e2abaf036986093a3289465121875dea0ec0c16579883853b3c20e44fafd3",
+        "sha256_in_prefix": "937e2abaf036986093a3289465121875dea0ec0c16579883853b3c20e44fafd3",
+        "size_in_bytes": 26090
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/CodonToProtein.bf",
+        "path_type": "hardlink",
+        "sha256": "72af592364a374bc2db7957e830e4f84d08b1f4e9a4f42f3deaa1f4d08f66970",
+        "sha256_in_prefix": "72af592364a374bc2db7957e830e4f84d08b1f4e9a4f42f3deaa1f4d08f66970",
+        "size_in_bytes": 5020
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ConvertDataFile.bf",
+        "path_type": "hardlink",
+        "sha256": "6b4491f85bf7bea4d19dfa80ebe6fa55d233f84445ace4457bfafb745c04fd6d",
+        "sha256_in_prefix": "6b4491f85bf7bea4d19dfa80ebe6fa55d233f84445ace4457bfafb745c04fd6d",
+        "size_in_bytes": 2240
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/DistanceMatrix.bf",
+        "path_type": "hardlink",
+        "sha256": "774e7937844cb5bad3c0ad46e511c74303c679c4511a3f66d25da5bbba7f159c",
+        "sha256_in_prefix": "774e7937844cb5bad3c0ad46e511c74303c679c4511a3f66d25da5bbba7f159c",
+        "size_in_bytes": 7993
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/CodonTools.def",
+        "path_type": "hardlink",
+        "sha256": "dec4ecd175a21ed4a4a0d86b08e6c2da4d35d39748bef9bdad4f3f5e50b7203d",
+        "sha256_in_prefix": "dec4ecd175a21ed4a4a0d86b08e6c2da4d35d39748bef9bdad4f3f5e50b7203d",
+        "size_in_bytes": 303
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/CodonTools2.def",
+        "path_type": "hardlink",
+        "sha256": "4701bd5701200f4fb8f23965d4c6394be6a179d53cc425fba5e58e7bc2f8fafa",
+        "sha256_in_prefix": "4701bd5701200f4fb8f23965d4c6394be6a179d53cc425fba5e58e7bc2f8fafa",
+        "size_in_bytes": 639
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/CodonToolsMain.def",
+        "path_type": "hardlink",
+        "sha256": "937729a214d5d4365dee376fb11dc1c44b64844847d3d410d5e5d3e08aa69a7a",
+        "sha256_in_prefix": "937729a214d5d4365dee376fb11dc1c44b64844847d3d410d5e5d3e08aa69a7a",
+        "size_in_bytes": 9815
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/JC69",
+        "path_type": "hardlink",
+        "sha256": "790b11754c0fafd630f40c33f8f4cd8067e3f1ce25a512c4ca8dc42cf54e3d4f",
+        "sha256_in_prefix": "790b11754c0fafd630f40c33f8f4cd8067e3f1ce25a512c4ca8dc42cf54e3d4f",
+        "size_in_bytes": 648
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/K2P",
+        "path_type": "hardlink",
+        "sha256": "5b96d2aec3a204a5d8f3af0242e085ce456e5239d22eb5d1e7f025556d211ab9",
+        "sha256_in_prefix": "5b96d2aec3a204a5d8f3af0242e085ce456e5239d22eb5d1e7f025556d211ab9",
+        "size_in_bytes": 1011
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/K2P_RV",
+        "path_type": "hardlink",
+        "sha256": "505cd37c6772468dbf66348f85409ec06c460fa30953067860551f4de06a1723",
+        "sha256_in_prefix": "505cd37c6772468dbf66348f85409ec06c460fa30953067860551f4de06a1723",
+        "size_in_bytes": 1300
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/Modified_Nei_Gojobori",
+        "path_type": "hardlink",
+        "sha256": "7a32eefa4ba87ac1da8932d5b07d6bea3a50c3c1e3072249273059a7da4ae79a",
+        "sha256_in_prefix": "7a32eefa4ba87ac1da8932d5b07d6bea3a50c3c1e3072249273059a7da4ae79a",
+        "size_in_bytes": 3755
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/Nei_Gojobori",
+        "path_type": "hardlink",
+        "sha256": "87caff74d076e45e8cbf73523c859d1e758ea971cd18d358d134acf076c028bf",
+        "sha256_in_prefix": "87caff74d076e45e8cbf73523c859d1e758ea971cd18d358d134acf076c028bf",
+        "size_in_bytes": 3554
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/PC",
+        "path_type": "hardlink",
+        "sha256": "02ce44fd878c38ff6a145d1ea43451e8003ce616d14e51a173d025e498ab16d9",
+        "sha256_in_prefix": "02ce44fd878c38ff6a145d1ea43451e8003ce616d14e51a173d025e498ab16d9",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/PC_MH",
+        "path_type": "hardlink",
+        "sha256": "b16f704f70ffa641b8041886d8a2a75e7f07d56c31d26f5cbb3d003da5aaf7a2",
+        "sha256_in_prefix": "b16f704f70ffa641b8041886d8a2a75e7f07d56c31d26f5cbb3d003da5aaf7a2",
+        "size_in_bytes": 663
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/PC_RV",
+        "path_type": "hardlink",
+        "sha256": "3f9520ba5e9b656e4eb5bbf7966fd2891a8a0f1b782b6a9e8c2ba34255cfa05b",
+        "sha256_in_prefix": "3f9520ba5e9b656e4eb5bbf7966fd2891a8a0f1b782b6a9e8c2ba34255cfa05b",
+        "size_in_bytes": 797
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/T3P",
+        "path_type": "hardlink",
+        "sha256": "7dfb40806a108b74e0b0864050b1bc5aeb8447ae1e710c3eefbd8d0a35f070ad",
+        "sha256_in_prefix": "7dfb40806a108b74e0b0864050b1bc5aeb8447ae1e710c3eefbd8d0a35f070ad",
+        "size_in_bytes": 1236
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/TN84",
+        "path_type": "hardlink",
+        "sha256": "f5f5dbb98b78b0edeac284e4fcedd2429126a81898e7703c2c70ead15181946d",
+        "sha256_in_prefix": "f5f5dbb98b78b0edeac284e4fcedd2429126a81898e7703c2c70ead15181946d",
+        "size_in_bytes": 1330
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/TN93",
+        "path_type": "hardlink",
+        "sha256": "e05be295b0281a152c994f0abbe89b2d27c9b05e192c0d9e1e207b75e8decf0e",
+        "sha256_in_prefix": "e05be295b0281a152c994f0abbe89b2d27c9b05e192c0d9e1e207b75e8decf0e",
+        "size_in_bytes": 2554
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/TN93_RV",
+        "path_type": "hardlink",
+        "sha256": "b7479c0ea1e2603c6050da93b3d5a6b5f729795f39f664c895ed239836ce2935",
+        "sha256_in_prefix": "b7479c0ea1e2603c6050da93b3d5a6b5f729795f39f664c895ed239836ce2935",
+        "size_in_bytes": 1925
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/Unaligned_LZ",
+        "path_type": "hardlink",
+        "sha256": "419d3bfadd98a913da99968270410c1c381af2d29b87da84af562382b31705e7",
+        "sha256_in_prefix": "419d3bfadd98a913da99968270410c1c381af2d29b87da84af562382b31705e7",
+        "size_in_bytes": 779
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/Unaligned_LZ_FR",
+        "path_type": "hardlink",
+        "sha256": "d027da1d45420a4b18aa5c4ccc585dec67a80ad8ef4fe31bb0150ff46f3f914a",
+        "sha256_in_prefix": "d027da1d45420a4b18aa5c4ccc585dec67a80ad8ef4fe31bb0150ff46f3f914a",
+        "size_in_bytes": 2090
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/p_Distance",
+        "path_type": "hardlink",
+        "sha256": "98f4a813033a56c71b6930ed8dcffc49459adb57471343c55ad251d219051386",
+        "sha256_in_prefix": "98f4a813033a56c71b6930ed8dcffc49459adb57471343c55ad251d219051386",
+        "size_in_bytes": 478
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/p_Distance_aa",
+        "path_type": "hardlink",
+        "sha256": "0c1eb0b64108dbb87dc482e9cebb99e099e1819a0d12910e19cdda33c687f66d",
+        "sha256_in_prefix": "0c1eb0b64108dbb87dc482e9cebb99e099e1819a0d12910e19cdda33c687f66d",
+        "size_in_bytes": 564
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/p_Distance_binary",
+        "path_type": "hardlink",
+        "sha256": "8fbb04b32a2060cf447e0f14f85e22174d8153eb389f823cf67edd532591e564",
+        "sha256_in_prefix": "8fbb04b32a2060cf447e0f14f85e22174d8153eb389f823cf67edd532591e564",
+        "size_in_bytes": 426
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Distances/p_Distance_codon",
+        "path_type": "hardlink",
+        "sha256": "dae61beb193ae9b097dc2a655f8c8adae4d30304c2586267a14bddf2bbb1b505",
+        "sha256_in_prefix": "dae61beb193ae9b097dc2a655f8c8adae4d30304c2586267a14bddf2bbb1b505",
+        "size_in_bytes": 1802
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/F_ST.bf",
+        "path_type": "hardlink",
+        "sha256": "d28a51016e5847f6da38a26d48f25ce7a05ade8324c4236238059b5ded4774cc",
+        "sha256_in_prefix": "d28a51016e5847f6da38a26d48f25ce7a05ade8324c4236238059b5ded4774cc",
+        "size_in_bytes": 16691
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/FitnessAAModels.bf",
+        "path_type": "hardlink",
+        "sha256": "3309be5f9eed8d1129f1f70335a0affc8bc22e5549cdb83c0e5c00ab06fc97de",
+        "sha256_in_prefix": "3309be5f9eed8d1129f1f70335a0affc8bc22e5549cdb83c0e5c00ab06fc97de",
+        "size_in_bytes": 8041
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/GARD.bf",
+        "path_type": "hardlink",
+        "sha256": "734f0c83c5174fc77a981df8e86d534d766406edfab81c4214bd02cb3812ee12",
+        "sha256_in_prefix": "734f0c83c5174fc77a981df8e86d534d766406edfab81c4214bd02cb3812ee12",
+        "size_in_bytes": 45687
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/GARDProcessor.bf",
+        "path_type": "hardlink",
+        "sha256": "b0c475dc8874f692a216a59d9431d14256cd94d360ce0c3f6412c33fdfda68f9",
+        "sha256_in_prefix": "b0c475dc8874f692a216a59d9431d14256cd94d360ce0c3f6412c33fdfda68f9",
+        "size_in_bytes": 19255
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/GARD_GA_CHC.ibf",
+        "path_type": "hardlink",
+        "sha256": "a1d03550c4b05a0e37d86121b47b2f6dec4c3e351061fe2de1e8ddf3be1183fb",
+        "sha256_in_prefix": "a1d03550c4b05a0e37d86121b47b2f6dec4c3e351061fe2de1e8ddf3be1183fb",
+        "size_in_bytes": 11689
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/GARD_old_v2.3.bf",
+        "path_type": "hardlink",
+        "sha256": "260948a4fb535574e4e59dae574c355b4d74a6b637b431abb3c06dba14ab3e1b",
+        "sha256_in_prefix": "260948a4fb535574e4e59dae574c355b4d74a6b637b431abb3c06dba14ab3e1b",
+        "size_in_bytes": 48361
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/GA_CHC.ibf",
+        "path_type": "hardlink",
+        "sha256": "3b8b3b83f940205a07cd91e86dadfaf480d7c44b1b4581ef28c8577e98820403",
+        "sha256_in_prefix": "3b8b3b83f940205a07cd91e86dadfaf480d7c44b1b4581ef28c8577e98820403",
+        "size_in_bytes": 11476
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/GA_CHC_Binary.ibf",
+        "path_type": "hardlink",
+        "sha256": "6f737afa8cc8b56d1d464ba0d0cbd80933eced7c81cb5b6fda8518fd4e34669d",
+        "sha256_in_prefix": "6f737afa8cc8b56d1d464ba0d0cbd80933eced7c81cb5b6fda8518fd4e34669d",
+        "size_in_bytes": 14350
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/GUI/crayolaColors.def",
+        "path_type": "hardlink",
+        "sha256": "a26cd565f80b1f49264cc2918771a8b0b907d766a925986eb1690bb9e232ed6a",
+        "sha256_in_prefix": "a26cd565f80b1f49264cc2918771a8b0b907d766a925986eb1690bb9e232ed6a",
+        "size_in_bytes": 17
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Gateaux.bf",
+        "path_type": "hardlink",
+        "sha256": "64c5fd991445c340e3bf8da5a1d0edec1bcaa464568532b2b4dc787f8500148e",
+        "sha256_in_prefix": "64c5fd991445c340e3bf8da5a1d0edec1bcaa464568532b2b4dc787f8500148e",
+        "size_in_bytes": 8283
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/GateauxMR.bf",
+        "path_type": "hardlink",
+        "sha256": "8866a61bfcac4dd6109f5779b4ffaeefaa2db5a3b36f3330934219991ff658f9",
+        "sha256_in_prefix": "8866a61bfcac4dd6109f5779b4ffaeefaa2db5a3b36f3330934219991ff658f9",
+        "size_in_bytes": 7804
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/KHTest.bf",
+        "path_type": "hardlink",
+        "sha256": "0df2c90688555f6ec6214e8ad9ef277098a37b7a2320fec98c4f299e5e0421da",
+        "sha256_in_prefix": "0df2c90688555f6ec6214e8ad9ef277098a37b7a2320fec98c4f299e5e0421da",
+        "size_in_bytes": 6621
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/LEISR.bf",
+        "path_type": "hardlink",
+        "sha256": "1bcd7736cd5291797bb90a00f955dbabb0fea9be15dd8c4aa24f49c75909cb36",
+        "sha256_in_prefix": "1bcd7736cd5291797bb90a00f955dbabb0fea9be15dd8c4aa24f49c75909cb36",
+        "size_in_bytes": 24059
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/LHT.bf",
+        "path_type": "hardlink",
+        "sha256": "5c50496c42d8df0abf549796eded79d7281972619fd10cc7686a84e7ec359f67",
+        "sha256_in_prefix": "5c50496c42d8df0abf549796eded79d7281972619fd10cc7686a84e7ec359f67",
+        "size_in_bytes": 6519
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/LRTRecombTest.bf",
+        "path_type": "hardlink",
+        "sha256": "0ba07a53195efb2aab37f206ac366ea07817ad22d9b434ff273af275bb052ad9",
+        "sha256_in_prefix": "0ba07a53195efb2aab37f206ac366ea07817ad22d9b434ff273af275bb052ad9",
+        "size_in_bytes": 7823
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/LZ_Complexity.bf",
+        "path_type": "hardlink",
+        "sha256": "c5d4ef9ad587d50ed107538805683d256689114ff8e319861758fa3059cec87b",
+        "sha256_in_prefix": "c5d4ef9ad587d50ed107538805683d256689114ff8e319861758fa3059cec87b",
+        "size_in_bytes": 1991
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/LocalMolClock.bf",
+        "path_type": "hardlink",
+        "sha256": "d09fdda4d9cd9f25479124217d324e55b26d106a5fbbf5e186d917e07c213511",
+        "sha256_in_prefix": "d09fdda4d9cd9f25479124217d324e55b26d106a5fbbf5e186d917e07c213511",
+        "size_in_bytes": 5094
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/MGvsGY.bf",
+        "path_type": "hardlink",
+        "sha256": "2edb24022df0da9f36e99cf2749b048558e4b7b12793cd3ee21685772342b136",
+        "sha256_in_prefix": "2edb24022df0da9f36e99cf2749b048558e4b7b12793cd3ee21685772342b136",
+        "size_in_bytes": 15953
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/MergeSequences.bf",
+        "path_type": "hardlink",
+        "sha256": "ae5d677258bd7da282c60eafc18569dacbd8823ad22314b5b67710ad2b31daa5",
+        "sha256_in_prefix": "ae5d677258bd7da282c60eafc18569dacbd8823ad22314b5b67710ad2b31daa5",
+        "size_in_bytes": 958
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/MergeSites.bf",
+        "path_type": "hardlink",
+        "sha256": "a48cbe0564eaf307c294d4f9abfea49548f3e2fa8b32b52490cf5f9116a9e281",
+        "sha256_in_prefix": "a48cbe0564eaf307c294d4f9abfea49548f3e2fa8b32b52490cf5f9116a9e281",
+        "size_in_bytes": 966
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/BranchAPriori.bf",
+        "path_type": "hardlink",
+        "sha256": "75ec91132529116ec4a199ba1c695b4bfdefa88481631ce09b9ee11839ccb95f",
+        "sha256_in_prefix": "75ec91132529116ec4a199ba1c695b4bfdefa88481631ce09b9ee11839ccb95f",
+        "size_in_bytes": 7260
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/CountSubstitutions.bf",
+        "path_type": "hardlink",
+        "sha256": "e951fc859556232e54b46f3e6a9cf566c647ac2c1570ca7a4939c41a70dd84a7",
+        "sha256_in_prefix": "e951fc859556232e54b46f3e6a9cf566c647ac2c1570ca7a4939c41a70dd84a7",
+        "size_in_bytes": 4151
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/EffectOfTopology.bf",
+        "path_type": "hardlink",
+        "sha256": "d618d88022dbd4f9553cf3ac9d67f224003b945f9a244ff79f35329624b98873",
+        "sha256_in_prefix": "d618d88022dbd4f9553cf3ac9d67f224003b945f9a244ff79f35329624b98873",
+        "size_in_bytes": 7957
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/ErrorEstimates.bf",
+        "path_type": "hardlink",
+        "sha256": "f65a7893f70d0b61ea4b97350c47e926fa05065845b0cc3df96fdb7b15cda960",
+        "sha256_in_prefix": "f65a7893f70d0b61ea4b97350c47e926fa05065845b0cc3df96fdb7b15cda960",
+        "size_in_bytes": 4836
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/LRT.bf",
+        "path_type": "hardlink",
+        "sha256": "7729107f811a1b80eb7485cddbdddc8f69778bbce95469df36722d577b375bef",
+        "sha256_in_prefix": "7729107f811a1b80eb7485cddbdddc8f69778bbce95469df36722d577b375bef",
+        "size_in_bytes": 6056
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/LocalvsGlobal.bf",
+        "path_type": "hardlink",
+        "sha256": "d1f30665dc3606bb3102a31082e66587e7acd7e06bbaac1f41bc8c4de736fed0",
+        "sha256_in_prefix": "d1f30665dc3606bb3102a31082e66587e7acd7e06bbaac1f41bc8c4de736fed0",
+        "size_in_bytes": 4185
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/NeutralExpectation.bf",
+        "path_type": "hardlink",
+        "sha256": "fbb9e80760d3c554cd30bc02a2ea0f03ab7d92a8c85b79e2a38d64c9b0e648cd",
+        "sha256_in_prefix": "fbb9e80760d3c554cd30bc02a2ea0f03ab7d92a8c85b79e2a38d64c9b0e648cd",
+        "size_in_bytes": 3993
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/NucleotideBiases.bf",
+        "path_type": "hardlink",
+        "sha256": "c2b6194140a369f9a297616e76280848a7b6d54762123206c316b7b732c6566e",
+        "sha256_in_prefix": "c2b6194140a369f9a297616e76280848a7b6d54762123206c316b7b732c6566e",
+        "size_in_bytes": 4755
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/Phylohandbook.bf",
+        "path_type": "hardlink",
+        "sha256": "19e1a6ec9b28aaecfc31e06e3984451a81454422e4479eafa1084d104606f3e3",
+        "sha256_in_prefix": "19e1a6ec9b28aaecfc31e06e3984451a81454422e4479eafa1084d104606f3e3",
+        "size_in_bytes": 2295
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/WhatsInTheMean.bf",
+        "path_type": "hardlink",
+        "sha256": "91c547f9ac092eb5f225ad2ade018e229a797c272c76b11bbb8db8d3a5a722c0",
+        "sha256_in_prefix": "91c547f9ac092eb5f225ad2ade018e229a797c272c76b11bbb8db8d3a5a722c0",
+        "size_in_bytes": 5815
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/dSdN.bf",
+        "path_type": "hardlink",
+        "sha256": "95dc22973ac7925457e748a31c64df64df80fb14245ec0882c330a35b5189fc2",
+        "sha256_in_prefix": "95dc22973ac7925457e748a31c64df64df80fb14245ec0882c330a35b5189fc2",
+        "size_in_bytes": 8418
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/datasets/Drosophilia_adh.nex",
+        "path_type": "hardlink",
+        "sha256": "61c76db16d4cc5f62e45e1c5d468cf1ab9b8bdd72d64602d3a147ec156d4a89e",
+        "sha256_in_prefix": "61c76db16d4cc5f62e45e1c5d468cf1ab9b8bdd72d64602d3a147ec156d4a89e",
+        "size_in_bytes": 4986
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Miscellaneous/phylohandbook/datasets/H5N1_HA_5.nex",
+        "path_type": "hardlink",
+        "sha256": "3245f3e44ca92cdb37943e5f46f3a0612f2b1fb188ab61f204714a6bc89a9685",
+        "sha256_in_prefix": "3245f3e44ca92cdb37943e5f46f3a0612f2b1fb188ab61f204714a6bc89a9685",
+        "size_in_bytes": 9147
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ModelTest.bf",
+        "path_type": "hardlink",
+        "sha256": "8d6f1049158080f07b29b4f97bddbcdb610730a2879e0883a93242fffd27e9f6",
+        "sha256_in_prefix": "8d6f1049158080f07b29b4f97bddbcdb610730a2879e0883a93242fffd27e9f6",
+        "size_in_bytes": 19567
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/MolClockAllRoots.bf",
+        "path_type": "hardlink",
+        "sha256": "f6ab4c39b096e8d3fb3ba85a10f81bd641d2a87e4dfcda65effe05552007f924",
+        "sha256_in_prefix": "f6ab4c39b096e8d3fb3ba85a10f81bd641d2a87e4dfcda65effe05552007f924",
+        "size_in_bytes": 5701
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/MolecularClock.bf",
+        "path_type": "hardlink",
+        "sha256": "3978cba3070330bb9f4da4cadea69eee52cd2522dc9da8cca17c286f34c62a41",
+        "sha256_in_prefix": "3978cba3070330bb9f4da4cadea69eee52cd2522dc9da8cca17c286f34c62a41",
+        "size_in_bytes": 3227
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/NeighborJoining.bf",
+        "path_type": "hardlink",
+        "sha256": "99b654b4221c5fd8d64d69811191347019e83d87c532e24c7f312fa789a1bc7a",
+        "sha256_in_prefix": "99b654b4221c5fd8d64d69811191347019e83d87c532e24c7f312fa789a1bc7a",
+        "size_in_bytes": 4160
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/NielsenYang.bf",
+        "path_type": "hardlink",
+        "sha256": "9d331eba4d57473197e5c7fdc1dd8bd4a7952a06225fadd32480b19e8b47b617",
+        "sha256_in_prefix": "9d331eba4d57473197e5c7fdc1dd8bd4a7952a06225fadd32480b19e8b47b617",
+        "size_in_bytes": 32129
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/NucModelCompare.bf",
+        "path_type": "hardlink",
+        "sha256": "e896bcf96ebf7e4091386098ed11f2df0adcd4e5a273fac994130ba9b012bc10",
+        "sha256_in_prefix": "e896bcf96ebf7e4091386098ed11f2df0adcd4e5a273fac994130ba9b012bc10",
+        "size_in_bytes": 24625
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/PARRIS.bf",
+        "path_type": "hardlink",
+        "sha256": "001377258cf294fabb1a8d77f1531f2f81059a0dd0116def4a178f26bb2fe8a3",
+        "sha256_in_prefix": "001377258cf294fabb1a8d77f1531f2f81059a0dd0116def4a178f26bb2fe8a3",
+        "size_in_bytes": 42655
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/PairwiseRelativeRate.bf",
+        "path_type": "hardlink",
+        "sha256": "d0f996a69be15777da46525fabb56206ef6cebbbbee19319dd2cf88e05d7f308",
+        "sha256_in_prefix": "d0f996a69be15777da46525fabb56206ef6cebbbbee19319dd2cf88e05d7f308",
+        "size_in_bytes": 7442
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/PairwiseRelativeRatio.bf",
+        "path_type": "hardlink",
+        "sha256": "28c088df886150f2bd0d4d7d021217e4c5881855773b5680087b973881225363",
+        "sha256_in_prefix": "28c088df886150f2bd0d4d7d021217e4c5881855773b5680087b973881225363",
+        "size_in_bytes": 9787
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/PartitionDataFile.bf",
+        "path_type": "hardlink",
+        "sha256": "fc423b81d883d29d6ec7e463313deba7c960fb578b7aa3582e6932a4c4d57008",
+        "sha256_in_prefix": "fc423b81d883d29d6ec7e463313deba7c960fb578b7aa3582e6932a4c4d57008",
+        "size_in_bytes": 1794
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/ProteinGTRFit.bf",
+        "path_type": "hardlink",
+        "sha256": "9253d52cfd38ada878f16d730771f8c598a884f2812ee73a947c85972ef39e14",
+        "sha256_in_prefix": "9253d52cfd38ada878f16d730771f8c598a884f2812ee73a947c85972ef39e14",
+        "size_in_bytes": 14761
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/ProteinGTRFit_helper.ibf",
+        "path_type": "hardlink",
+        "sha256": "6b88d9892907ce3a5cacac503881e60d09b54f466d9448be6a81d66179ef2bbe",
+        "sha256_in_prefix": "6b88d9892907ce3a5cacac503881e60d09b54f466d9448be6a81d66179ef2bbe",
+        "size_in_bytes": 24835
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/README_relative_prot_rates.md",
+        "path_type": "hardlink",
+        "sha256": "c9a2c1f2288cef0581fc662510614b8a3fff88f0bafe5a55757e056983efc6bf",
+        "sha256_in_prefix": "c9a2c1f2288cef0581fc662510614b8a3fff88f0bafe5a55757e056983efc6bf",
+        "size_in_bytes": 1919
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/plusF_helper.ibf",
+        "path_type": "hardlink",
+        "sha256": "400feeaf50d4ca45a63538e7217b43bfc9c33e674fd9518c64f94f779a090679",
+        "sha256_in_prefix": "400feeaf50d4ca45a63538e7217b43bfc9c33e674fd9518c64f94f779a090679",
+        "size_in_bytes": 1824
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ProteinAnalyses/relative_prot_rates.bf",
+        "path_type": "hardlink",
+        "sha256": "a26b78234174816788c30a7d4fb531d08dd5f1fd31ccc1e4f5bf45c89a21e464",
+        "sha256_in_prefix": "a26b78234174816788c30a7d4fb531d08dd5f1fd31ccc1e4f5bf45c89a21e464",
+        "size_in_bytes": 15951
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/ReduceDataSetMatrix.bf",
+        "path_type": "hardlink",
+        "sha256": "e69a37ceea497bc7127bfe3460494a8dbd5980765db54b5e8d818ca7d8eaf2a3",
+        "sha256_in_prefix": "e69a37ceea497bc7127bfe3460494a8dbd5980765db54b5e8d818ca7d8eaf2a3",
+        "size_in_bytes": 9107
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/RelativeRate.bf",
+        "path_type": "hardlink",
+        "sha256": "1988b676adbb7fbeb04876374c3f9c43503e33591f6ac966a607816e95a3b3ba",
+        "sha256_in_prefix": "1988b676adbb7fbeb04876374c3f9c43503e33591f6ac966a607816e95a3b3ba",
+        "size_in_bytes": 3511
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/RelativeRatio.bf",
+        "path_type": "hardlink",
+        "sha256": "c9837431ccb7de58da447a7dcd75714a54dd231561cfc763c35f4684c1ede27f",
+        "sha256_in_prefix": "c9837431ccb7de58da447a7dcd75714a54dd231561cfc763c35f4684c1ede27f",
+        "size_in_bytes": 5504
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SGASimProcessor.bf",
+        "path_type": "hardlink",
+        "sha256": "f578ba3b4a248e279155386ed2c62269abed7faa4db4a30b1473de4da80ef990",
+        "sha256_in_prefix": "f578ba3b4a248e279155386ed2c62269abed7faa4db4a30b1473de4da80ef990",
+        "size_in_bytes": 13250
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SGEmulator.bf",
+        "path_type": "hardlink",
+        "sha256": "d8d4ad1310622354f5242b4c4439227f4636cc7c2d9af3ad5fc32b0a4a995ae4",
+        "sha256_in_prefix": "d8d4ad1310622354f5242b4c4439227f4636cc7c2d9af3ad5fc32b0a4a995ae4",
+        "size_in_bytes": 23402
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SGEmulator_MF.bf",
+        "path_type": "hardlink",
+        "sha256": "f28dd637220b3b4a17606e8f0a41d043941505454859f0f686270ab92c895bc8",
+        "sha256_in_prefix": "f28dd637220b3b4a17606e8f0a41d043941505454859f0f686270ab92c895bc8",
+        "size_in_bytes": 19530
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SGIvL.bf",
+        "path_type": "hardlink",
+        "sha256": "8440bf4a2e31c001c9cc99226f0f587afa4be3ec781b5a1df6ec19098b6ddcc0",
+        "sha256_in_prefix": "8440bf4a2e31c001c9cc99226f0f587afa4be3ec781b5a1df6ec19098b6ddcc0",
+        "size_in_bytes": 18856
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SM-2019.bf",
+        "path_type": "hardlink",
+        "sha256": "a6d06aa9af938070a49906de8a9c0055853349b94acd9a16fcc2bcc5d504583b",
+        "sha256_in_prefix": "a6d06aa9af938070a49906de8a9c0055853349b94acd9a16fcc2bcc5d504583b",
+        "size_in_bytes": 13604
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Samplers/lhc-ErrorEst.bf",
+        "path_type": "hardlink",
+        "sha256": "35f27f7e8bc5dbe5ed687fa08f4e9a2721756a3dc159fc31d6a0a6066b05299c",
+        "sha256_in_prefix": "35f27f7e8bc5dbe5ed687fa08f4e9a2721756a3dc159fc31d6a0a6066b05299c",
+        "size_in_bytes": 1598
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Samplers/lhc.bf",
+        "path_type": "hardlink",
+        "sha256": "f5eaa916f22a9906312ea57ad5db6bb83f8d74b0dad69141f10fe0903badc4f1",
+        "sha256_in_prefix": "f5eaa916f22a9906312ea57ad5db6bb83f8d74b0dad69141f10fe0903badc4f1",
+        "size_in_bytes": 6523
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Samplers/lhc_supp.ibf",
+        "path_type": "hardlink",
+        "sha256": "55b8436f683d23948c818413f518370d9976f1f30873e72e414bb761c42f15c8",
+        "sha256_in_prefix": "55b8436f683d23948c818413f518370d9976f1f30873e72e414bb761c42f15c8",
+        "size_in_bytes": 1237
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Samplers/sir.bf",
+        "path_type": "hardlink",
+        "sha256": "bf5967b8f478d3f3771ca45e600c8d4e9f1156e8f27a9c08c84d65fb2db4be75",
+        "sha256_in_prefix": "bf5967b8f478d3f3771ca45e600c8d4e9f1156e8f27a9c08c84d65fb2db4be75",
+        "size_in_bytes": 3267
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Samplers/srs-ErrorEst.ibf",
+        "path_type": "hardlink",
+        "sha256": "3035afede7140c83a1c8ccb302803a4e07882257fc8d80360ac54be705c5f11d",
+        "sha256_in_prefix": "3035afede7140c83a1c8ccb302803a4e07882257fc8d80360ac54be705c5f11d",
+        "size_in_bytes": 2380
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Samplers/srs.ibf",
+        "path_type": "hardlink",
+        "sha256": "f9f6a7c46687b9684828fff20cfc97d6756edf1aa780a8d3bc44bd6745aa9b01",
+        "sha256_in_prefix": "f9f6a7c46687b9684828fff20cfc97d6756edf1aa780a8d3bc44bd6745aa9b01",
+        "size_in_bytes": 9016
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SandNSAmbigs.bf",
+        "path_type": "hardlink",
+        "sha256": "bb6a3075b1188bf63b1cc3181dd9cb2dae097224118bba0b5ca5d94db59730c5",
+        "sha256_in_prefix": "bb6a3075b1188bf63b1cc3181dd9cb2dae097224118bba0b5ca5d94db59730c5",
+        "size_in_bytes": 9527
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/BUSTED.bf",
+        "path_type": "hardlink",
+        "sha256": "64e381b7f3e3e9577593e79af9d8b04e80ed45479ee29d1884a230a3086d87a6",
+        "sha256_in_prefix": "64e381b7f3e3e9577593e79af9d8b04e80ed45479ee29d1884a230a3086d87a6",
+        "size_in_bytes": 31050
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/BranchSiteREL.bf",
+        "path_type": "hardlink",
+        "sha256": "a07ba45820885c8878cec1738c78a47d6c548229a57c8be45f9e15b8a35ca4ab",
+        "sha256_in_prefix": "a07ba45820885c8878cec1738c78a47d6c548229a57c8be45f9e15b8a35ca4ab",
+        "size_in_bytes": 42838
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FADE.bf",
+        "path_type": "hardlink",
+        "sha256": "aa64c956d41e443adb7471cdbd4535b868fadb4b9656b99935c633b86af30d28",
+        "sha256_in_prefix": "aa64c956d41e443adb7471cdbd4535b868fadb4b9656b99935c633b86af30d28",
+        "size_in_bytes": 46386
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FEL-contrast.bf",
+        "path_type": "hardlink",
+        "sha256": "27f1c24ef17de33943797a456ded7a980804b2f64fe86b88c89cd4cf05c7c997",
+        "sha256_in_prefix": "27f1c24ef17de33943797a456ded7a980804b2f64fe86b88c89cd4cf05c7c997",
+        "size_in_bytes": 35806
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FEL.bf",
+        "path_type": "hardlink",
+        "sha256": "1be5972dfbbe247f0439116864423de843d20c6dd97f9433e831d0857abadc61",
+        "sha256_in_prefix": "1be5972dfbbe247f0439116864423de843d20c6dd97f9433e831d0857abadc61",
+        "size_in_bytes": 21469
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FUBAR.bf",
+        "path_type": "hardlink",
+        "sha256": "570b092bd291d9e9b191d4000e0d99bcb3a32d0008730105e28fda5cfbabe318",
+        "sha256_in_prefix": "570b092bd291d9e9b191d4000e0d99bcb3a32d0008730105e28fda5cfbabe318",
+        "size_in_bytes": 39798
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/FitMultiModel.bf",
+        "path_type": "hardlink",
+        "sha256": "52e5176139e53e27ea773e606626fa226eb7233b8937e7d3fff5b18da59a3dbe",
+        "sha256_in_prefix": "52e5176139e53e27ea773e606626fa226eb7233b8937e7d3fff5b18da59a3dbe",
+        "size_in_bytes": 13666
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/MEME.bf",
+        "path_type": "hardlink",
+        "sha256": "7b26ddf7224bd29ee7683b3f49721b16e039e4a6aaba3d049b9b1328860ac54c",
+        "sha256_in_prefix": "7b26ddf7224bd29ee7683b3f49721b16e039e4a6aaba3d049b9b1328860ac54c",
+        "size_in_bytes": 33383
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/RELAX-Groups.bf",
+        "path_type": "hardlink",
+        "sha256": "ec15d41316f6b6c8c1dba0d59c934bf0690b9319a780e46eda53a0e96f032e51",
+        "sha256_in_prefix": "ec15d41316f6b6c8c1dba0d59c934bf0690b9319a780e46eda53a0e96f032e51",
+        "size_in_bytes": 17948
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/RELAX-SRV.bf",
+        "path_type": "hardlink",
+        "sha256": "e3b8b01e0b2d579c69b99d63997a894582ad5eff3303b843e6886f823756b745",
+        "sha256_in_prefix": "e3b8b01e0b2d579c69b99d63997a894582ad5eff3303b843e6886f823756b745",
+        "size_in_bytes": 38390
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/RELAX.bf",
+        "path_type": "hardlink",
+        "sha256": "3bb170244d1e49d0de1e6c4bf8211782bbcb8778281799a4b6693fe791abfe08",
+        "sha256_in_prefix": "3bb170244d1e49d0de1e6c4bf8211782bbcb8778281799a4b6693fe791abfe08",
+        "size_in_bytes": 62643
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/SLAC.bf",
+        "path_type": "hardlink",
+        "sha256": "6e38fdf783ad3d11e941b9ced38d66635a4f74668c78a2e1ffb183bc77b37e3c",
+        "sha256_in_prefix": "6e38fdf783ad3d11e941b9ced38d66635a4f74668c78a2e1ffb183bc77b37e3c",
+        "size_in_bytes": 34302
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/SingleOmega.bf",
+        "path_type": "hardlink",
+        "sha256": "8598587d46e5c5f18286e147f70f9c16d5b7ed768d204bc462e250fae38cc446",
+        "sha256_in_prefix": "8598587d46e5c5f18286e147f70f9c16d5b7ed768d204bc462e250fae38cc446",
+        "size_in_bytes": 6851
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/aBSREL.bf",
+        "path_type": "hardlink",
+        "sha256": "aed2001b790046e2247809438109ddaf9626c126d30f43aff2d8652dea5508b0",
+        "sha256_in_prefix": "aed2001b790046e2247809438109ddaf9626c126d30f43aff2d8652dea5508b0",
+        "size_in_bytes": 39207
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/modules/grid_compute.ibf",
+        "path_type": "hardlink",
+        "sha256": "5c407e11e44a9f81694da82f9d3bd801a1a122b441987aa872b9214a7f8f1bfc",
+        "sha256_in_prefix": "5c407e11e44a9f81694da82f9d3bd801a1a122b441987aa872b9214a7f8f1bfc",
+        "size_in_bytes": 19643
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/modules/io_functions.ibf",
+        "path_type": "hardlink",
+        "sha256": "8da03cfb250153cad499a64ec284f0f2878970b81f7b7fe6da7cdbe927ccb6fd",
+        "sha256_in_prefix": "8da03cfb250153cad499a64ec284f0f2878970b81f7b7fe6da7cdbe927ccb6fd",
+        "size_in_bytes": 14635
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/modules/selection_lib.ibf",
+        "path_type": "hardlink",
+        "sha256": "4ead20320d98e801ece577e1fd26efcfbeda9e6bae6ef1c2af099772600368bd",
+        "sha256_in_prefix": "4ead20320d98e801ece577e1fd26efcfbeda9e6bae6ef1c2af099772600368bd",
+        "size_in_bytes": 4530
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionAnalyses/modules/shared-load-file.bf",
+        "path_type": "hardlink",
+        "sha256": "1c41688cc6e1f91c9ce72527deaed77d6c56d020920aa60cc9e68e93259c2314",
+        "sha256_in_prefix": "1c41688cc6e1f91c9ce72527deaed77d6c56d020920aa60cc9e68e93259c2314",
+        "size_in_bytes": 15069
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SelectionLRT.bf",
+        "path_type": "hardlink",
+        "sha256": "19980b19528f15029ac926e9d432fdff7c926fef4ea1e6e55cef9e3f499fc25e",
+        "sha256_in_prefix": "19980b19528f15029ac926e9d432fdff7c926fef4ea1e6e55cef9e3f499fc25e",
+        "size_in_bytes": 10851
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SeqAlignShared.ibf",
+        "path_type": "hardlink",
+        "sha256": "06f11a07bd40dda7018770bdd375842ff4dba0564e5c2699f49f5dba94bee03a",
+        "sha256_in_prefix": "06f11a07bd40dda7018770bdd375842ff4dba0564e5c2699f49f5dba94bee03a",
+        "size_in_bytes": 85024
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SeqAlignmentCodon.bf",
+        "path_type": "hardlink",
+        "sha256": "42957dd5dae6347dab849cc1a850eb248cf8e8c4e23dc39531419eb048aaed4f",
+        "sha256_in_prefix": "42957dd5dae6347dab849cc1a850eb248cf8e8c4e23dc39531419eb048aaed4f",
+        "size_in_bytes": 169
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SeqAlignmentCodonShared.ibf",
+        "path_type": "hardlink",
+        "sha256": "f375d7f6eca9906c8924b37ca8ef8dd2e299510b27db7b38ee0293aeaec673d6",
+        "sha256_in_prefix": "f375d7f6eca9906c8924b37ca8ef8dd2e299510b27db7b38ee0293aeaec673d6",
+        "size_in_bytes": 7883
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SeqAlignmentNucShared.ibf",
+        "path_type": "hardlink",
+        "sha256": "5db3852d5cf4d8b2a80b1c12ac12f3d629593e1fb054c2eef312197708eeaf5d",
+        "sha256_in_prefix": "5db3852d5cf4d8b2a80b1c12ac12f3d629593e1fb054c2eef312197708eeaf5d",
+        "size_in_bytes": 7213
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SequentialAddition.bf",
+        "path_type": "hardlink",
+        "sha256": "3cb60f64bd6df257638322536589ee720dac0dfcf907aeabbc4360e870b04d87",
+        "sha256_in_prefix": "3cb60f64bd6df257638322536589ee720dac0dfcf907aeabbc4360e870b04d87",
+        "size_in_bytes": 5539
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SequentialAddition.ibf",
+        "path_type": "hardlink",
+        "sha256": "dd440496e089aa546853eff4f3e77650eca4945485be5af1b29234dc3d711a10",
+        "sha256_in_prefix": "dd440496e089aa546853eff4f3e77650eca4945485be5af1b29234dc3d711a10",
+        "size_in_bytes": 15268
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SimilarityPlot.bf",
+        "path_type": "hardlink",
+        "sha256": "9d98e37d91c47ded0ad6b133f773d55dc497f93eec34e94f8beef92565e9cfbe",
+        "sha256_in_prefix": "9d98e37d91c47ded0ad6b133f773d55dc497f93eec34e94f8beef92565e9cfbe",
+        "size_in_bytes": 4634
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SimmondsAI.bf",
+        "path_type": "hardlink",
+        "sha256": "998a4a4f43bda737052363bdeff371b5624bf484675185b87314eb1ea967fa70",
+        "sha256_in_prefix": "998a4a4f43bda737052363bdeff371b5624bf484675185b87314eb1ea967fa70",
+        "size_in_bytes": 7799
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SingleBreakpointRecomb.bf",
+        "path_type": "hardlink",
+        "sha256": "e242a42c1d9a38aa9a129c09d813b2c1e12282fda34fbe08a877ba690c719e8f",
+        "sha256_in_prefix": "e242a42c1d9a38aa9a129c09d813b2c1e12282fda34fbe08a877ba690c719e8f",
+        "size_in_bytes": 29433
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/SlidingWindowAnalysis.bf",
+        "path_type": "hardlink",
+        "sha256": "0fde012847d5f09654cb3109a0dc4f0f9fe03eda98f49ee2fb941dd247562210",
+        "sha256_in_prefix": "0fde012847d5f09654cb3109a0dc4f0f9fe03eda98f49ee2fb941dd247562210",
+        "size_in_bytes": 6498
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/190",
+        "path_type": "hardlink",
+        "sha256": "21867064cc56337e1d86956894d62148c21e8fb9053236422d0712fdd381106e",
+        "sha256_in_prefix": "21867064cc56337e1d86956894d62148c21e8fb9053236422d0712fdd381106e",
+        "size_in_bytes": 1405
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/BranchSiteTemplate.mdl",
+        "path_type": "hardlink",
+        "sha256": "846df53ec358e807f657f32ae318a78c4463e1c3d74a651335d241aad29a1c3a",
+        "sha256_in_prefix": "846df53ec358e807f657f32ae318a78c4463e1c3d74a651335d241aad29a1c3a",
+        "size_in_bytes": 7119
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/CF3x4.bf",
+        "path_type": "hardlink",
+        "sha256": "dcaf6eb3fb9289912f2de75234b86281fb9e951ceeb4ffc0f5590f0cd0c65e88",
+        "sha256_in_prefix": "dcaf6eb3fb9289912f2de75234b86281fb9e951ceeb4ffc0f5590f0cd0c65e88",
+        "size_in_bytes": 2735
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/Custom_AA.mdl",
+        "path_type": "hardlink",
+        "sha256": "205505370ebf601656a01b01b361a0e45920c922e02103858d03afc3341a1fc6",
+        "sha256_in_prefix": "205505370ebf601656a01b01b361a0e45920c922e02103858d03afc3341a1fc6",
+        "size_in_bytes": 3522
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/Custom_AA_empirical.mdl",
+        "path_type": "hardlink",
+        "sha256": "b6b154a735cbbfbcc265a8307c070114dd311e84858b383d5852525e7e1f9b36",
+        "sha256_in_prefix": "b6b154a735cbbfbcc265a8307c070114dd311e84858b383d5852525e7e1f9b36",
+        "size_in_bytes": 4357
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/Dayhoff.mdl",
+        "path_type": "hardlink",
+        "sha256": "2837285c2f8855c8900ba096a1dc12f5c1b0412fdb1796b21cbb32313fa78810",
+        "sha256_in_prefix": "2837285c2f8855c8900ba096a1dc12f5c1b0412fdb1796b21cbb32313fa78810",
+        "size_in_bytes": 34528
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/Dayhoff_F.mdl",
+        "path_type": "hardlink",
+        "sha256": "2aca7467c7258ed6b55ab888f8cecb0acb2d1858e6dec75ea554ff5455f209bd",
+        "sha256_in_prefix": "2aca7467c7258ed6b55ab888f8cecb0acb2d1858e6dec75ea554ff5455f209bd",
+        "size_in_bytes": 34043
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/Default",
+        "path_type": "hardlink",
+        "sha256": "0f3f908269ed360a87ddf01af67489ba8d5c2b53cf67aba982c0eba2f7ca63b2",
+        "sha256_in_prefix": "0f3f908269ed360a87ddf01af67489ba8d5c2b53cf67aba982c0eba2f7ca63b2",
+        "size_in_bytes": 867
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM+F+omega.mdl",
+        "path_type": "hardlink",
+        "sha256": "3f471652ff098c111d5f30329e9a6110ca3656cfbeaacb43b8469fd3d2c7a444",
+        "sha256_in_prefix": "3f471652ff098c111d5f30329e9a6110ca3656cfbeaacb43b8469fd3d2c7a444",
+        "size_in_bytes": 4155
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM+F.mdl",
+        "path_type": "hardlink",
+        "sha256": "7bcc3157cb4f672a2793c8fd160fd0f866899139539ec60c8fe96faf9d8663cd",
+        "sha256_in_prefix": "7bcc3157cb4f672a2793c8fd160fd0f866899139539ec60c8fe96faf9d8663cd",
+        "size_in_bytes": 4153
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM+F3x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "4c9c98d3e2d76a73952fc3301e6847286f2303cf3bdde3a73e3637fbf5873294",
+        "sha256_in_prefix": "4c9c98d3e2d76a73952fc3301e6847286f2303cf3bdde3a73e3637fbf5873294",
+        "size_in_bytes": 4634
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM+MLFREQS.mdl",
+        "path_type": "hardlink",
+        "sha256": "d6169c0aca713f5d2e61b5fb9921329d50e14632dad8569fa1084167d7673ea6",
+        "sha256_in_prefix": "d6169c0aca713f5d2e61b5fb9921329d50e14632dad8569fa1084167d7673ea6",
+        "size_in_bytes": 4305
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/ECM.mdl",
+        "path_type": "hardlink",
+        "sha256": "3536ece7c4ca5f622b2c0baba794ea56643370a7b99c51ed6052e27023339583",
+        "sha256_in_prefix": "3536ece7c4ca5f622b2c0baba794ea56643370a7b99c51ed6052e27023339583",
+        "size_in_bytes": 4154
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EIAA.mdl",
+        "path_type": "hardlink",
+        "sha256": "c4d0926cdb1ebfee014693d10dddb4adf80d2d7e6ef816ee61c6253beee0229d",
+        "sha256_in_prefix": "c4d0926cdb1ebfee014693d10dddb4adf80d2d7e6ef816ee61c6253beee0229d",
+        "size_in_bytes": 1636
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EIAAFreq.mdl",
+        "path_type": "hardlink",
+        "sha256": "41384aa04d1dbe6cca0ce23c5a32de40cd6b2ec4d1507e4801bdee397801dcce",
+        "sha256_in_prefix": "41384aa04d1dbe6cca0ce23c5a32de40cd6b2ec4d1507e4801bdee397801dcce",
+        "size_in_bytes": 2240
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EX.dat",
+        "path_type": "hardlink",
+        "sha256": "3e3f43e48716985b89f5e7af2cdb6afd4ecc54fa6769b0b3cdd5bb114fd06076",
+        "sha256_in_prefix": "3e3f43e48716985b89f5e7af2cdb6afd4ecc54fa6769b0b3cdd5bb114fd06076",
+        "size_in_bytes": 2727
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EX.mdl",
+        "path_type": "hardlink",
+        "sha256": "9af17573f43098daa40e776843597e1823e4135553114d6618dc03cee2d60fdf",
+        "sha256_in_prefix": "9af17573f43098daa40e776843597e1823e4135553114d6618dc03cee2d60fdf",
+        "size_in_bytes": 34672
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/BLOSUM62",
+        "path_type": "hardlink",
+        "sha256": "298a817c87823425dce243b80f7a08647e4b984d04537b715b736dfb4afd57f7",
+        "sha256_in_prefix": "298a817c87823425dce243b80f7a08647e4b984d04537b715b736dfb4afd57f7",
+        "size_in_bytes": 6408
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/Dayhoff",
+        "path_type": "hardlink",
+        "sha256": "ae7d05a8805e78b101db0be5f025505ecd01a7278c8e79066337d8975948875c",
+        "sha256_in_prefix": "ae7d05a8805e78b101db0be5f025505ecd01a7278c8e79066337d8975948875c",
+        "size_in_bytes": 6410
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/H5N1",
+        "path_type": "hardlink",
+        "sha256": "bbbe13e2d7d7b11c96d26b21a4c09b60092f032946280c4a1f3aa8885b342497",
+        "sha256_in_prefix": "bbbe13e2d7d7b11c96d26b21a4c09b60092f032946280c4a1f3aa8885b342497",
+        "size_in_bytes": 8010
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/HIVBetween",
+        "path_type": "hardlink",
+        "sha256": "c1d9b12fceda079b0ad52caecd2a5de7af58d78d930515651aa0a0800b6c92c8",
+        "sha256_in_prefix": "c1d9b12fceda079b0ad52caecd2a5de7af58d78d930515651aa0a0800b6c92c8",
+        "size_in_bytes": 3507
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/HIVWithin",
+        "path_type": "hardlink",
+        "sha256": "d62a6215c3b5920f7a48ef19372d6a768ea5b6a2b70f6f9576bfb85eec914d0a",
+        "sha256_in_prefix": "d62a6215c3b5920f7a48ef19372d6a768ea5b6a2b70f6f9576bfb85eec914d0a",
+        "size_in_bytes": 3233
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/IAV",
+        "path_type": "hardlink",
+        "sha256": "f54699fbe2762715b19c75c619c07f39a77394eaac1189b639cd5a2c9a744d67",
+        "sha256_in_prefix": "f54699fbe2762715b19c75c619c07f39a77394eaac1189b639cd5a2c9a744d67",
+        "size_in_bytes": 6410
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/JTT",
+        "path_type": "hardlink",
+        "sha256": "1b29d8d03b7ef8b1e51f5a6d998a0d2a615abe4795c37756f566d509ee89834c",
+        "sha256_in_prefix": "1b29d8d03b7ef8b1e51f5a6d998a0d2a615abe4795c37756f566d509ee89834c",
+        "size_in_bytes": 8091
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/LCAP",
+        "path_type": "hardlink",
+        "sha256": "eed8ba6d51165815b4cfb19325f347aa60e766820ad6a617ec075811cf884136",
+        "sha256_in_prefix": "eed8ba6d51165815b4cfb19325f347aa60e766820ad6a617ec075811cf884136",
+        "size_in_bytes": 36640
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/LG",
+        "path_type": "hardlink",
+        "sha256": "81190f0403f6ed56ce5af0ac5608b7b708ce0e47e3f9deec7724da22774116d9",
+        "sha256_in_prefix": "81190f0403f6ed56ce5af0ac5608b7b708ce0e47e3f9deec7724da22774116d9",
+        "size_in_bytes": 6408
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/MtArt",
+        "path_type": "hardlink",
+        "sha256": "5f9b23e666806f129f97a0cfbdf990e729279a75d54a21c1929128102d72225a",
+        "sha256_in_prefix": "5f9b23e666806f129f97a0cfbdf990e729279a75d54a21c1929128102d72225a",
+        "size_in_bytes": 6408
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/VT",
+        "path_type": "hardlink",
+        "sha256": "6fdacf9f894f2d85b9f13e8f251976ce29319c04d8e4318ba90fa770dacb2596",
+        "sha256_in_prefix": "6fdacf9f894f2d85b9f13e8f251976ce29319c04d8e4318ba90fa770dacb2596",
+        "size_in_bytes": 6408
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/WAG",
+        "path_type": "hardlink",
+        "sha256": "f10c4654d8fbc8f98b7675daa40901652223246d2b597819b8e85c927b5a9755",
+        "sha256_in_prefix": "f10c4654d8fbc8f98b7675daa40901652223246d2b597819b8e85c927b5a9755",
+        "size_in_bytes": 6410
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/cpREV",
+        "path_type": "hardlink",
+        "sha256": "87999d35641f49eda1c07403a4932a7a308bbb6e3a7fb927b0d4fad7ab6e0e23",
+        "sha256_in_prefix": "87999d35641f49eda1c07403a4932a7a308bbb6e3a7fb927b0d4fad7ab6e0e23",
+        "size_in_bytes": 6408
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/modellist.ibf",
+        "path_type": "hardlink",
+        "sha256": "c2ec293986bcd585cc933792ccd940b29fab279c002a7c14594f5de3efc86060",
+        "sha256_in_prefix": "c2ec293986bcd585cc933792ccd940b29fab279c002a7c14594f5de3efc86060",
+        "size_in_bytes": 10147
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/mtMAM",
+        "path_type": "hardlink",
+        "sha256": "0d6eb5070039d7304d727221c4849f001c32ab0853f62032a84ea5c13812de8c",
+        "sha256_in_prefix": "0d6eb5070039d7304d727221c4849f001c32ab0853f62032a84ea5c13812de8c",
+        "size_in_bytes": 6410
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/mtREV24",
+        "path_type": "hardlink",
+        "sha256": "8cb636e3e4397feab2399b907310001608fb457c487077f806aa62774f1494c0",
+        "sha256_in_prefix": "8cb636e3e4397feab2399b907310001608fb457c487077f806aa62774f1494c0",
+        "size_in_bytes": 6410
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalAA/rtREV",
+        "path_type": "hardlink",
+        "sha256": "2c8372e67255dfd77e3fe810cbdb37b01eb88a809e8e3ce1c99b78b50236e995",
+        "sha256_in_prefix": "2c8372e67255dfd77e3fe810cbdb37b01eb88a809e8e3ce1c99b78b50236e995",
+        "size_in_bytes": 6410
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalCodon/KHG_ECM",
+        "path_type": "hardlink",
+        "sha256": "f26873e71f3bb6d46418a5fdc9751ecbed3f32a7ef7999c60c7c14d348ae56bd",
+        "sha256_in_prefix": "f26873e71f3bb6d46418a5fdc9751ecbed3f32a7ef7999c60c7c14d348ae56bd",
+        "size_in_bytes": 37977
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/EmpiricalCodon/KHG_ECMu",
+        "path_type": "hardlink",
+        "sha256": "25e6028bdea392bb82a6eec73e4511fa1cba607aa713874226e58cb22674b783",
+        "sha256_in_prefix": "25e6028bdea392bb82a6eec73e4511fa1cba607aa713874226e58cb22674b783",
+        "size_in_bytes": 38029
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/F81.mdl",
+        "path_type": "hardlink",
+        "sha256": "7c136f97e8f725a32ad0a9dda98cae7935ea81ff5968b28dff5ea29fee4d141a",
+        "sha256_in_prefix": "7c136f97e8f725a32ad0a9dda98cae7935ea81ff5968b28dff5ea29fee4d141a",
+        "size_in_bytes": 1259
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/F81_binary.mdl",
+        "path_type": "hardlink",
+        "sha256": "586156cb739c99301f867118a9823782f24f1cd9f8dcf6941f8dc7e2a615fd0d",
+        "sha256_in_prefix": "586156cb739c99301f867118a9823782f24f1cd9f8dcf6941f8dc7e2a615fd0d",
+        "size_in_bytes": 1191
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/F84.mdl",
+        "path_type": "hardlink",
+        "sha256": "4614ccf52ab1728cdea08c7ff58627f88089e2eb29d0d5737c3cd9b793af79e2",
+        "sha256_in_prefix": "4614ccf52ab1728cdea08c7ff58627f88089e2eb29d0d5737c3cd9b793af79e2",
+        "size_in_bytes": 2386
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/F84P.mdl",
+        "path_type": "hardlink",
+        "sha256": "e47463e318dda8e19c109488663009711471f7a663c542eaf42599729771b9dc",
+        "sha256_in_prefix": "e47463e318dda8e19c109488663009711471f7a663c542eaf42599729771b9dc",
+        "size_in_bytes": 3755
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/GRM.mdl",
+        "path_type": "hardlink",
+        "sha256": "883f92d6bd8531d590873867c237ad12b20cd95ae07d15cb546ba6d40934520e",
+        "sha256_in_prefix": "883f92d6bd8531d590873867c237ad12b20cd95ae07d15cb546ba6d40934520e",
+        "size_in_bytes": 1672
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/GY94.ibf",
+        "path_type": "hardlink",
+        "sha256": "e3d7ba7f5f61810821414058585f45ee5043b8a30e4897bb044fb6ae59058be6",
+        "sha256_in_prefix": "e3d7ba7f5f61810821414058585f45ee5043b8a30e4897bb044fb6ae59058be6",
+        "size_in_bytes": 4985
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/GY94.mdl",
+        "path_type": "hardlink",
+        "sha256": "464f1052a07efc97db926562386398d959d03302f528e7ef11565f6c4bd13c1b",
+        "sha256_in_prefix": "464f1052a07efc97db926562386398d959d03302f528e7ef11565f6c4bd13c1b",
+        "size_in_bytes": 1878
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/GY94customF3x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "520af9005fc19488ee11420b1da163ead21fe7134ac40d14b52881cb8a86391b",
+        "sha256_in_prefix": "520af9005fc19488ee11420b1da163ead21fe7134ac40d14b52881cb8a86391b",
+        "size_in_bytes": 7177
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/GY94w9.mdl",
+        "path_type": "hardlink",
+        "sha256": "0b4cbaf94df6598cce5c57204e3b33945336a965515be0a047dcd0647b45a24f",
+        "sha256_in_prefix": "0b4cbaf94df6598cce5c57204e3b33945336a965515be0a047dcd0647b45a24f",
+        "size_in_bytes": 2179
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVbetween+F.mdl",
+        "path_type": "hardlink",
+        "sha256": "8ea97299b13af439a568fd7523cd4e64a24a7a032b5b13da98a40e1364220aa1",
+        "sha256_in_prefix": "8ea97299b13af439a568fd7523cd4e64a24a7a032b5b13da98a40e1364220aa1",
+        "size_in_bytes": 355
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVbetween.ibf",
+        "path_type": "hardlink",
+        "sha256": "d95a865cfdf8f8c86f97af4edc658061a73d7e99356d31ccd83307eb2e40d272",
+        "sha256_in_prefix": "d95a865cfdf8f8c86f97af4edc658061a73d7e99356d31ccd83307eb2e40d272",
+        "size_in_bytes": 3949
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVbetween.mdl",
+        "path_type": "hardlink",
+        "sha256": "4bc29041b5365c5d7cfa5c7965034df9a2b9fbdd895cbd5183ea0f7ac5cf06d5",
+        "sha256_in_prefix": "4bc29041b5365c5d7cfa5c7965034df9a2b9fbdd895cbd5183ea0f7ac5cf06d5",
+        "size_in_bytes": 597
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVwithin+F.mdl",
+        "path_type": "hardlink",
+        "sha256": "3c8c0284d48fb54078bdefe5f8fc461deb64cccd268089b098ba9459475e4aa7",
+        "sha256_in_prefix": "3c8c0284d48fb54078bdefe5f8fc461deb64cccd268089b098ba9459475e4aa7",
+        "size_in_bytes": 351
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVwithin.ibf",
+        "path_type": "hardlink",
+        "sha256": "60187b87b2a128842d2181c5adf37cf9c439cf28c69f0ecfbe852568524ee19a",
+        "sha256_in_prefix": "60187b87b2a128842d2181c5adf37cf9c439cf28c69f0ecfbe852568524ee19a",
+        "size_in_bytes": 4072
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/HIVwithin.mdl",
+        "path_type": "hardlink",
+        "sha256": "196e22208599c66ba7e2d86263a48145cc80840182fdaa009e80e6e715399a28",
+        "sha256_in_prefix": "196e22208599c66ba7e2d86263a48145cc80840182fdaa009e80e6e715399a28",
+        "size_in_bytes": 490
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/HKY85.mdl",
+        "path_type": "hardlink",
+        "sha256": "263274569fec51d892453f0f3c04ec0a77126c6329e49c282dbb6d64244e0f6b",
+        "sha256_in_prefix": "263274569fec51d892453f0f3c04ec0a77126c6329e49c282dbb6d64244e0f6b",
+        "size_in_bytes": 1529
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/JC69.mdl",
+        "path_type": "hardlink",
+        "sha256": "03e045f06d223fb443f4efd75d9c73e44cb76da18fbdbaaffb5889588e6991f0",
+        "sha256_in_prefix": "03e045f06d223fb443f4efd75d9c73e44cb76da18fbdbaaffb5889588e6991f0",
+        "size_in_bytes": 1256
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/JC69_binary.mdl",
+        "path_type": "hardlink",
+        "sha256": "137212c399af1de385ac8255dc5949c2aa761460522f4fc6905d5cb92e575beb",
+        "sha256_in_prefix": "137212c399af1de385ac8255dc5949c2aa761460522f4fc6905d5cb92e575beb",
+        "size_in_bytes": 1175
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/Jones.mdl",
+        "path_type": "hardlink",
+        "sha256": "e3692d24139c69b8703b8fe79d68c30aa8a5690038ca2c2e9ccf39f74383ebae",
+        "sha256_in_prefix": "e3692d24139c69b8703b8fe79d68c30aa8a5690038ca2c2e9ccf39f74383ebae",
+        "size_in_bytes": 35087
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/Jones_F.mdl",
+        "path_type": "hardlink",
+        "sha256": "920555b65628d44e370b22b59d5e98bda5e014748cb59164a0848dc816d62a9d",
+        "sha256_in_prefix": "920555b65628d44e370b22b59d5e98bda5e014748cb59164a0848dc816d62a9d",
+        "size_in_bytes": 34009
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/K2P.mdl",
+        "path_type": "hardlink",
+        "sha256": "d08b36dcd7d93c849b19a11c3b6c6c3f1af3698662c3d66d6231c8e91cc528b9",
+        "sha256_in_prefix": "d08b36dcd7d93c849b19a11c3b6c6c3f1af3698662c3d66d6231c8e91cc528b9",
+        "size_in_bytes": 1422
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/K3ST.mdl",
+        "path_type": "hardlink",
+        "sha256": "23925e9e63710d9427dd5558b92ea5db4974c104209555dd02a58bf8df616ae9",
+        "sha256_in_prefix": "23925e9e63710d9427dd5558b92ea5db4974c104209555dd02a58bf8df616ae9",
+        "size_in_bytes": 1513
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/LCAP.mdl",
+        "path_type": "hardlink",
+        "sha256": "1bc256202e1bfb83be93467f4c77d409a236f6b0d1ec8113217915a5be42148b",
+        "sha256_in_prefix": "1bc256202e1bfb83be93467f4c77d409a236f6b0d1ec8113217915a5be42148b",
+        "size_in_bytes": 9171
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MEC.mdl",
+        "path_type": "hardlink",
+        "sha256": "6e3dc1d2fa599c645db5ecbd2433a154cef1f8aa596b9a0892d7563156c31124",
+        "sha256_in_prefix": "6e3dc1d2fa599c645db5ecbd2433a154cef1f8aa596b9a0892d7563156c31124",
+        "size_in_bytes": 8013
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94.mdl",
+        "path_type": "hardlink",
+        "sha256": "ffa4bebe741d28a030015b0117a80427a5b0654f3a8a1bde3ce8acbfed143d99",
+        "sha256_in_prefix": "ffa4bebe741d28a030015b0117a80427a5b0654f3a8a1bde3ce8acbfed143d99",
+        "size_in_bytes": 5854
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94custom.mdl",
+        "path_type": "hardlink",
+        "sha256": "f45428622088993a47274c0a16cc154d13e152e1c87858c3d706d959be3ac78c",
+        "sha256_in_prefix": "f45428622088993a47274c0a16cc154d13e152e1c87858c3d706d959be3ac78c",
+        "size_in_bytes": 9572
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94customCF3x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "d401e4cad75c430e37e3af2fb33629be871b5b71a3e9d2a09678e95db6cb9bcb",
+        "sha256_in_prefix": "d401e4cad75c430e37e3af2fb33629be871b5b71a3e9d2a09678e95db6cb9bcb",
+        "size_in_bytes": 9771
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94customF1x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "82f32c3b75dce03735d5e2ae6d458d01221afa0983984ab1512684be21f894a4",
+        "sha256_in_prefix": "82f32c3b75dce03735d5e2ae6d458d01221afa0983984ab1512684be21f894a4",
+        "size_in_bytes": 9582
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94customFreqs.mdl",
+        "path_type": "hardlink",
+        "sha256": "cf288dac77903bc09e1fe1a819c9129955b0744f3a97312e50e2b76eeba12e0a",
+        "sha256_in_prefix": "cf288dac77903bc09e1fe1a819c9129955b0744f3a97312e50e2b76eeba12e0a",
+        "size_in_bytes": 9067
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAA.mdl",
+        "path_type": "hardlink",
+        "sha256": "a3bb8e1d3a80160a84ad62d6115d4bc57b0fa366c3b6b10ae5860c7dff251622",
+        "sha256_in_prefix": "a3bb8e1d3a80160a84ad62d6115d4bc57b0fa366c3b6b10ae5860c7dff251622",
+        "size_in_bytes": 6082
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAAF61.mdl",
+        "path_type": "hardlink",
+        "sha256": "7ac274cde1e631ee5d4843da032566879b8704222012f9eef4182e85056ced9f",
+        "sha256_in_prefix": "7ac274cde1e631ee5d4843da032566879b8704222012f9eef4182e85056ced9f",
+        "size_in_bytes": 5353
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAAF61multiple.mdl",
+        "path_type": "hardlink",
+        "sha256": "29c654cc15cbc1b2a987b4c7d13fafaa29fd384fca4a4a9d932dd28ceb6a5e47",
+        "sha256_in_prefix": "29c654cc15cbc1b2a987b4c7d13fafaa29fd384fca4a4a9d932dd28ceb6a5e47",
+        "size_in_bytes": 5584
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAAFreqs.mdl",
+        "path_type": "hardlink",
+        "sha256": "ca636e7cc24b64ea1c034709a83fc5a6a423b65787a3362dd0499191f341e1cd",
+        "sha256_in_prefix": "ca636e7cc24b64ea1c034709a83fc5a6a423b65787a3362dd0499191f341e1cd",
+        "size_in_bytes": 5499
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wAAUserFreqs.mdl",
+        "path_type": "hardlink",
+        "sha256": "29580dfbd4df39d69874f2174fedfe7606e3f401a25352ace8eb40c654d51203",
+        "sha256_in_prefix": "29580dfbd4df39d69874f2174fedfe7606e3f401a25352ace8eb40c654d51203",
+        "size_in_bytes": 5409
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94wEX.mdl",
+        "path_type": "hardlink",
+        "sha256": "e585fd327a9527f1952cf143eefe8e61e66566dec62a274e49e771bf710d79b4",
+        "sha256_in_prefix": "e585fd327a9527f1952cf143eefe8e61e66566dec62a274e49e771bf710d79b4",
+        "size_in_bytes": 5496
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94with9freqs.mdl",
+        "path_type": "hardlink",
+        "sha256": "079ed19be09127dee22e65d9cb39bdf6d2f6c15c1c67ffa137b11d24f651af7b",
+        "sha256_in_prefix": "079ed19be09127dee22e65d9cb39bdf6d2f6c15c1c67ffa137b11d24f651af7b",
+        "size_in_bytes": 6441
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MG94x2.mdl",
+        "path_type": "hardlink",
+        "sha256": "68a4003b0d74b56c911638c8b0eef1c67a684c616437dca4b1f62ca5e2475814",
+        "sha256_in_prefix": "68a4003b0d74b56c911638c8b0eef1c67a684c616437dca4b1f62ca5e2475814",
+        "size_in_bytes": 11062
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MGFreqsEstimator.ibf",
+        "path_type": "hardlink",
+        "sha256": "f123408a634c0a4ab819cbd0f2433d138636d51eac4f9efe83876477c11ac151",
+        "sha256_in_prefix": "f123408a634c0a4ab819cbd0f2433d138636d51eac4f9efe83876477c11ac151",
+        "size_in_bytes": 1533
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MGwAA.ibf",
+        "path_type": "hardlink",
+        "sha256": "7af8d02f047fa2595abddf1773bc3ad35f1efa498d07f761192c85ba00e4ecad",
+        "sha256_in_prefix": "7af8d02f047fa2595abddf1773bc3ad35f1efa498d07f761192c85ba00e4ecad",
+        "size_in_bytes": 3356
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/MGwEX.ibf",
+        "path_type": "hardlink",
+        "sha256": "a4e372f1a0d499c35ed3e3cd58ec3f7bb1326b2479b36b1e353db9df17cb25de",
+        "sha256_in_prefix": "a4e372f1a0d499c35ed3e3cd58ec3f7bb1326b2479b36b1e353db9df17cb25de",
+        "size_in_bytes": 2688
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/NRM+Freqs.mdl",
+        "path_type": "hardlink",
+        "sha256": "af36d1a864a804f80516d1bfcfca3c12378ebf40ce0448a282a1429bfa0e6be7",
+        "sha256_in_prefix": "af36d1a864a804f80516d1bfcfca3c12378ebf40ce0448a282a1429bfa0e6be7",
+        "size_in_bytes": 1584
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/NRM.mdl",
+        "path_type": "hardlink",
+        "sha256": "3af170da83736d3220aea47f62ead9917b96c3682e7282324525440acded964f",
+        "sha256_in_prefix": "3af170da83736d3220aea47f62ead9917b96c3682e7282324525440acded964f",
+        "size_in_bytes": 1739
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/PCH",
+        "path_type": "hardlink",
+        "sha256": "f4f7e59b4759a8d09450f6faacb96544e4196062e247e954fe6e14f68654a993",
+        "sha256_in_prefix": "f4f7e59b4759a8d09450f6faacb96544e4196062e247e954fe6e14f68654a993",
+        "size_in_bytes": 867
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/RNA16.mdl",
+        "path_type": "hardlink",
+        "sha256": "bfe89b055e8397880b27ca83fe7c721309f503ec00a753301df93c6b56e5503a",
+        "sha256_in_prefix": "bfe89b055e8397880b27ca83fe7c721309f503ec00a753301df93c6b56e5503a",
+        "size_in_bytes": 5828
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/RNA16A",
+        "path_type": "hardlink",
+        "sha256": "5a197db89bb1230a44799892cf3701a27675fa36480f9f227276ebf0c389416e",
+        "sha256_in_prefix": "5a197db89bb1230a44799892cf3701a27675fa36480f9f227276ebf0c389416e",
+        "size_in_bytes": 1480
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/RNA16SvH.mdl",
+        "path_type": "hardlink",
+        "sha256": "b334a23ff34e0a910d164b1a3b6fe4b1c966fbafcae8a8fa7436c8281dcaf70f",
+        "sha256_in_prefix": "b334a23ff34e0a910d164b1a3b6fe4b1c966fbafcae8a8fa7436c8281dcaf70f",
+        "size_in_bytes": 3487
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAEqualInput",
+        "path_type": "hardlink",
+        "sha256": "86a9f3f6ab573ff00ad803816486126abd33f190db85cc5a5c0732fe569933ff",
+        "sha256_in_prefix": "86a9f3f6ab573ff00ad803816486126abd33f190db85cc5a5c0732fe569933ff",
+        "size_in_bytes": 549
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAF81",
+        "path_type": "hardlink",
+        "sha256": "f3f2ca0688504f82bef66279d409796410732770d073424397a80fee5ce170ef",
+        "sha256_in_prefix": "f3f2ca0688504f82bef66279d409796410732770d073424397a80fee5ce170ef",
+        "size_in_bytes": 916
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAMuse95.mdl",
+        "path_type": "hardlink",
+        "sha256": "2f884bcca1de7b3d7491826999d874cb911f4721e668c54414439aad8cfd67ac",
+        "sha256_in_prefix": "2f884bcca1de7b3d7491826999d874cb911f4721e668c54414439aad8cfd67ac",
+        "size_in_bytes": 3749
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAREV",
+        "path_type": "hardlink",
+        "sha256": "01665144a9057922accf2532b591882e0d077573941f7e913be95c23c3ff9991",
+        "sha256_in_prefix": "01665144a9057922accf2532b591882e0d077573941f7e913be95c23c3ff9991",
+        "size_in_bytes": 809
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/RNAREV_1",
+        "path_type": "hardlink",
+        "sha256": "dadba7a60d6dd87b9b23acbe79ba9fe6eb4cfa3940b7babd8aeb06e8a1313097",
+        "sha256_in_prefix": "dadba7a60d6dd87b9b23acbe79ba9fe6eb4cfa3940b7babd8aeb06e8a1313097",
+        "size_in_bytes": 785
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/S4",
+        "path_type": "hardlink",
+        "sha256": "19014b266c6f66cd9c23965b2e491cbb9a66572177a6336064927a203605af3c",
+        "sha256_in_prefix": "19014b266c6f66cd9c23965b2e491cbb9a66572177a6336064927a203605af3c",
+        "size_in_bytes": 866
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/STGRM.mdl",
+        "path_type": "hardlink",
+        "sha256": "ee978ef0633605fd34bf5840462ff6b0dbfd377e1b8a7ea18c4d0160225cd2b0",
+        "sha256_in_prefix": "ee978ef0633605fd34bf5840462ff6b0dbfd377e1b8a7ea18c4d0160225cd2b0",
+        "size_in_bytes": 1656
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/TrN.mdl",
+        "path_type": "hardlink",
+        "sha256": "cdb77da2dfae11b7ea8383045de3f3481d5a09539d1edf20e3e8d16575a3a08b",
+        "sha256_in_prefix": "cdb77da2dfae11b7ea8383045de3f3481d5a09539d1edf20e3e8d16575a3a08b",
+        "size_in_bytes": 1564
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/UniversalCode.def",
+        "path_type": "hardlink",
+        "sha256": "7334ad6a742d9b9195fe4ba7aa9a2c663cdbab65925b9a4b5673368697cfc7c7",
+        "sha256_in_prefix": "7334ad6a742d9b9195fe4ba7aa9a2c663cdbab65925b9a4b5673368697cfc7c7",
+        "size_in_bytes": 5119
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/WAG.mdl",
+        "path_type": "hardlink",
+        "sha256": "c5ec88333d9a97ab016bc697b07a4fdc61bc6bd0c5a20f31f6fd33322f6dfa9f",
+        "sha256_in_prefix": "c5ec88333d9a97ab016bc697b07a4fdc61bc6bd0c5a20f31f6fd33322f6dfa9f",
+        "size_in_bytes": 28568
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/WAG_F.mdl",
+        "path_type": "hardlink",
+        "sha256": "bc7771660dc656b1993397bf71b45bf603408dc44be72f991b2e283aeed7c336",
+        "sha256_in_prefix": "bc7771660dc656b1993397bf71b45bf603408dc44be72f991b2e283aeed7c336",
+        "size_in_bytes": 28123
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/Yang2000Distributions.def",
+        "path_type": "hardlink",
+        "sha256": "3850ef8303cc86fe15235785fc14e9104704a575d8227e383898dff2498e8956",
+        "sha256_in_prefix": "3850ef8303cc86fe15235785fc14e9104704a575d8227e383898dff2498e8956",
+        "size_in_bytes": 10677
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/chooseGeneticCode.def",
+        "path_type": "hardlink",
+        "sha256": "74effc89bd6a728b6107e1b4945bdbfc4b0df6ed28a25b52cee94c98220fdfa6",
+        "sha256_in_prefix": "74effc89bd6a728b6107e1b4945bdbfc4b0df6ed28a25b52cee94c98220fdfa6",
+        "size_in_bytes": 31167
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/custm4x4.mdl",
+        "path_type": "hardlink",
+        "sha256": "0d58b173384fa22543e12db74136a8c028110e4e44d7e2bd806264b0b138ae0b",
+        "sha256_in_prefix": "0d58b173384fa22543e12db74136a8c028110e4e44d7e2bd806264b0b138ae0b",
+        "size_in_bytes": 9371
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/defineGamma.mdl",
+        "path_type": "hardlink",
+        "sha256": "745af4492488c5661da861ad1c9df524dbe03412a99a6b757e7527b25e373ec7",
+        "sha256_in_prefix": "745af4492488c5661da861ad1c9df524dbe03412a99a6b757e7527b25e373ec7",
+        "size_in_bytes": 10994
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/defineHM.mdl",
+        "path_type": "hardlink",
+        "sha256": "bb6cee41818d9488c7c6fda8967fd972aeddc7af5c9df56571f5626576398c89",
+        "sha256_in_prefix": "bb6cee41818d9488c7c6fda8967fd972aeddc7af5c9df56571f5626576398c89",
+        "size_in_bytes": 10197
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/fitness.mdl",
+        "path_type": "hardlink",
+        "sha256": "105f4902661e4c2b1504ebd57cfedcdf99cc22b031a3a09e6ec8f1d104dd7007",
+        "sha256_in_prefix": "105f4902661e4c2b1504ebd57cfedcdf99cc22b031a3a09e6ec8f1d104dd7007",
+        "size_in_bytes": 1878
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters.mdl",
+        "path_type": "hardlink",
+        "sha256": "6225c3912936499eeb3d1217d90f9d27a136e18417a30f66e2c9a98531ad0b84",
+        "sha256_in_prefix": "6225c3912936499eeb3d1217d90f9d27a136e18417a30f66e2c9a98531ad0b84",
+        "size_in_bytes": 829
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters2.mdl",
+        "path_type": "hardlink",
+        "sha256": "bc043e71e29fa74d65122e63861955ebcc2b302aa214d3cfcad2f8351a14ead7",
+        "sha256_in_prefix": "bc043e71e29fa74d65122e63861955ebcc2b302aa214d3cfcad2f8351a14ead7",
+        "size_in_bytes": 546
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters3.mdl",
+        "path_type": "hardlink",
+        "sha256": "3a41316cd8f4d9089ccef3140c6d57ab6c0f2289a152ada8cf75c359ab5e9b7a",
+        "sha256_in_prefix": "3a41316cd8f4d9089ccef3140c6d57ab6c0f2289a152ada8cf75c359ab5e9b7a",
+        "size_in_bytes": 659
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters4.mdl",
+        "path_type": "hardlink",
+        "sha256": "23a544e534ab2b7cb0989a7fc32f7a61671f3ac40b3e35aa8b4d997ef214ed44",
+        "sha256_in_prefix": "23a544e534ab2b7cb0989a7fc32f7a61671f3ac40b3e35aa8b4d997ef214ed44",
+        "size_in_bytes": 1699
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/modelParameters5.mdl",
+        "path_type": "hardlink",
+        "sha256": "a2fcf4022dea0c0b47b966cfc7b7325d52fe8844414203853f1c8f38f97d9068",
+        "sha256_in_prefix": "a2fcf4022dea0c0b47b966cfc7b7325d52fe8844414203853f1c8f38f97d9068",
+        "size_in_bytes": 660
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/models.lst",
+        "path_type": "hardlink",
+        "sha256": "72fbee24bc00078a872fa3b128d09e98ddcee9cdf0133a46f6958f55997cb0da",
+        "sha256_in_prefix": "72fbee24bc00078a872fa3b128d09e98ddcee9cdf0133a46f6958f55997cb0da",
+        "size_in_bytes": 10986
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/mtMAM.mdl",
+        "path_type": "hardlink",
+        "sha256": "e1628b52abf03de17505dc2fdec61357286aa20bb5bfd5105b2a1391d3cacf4a",
+        "sha256_in_prefix": "e1628b52abf03de17505dc2fdec61357286aa20bb5bfd5105b2a1391d3cacf4a",
+        "size_in_bytes": 16378
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/mtMAM_F.mdl",
+        "path_type": "hardlink",
+        "sha256": "7dff39d2e4a37c9309632cab2baee0fd185649639c41aaadc992a9fff7327658",
+        "sha256_in_prefix": "7dff39d2e4a37c9309632cab2baee0fd185649639c41aaadc992a9fff7327658",
+        "size_in_bytes": 15997
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/mtREV.mdl",
+        "path_type": "hardlink",
+        "sha256": "475a5ab0eee795c441f8f97ef1f8575b6f0c333013fa3159ce9e7bd4acef88e8",
+        "sha256_in_prefix": "475a5ab0eee795c441f8f97ef1f8575b6f0c333013fa3159ce9e7bd4acef88e8",
+        "size_in_bytes": 1474
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/mtREV_24.mdl",
+        "path_type": "hardlink",
+        "sha256": "dd68b0a1580f2bdff388df7a5bbbc0e41e9b4e4221159cb6c1024df825a8aab3",
+        "sha256_in_prefix": "dd68b0a1580f2bdff388df7a5bbbc0e41e9b4e4221159cb6c1024df825a8aab3",
+        "size_in_bytes": 28224
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/mtREV_24_F.mdl",
+        "path_type": "hardlink",
+        "sha256": "5f2a9cd4f337a3f71096ab24e1e91e7da7766e6d048d87c168acea8bbc8a1626",
+        "sha256_in_prefix": "5f2a9cd4f337a3f71096ab24e1e91e7da7766e6d048d87c168acea8bbc8a1626",
+        "size_in_bytes": 27857
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/reducedREV.mdl",
+        "path_type": "hardlink",
+        "sha256": "b489c1bd8cb13030218c4eb91d019ce538586266d3b129533ad97add3bf34a7f",
+        "sha256_in_prefix": "b489c1bd8cb13030218c4eb91d019ce538586266d3b129533ad97add3bf34a7f",
+        "size_in_bytes": 3060
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/rtREV.mdl",
+        "path_type": "hardlink",
+        "sha256": "12ad5100f4ba3feec114f0713d8c68f6647121747e55f3d27acb5bc1523ccc01",
+        "sha256_in_prefix": "12ad5100f4ba3feec114f0713d8c68f6647121747e55f3d27acb5bc1523ccc01",
+        "size_in_bytes": 28734
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TemplateModels/rtREV_F.mdl",
+        "path_type": "hardlink",
+        "sha256": "98d126aabe92764af6e5606acf3d5b067025b37807ee59c7b8152e4595bfe4e7",
+        "sha256_in_prefix": "98d126aabe92764af6e5606acf3d5b067025b37807ee59c7b8152e4595bfe4e7",
+        "size_in_bytes": 28346
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TestBranchDNDS.bf",
+        "path_type": "hardlink",
+        "sha256": "d366d306b946f8a13979155b481e643c0e83371e0512b111b681877e714a390c",
+        "sha256_in_prefix": "d366d306b946f8a13979155b481e643c0e83371e0512b111b681877e714a390c",
+        "size_in_bytes": 12274
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TestClade.bf",
+        "path_type": "hardlink",
+        "sha256": "32eb997518e4133acbb2f016e60039ea132f03a87623f2a4d61d0bdb53a28f00",
+        "sha256_in_prefix": "32eb997518e4133acbb2f016e60039ea132f03a87623f2a4d61d0bdb53a28f00",
+        "size_in_bytes": 23714
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TestCladeMeans.bf",
+        "path_type": "hardlink",
+        "sha256": "7cd5e1338f079486764f0bfb698fb1c9aa31e7a0de7ecdfd9eb94806b632319a",
+        "sha256_in_prefix": "7cd5e1338f079486764f0bfb698fb1c9aa31e7a0de7ecdfd9eb94806b632319a",
+        "size_in_bytes": 10295
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TopologySearch.bf",
+        "path_type": "hardlink",
+        "sha256": "b572dff67b3eb66dcbfccb3759ac7fa682e4280cff16a53a249785b3a4b71fa9",
+        "sha256_in_prefix": "b572dff67b3eb66dcbfccb3759ac7fa682e4280cff16a53a249785b3a4b71fa9",
+        "size_in_bytes": 10783
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TopologySearchConstrained.bf",
+        "path_type": "hardlink",
+        "sha256": "49b1e07e657b6de95bf41b1039626c89660eaf81ce16d5629360d3d7e7d3abec",
+        "sha256_in_prefix": "49b1e07e657b6de95bf41b1039626c89660eaf81ce16d5629360d3d7e7d3abec",
+        "size_in_bytes": 9090
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TreeCorrelationCoefficients.bf",
+        "path_type": "hardlink",
+        "sha256": "cfbefbd6d037a10349107115860414a95a97ae45038ef32803aa977d53fd10a4",
+        "sha256_in_prefix": "cfbefbd6d037a10349107115860414a95a97ae45038ef32803aa977d53fd10a4",
+        "size_in_bytes": 7969
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/TreeTools.ibf",
+        "path_type": "hardlink",
+        "sha256": "7f0781e96eff8b8198256bf99134fe6983db7595481050bfa77aacd0433efd9a",
+        "sha256_in_prefix": "7f0781e96eff8b8198256bf99134fe6983db7595481050bfa77aacd0433efd9a",
+        "size_in_bytes": 20678
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/UpperBound.bf",
+        "path_type": "hardlink",
+        "sha256": "ac72ac2ec02cc1c091c0b680e58574f657329cfdb9401440b2ffc085e05fd7a4",
+        "sha256_in_prefix": "ac72ac2ec02cc1c091c0b680e58574f657329cfdb9401440b2ffc085e05fd7a4",
+        "size_in_bytes": 1645
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/AncestralMapper.bf",
+        "path_type": "hardlink",
+        "sha256": "a0d41e065b1b65891b9fe6974209016a13903d97fff9041d6aa70c8beb5d455c",
+        "sha256_in_prefix": "a0d41e065b1b65891b9fe6974209016a13903d97fff9041d6aa70c8beb5d455c",
+        "size_in_bytes": 23615
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/BranchLengthFitters.bf",
+        "path_type": "hardlink",
+        "sha256": "e66beb6aba16c4d1b1134a8caf899e0f93d0bc56fe3be5d47c77aa100df3b15b",
+        "sha256_in_prefix": "e66beb6aba16c4d1b1134a8caf899e0f93d0bc56fe3be5d47c77aa100df3b15b",
+        "size_in_bytes": 2716
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/CoalescentPostProcessor.bf",
+        "path_type": "hardlink",
+        "sha256": "1032fc7c22c0d9ff29f13593ae371b621f13db0ac553c718d3271b6ffffd12e3",
+        "sha256_in_prefix": "1032fc7c22c0d9ff29f13593ae371b621f13db0ac553c718d3271b6ffffd12e3",
+        "size_in_bytes": 12371
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/CodonTools.bf",
+        "path_type": "hardlink",
+        "sha256": "ad3a4637384c457eb00fadcbc1b27a0b77447c9ad9ee4b62a09e2bb93a694383",
+        "sha256_in_prefix": "ad3a4637384c457eb00fadcbc1b27a0b77447c9ad9ee4b62a09e2bb93a694383",
+        "size_in_bytes": 1667
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/DBTools.ibf",
+        "path_type": "hardlink",
+        "sha256": "4608fe29101500206e5fbbe132e004287b402be34f32cba915040165123afca8",
+        "sha256_in_prefix": "4608fe29101500206e5fbbe132e004287b402be34f32cba915040165123afca8",
+        "size_in_bytes": 4505
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/DescriptiveStatistics.bf",
+        "path_type": "hardlink",
+        "sha256": "1141f53b95a861022cb105cab120c44ff03806a457ed85801e1ff60b73fe1f1d",
+        "sha256_in_prefix": "1141f53b95a861022cb105cab120c44ff03806a457ed85801e1ff60b73fe1f1d",
+        "size_in_bytes": 2773
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/GrabBag.bf",
+        "path_type": "hardlink",
+        "sha256": "1e57ce11062b8f885534d2ddf7b781444d8320209a6db553266ac230323e75b0",
+        "sha256_in_prefix": "1e57ce11062b8f885534d2ddf7b781444d8320209a6db553266ac230323e75b0",
+        "size_in_bytes": 22537
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/HXB2Mapper.bf",
+        "path_type": "hardlink",
+        "sha256": "8e6d56fcb97a12b56385cfcd507659cd9c3a8bff5fe5286565dc3689cd78a8da",
+        "sha256_in_prefix": "8e6d56fcb97a12b56385cfcd507659cd9c3a8bff5fe5286565dc3689cd78a8da",
+        "size_in_bytes": 20377
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/LocalMGREV.bf",
+        "path_type": "hardlink",
+        "sha256": "20aab1a5f1af63036703897f69b400d5ab908a2f7060ef9580aa35b7c662aa30",
+        "sha256_in_prefix": "20aab1a5f1af63036703897f69b400d5ab908a2f7060ef9580aa35b7c662aa30",
+        "size_in_bytes": 3190
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/LocalMGREVMLFreqs.bf",
+        "path_type": "hardlink",
+        "sha256": "5bd3009901962eafcb81ce964ebbfefb0a95e537d421b844d3f45adb43a6554e",
+        "sha256_in_prefix": "5bd3009901962eafcb81ce964ebbfefb0a95e537d421b844d3f45adb43a6554e",
+        "size_in_bytes": 5349
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/MPITools.bf",
+        "path_type": "hardlink",
+        "sha256": "856f98e5f5569dceed74ce3474c7460ed93a8f617ce16e8be60cb022efb4d68e",
+        "sha256_in_prefix": "856f98e5f5569dceed74ce3474c7460ed93a8f617ce16e8be60cb022efb4d68e",
+        "size_in_bytes": 2617
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/NJ.bf",
+        "path_type": "hardlink",
+        "sha256": "154e8ce8a25d003e0b6bdc8b3fbbe1dc34d93b209009297efdf8f2c633fc6d41",
+        "sha256_in_prefix": "154e8ce8a25d003e0b6bdc8b3fbbe1dc34d93b209009297efdf8f2c633fc6d41",
+        "size_in_bytes": 6085
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/PS_Plotters.bf",
+        "path_type": "hardlink",
+        "sha256": "e702e91b3382362fff86765511090b86b8b7e1452b04f4f0f8c16f43b04452b5",
+        "sha256_in_prefix": "e702e91b3382362fff86765511090b86b8b7e1452b04f4f0f8c16f43b04452b5",
+        "size_in_bytes": 51053
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/PostScript.bf",
+        "path_type": "hardlink",
+        "sha256": "4d4fa563fe9a7cac5950ceabdcec65832c03fbc45d181b345ed92bd931d9ffa5",
+        "sha256_in_prefix": "4d4fa563fe9a7cac5950ceabdcec65832c03fbc45d181b345ed92bd931d9ffa5",
+        "size_in_bytes": 12199
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/ProbabilityDistributions.bf",
+        "path_type": "hardlink",
+        "sha256": "cc59f869255bcf0ece8eecd3e0ddf60a4f052dd38e1db1480da7460f91bdc605",
+        "sha256_in_prefix": "cc59f869255bcf0ece8eecd3e0ddf60a4f052dd38e1db1480da7460f91bdc605",
+        "size_in_bytes": 1814
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/ReadDelimitedFiles.bf",
+        "path_type": "hardlink",
+        "sha256": "46488fbc39e0684ab55941b9a9aa90807354d1c5924476771b0821ee2219d91c",
+        "sha256_in_prefix": "46488fbc39e0684ab55941b9a9aa90807354d1c5924476771b0821ee2219d91c",
+        "size_in_bytes": 11585
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/TreeFunctions.bf",
+        "path_type": "hardlink",
+        "sha256": "19a5985565f2fcd77687f2ecbb5b2d2433f81a513ae3f14e81b3e7c0faced656",
+        "sha256_in_prefix": "19a5985565f2fcd77687f2ecbb5b2d2433f81a513ae3f14e81b3e7c0faced656",
+        "size_in_bytes": 1176
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/Utility/WriteDelimitedFiles.bf",
+        "path_type": "hardlink",
+        "sha256": "752d2e4b7ea4b6aa1c6152560ab1a9f056dc8c7b698a1ae6b5e1750eeb2d95b5",
+        "sha256_in_prefix": "752d2e4b7ea4b6aa1c6152560ab1a9f056dc8c7b698a1ae6b5e1750eeb2d95b5",
+        "size_in_bytes": 1194
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/WANC.bf",
+        "path_type": "hardlink",
+        "sha256": "2dd92ffef81cd54469df0fd13e47e5b3ce33b7979fdfeead984aa2e9fb282613",
+        "sha256_in_prefix": "2dd92ffef81cd54469df0fd13e47e5b3ce33b7979fdfeead984aa2e9fb282613",
+        "size_in_bytes": 9316
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/YangNielsenBranchSite2005.bf",
+        "path_type": "hardlink",
+        "sha256": "6c7b7744977c40cfe4401a878babe368f566e4b8977d295e20541ce2dd127e6f",
+        "sha256_in_prefix": "6c7b7744977c40cfe4401a878babe368f566e4b8977d295e20541ce2dd127e6f",
+        "size_in_bytes": 14643
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/_BMS_Aux.ibf",
+        "path_type": "hardlink",
+        "sha256": "def4c1f3ea50b8a1d37c462e4393c0f5d6f73109806e28d72f6dc36f07e669dc",
+        "sha256_in_prefix": "def4c1f3ea50b8a1d37c462e4393c0f5d6f73109806e28d72f6dc36f07e669dc",
+        "size_in_bytes": 4529
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/_CMS_Aux.ibf",
+        "path_type": "hardlink",
+        "sha256": "9597feeb231fda7031f6b93880221951bad4c741d4d5ddd836b636df1c2c8f9c",
+        "sha256_in_prefix": "9597feeb231fda7031f6b93880221951bad4c741d4d5ddd836b636df1c2c8f9c",
+        "size_in_bytes": 8855
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/_MFReader_.ibf",
+        "path_type": "hardlink",
+        "sha256": "e8cac51341c5e04d2394c4d0dd50ff2b87b527276f1fd9505950b614a13867a8",
+        "sha256_in_prefix": "e8cac51341c5e04d2394c4d0dd50ff2b87b527276f1fd9505950b614a13867a8",
+        "size_in_bytes": 6999
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/_tipDater.ibf",
+        "path_type": "hardlink",
+        "sha256": "ff9d5c7c0efeeada64b3b223d1db4b03f0796f8596bb4232b878994552783f57",
+        "sha256_in_prefix": "ff9d5c7c0efeeada64b3b223d1db4b03f0796f8596bb4232b878994552783f57",
+        "size_in_bytes": 1894
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/bayesgraph.ibf",
+        "path_type": "hardlink",
+        "sha256": "8aca6fd82e03e252c484264bdddcaa9d8322a0e5258447eaa5c9d6b1e5f9cb3c",
+        "sha256_in_prefix": "8aca6fd82e03e252c484264bdddcaa9d8322a0e5258447eaa5c9d6b1e5f9cb3c",
+        "size_in_bytes": 20444
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/binomial.ibf",
+        "path_type": "hardlink",
+        "sha256": "78efca2e174873a80682c7887b7b9888f3871fb866368ef0383cd55da3976ae0",
+        "sha256_in_prefix": "78efca2e174873a80682c7887b7b9888f3871fb866368ef0383cd55da3976ae0",
+        "size_in_bytes": 1647
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/branchSwappingFunctions.bf",
+        "path_type": "hardlink",
+        "sha256": "048f9939cda2e1072f57ad84cf4c412a1804d3902179ac72b9d1357fdb1fe826",
+        "sha256_in_prefix": "048f9939cda2e1072f57ad84cf4c412a1804d3902179ac72b9d1357fdb1fe826",
+        "size_in_bytes": 8954
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/categoryEcho.bf",
+        "path_type": "hardlink",
+        "sha256": "0ae45e3a76d0d85820afeb24705c60b7f696ecdf0be3c4b8c7add751ea88905b",
+        "sha256_in_prefix": "0ae45e3a76d0d85820afeb24705c60b7f696ecdf0be3c4b8c7add751ea88905b",
+        "size_in_bytes": 4441
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/chooseDistanceFormula.def",
+        "path_type": "hardlink",
+        "sha256": "4b711941bf1d4070fe1069a302880a9ad70c5e1407fce0290f131051c10e4d52",
+        "sha256_in_prefix": "4b711941bf1d4070fe1069a302880a9ad70c5e1407fce0290f131051c10e4d52",
+        "size_in_bytes": 4025
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/dNdSBivariateRateAnalysis.bf",
+        "path_type": "hardlink",
+        "sha256": "5b95181c0f6d3303ad566fca65842d63b0d1eb96f43dc2e31e8d72951f40630c",
+        "sha256_in_prefix": "5b95181c0f6d3303ad566fca65842d63b0d1eb96f43dc2e31e8d72951f40630c",
+        "size_in_bytes": 22020
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/dNdSDistributionComparison.bf",
+        "path_type": "hardlink",
+        "sha256": "cda4fa6903df7a83aa94f4ae299ea3076311c51c94107fc325cdbfccd7ce0fcd",
+        "sha256_in_prefix": "cda4fa6903df7a83aa94f4ae299ea3076311c51c94107fc325cdbfccd7ce0fcd",
+        "size_in_bytes": 29297
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/dNdSRateAnalysis.bf",
+        "path_type": "hardlink",
+        "sha256": "4afb68a9562ec379d7fe2113205c6d9e8240ce4871eaf094d493fd83249ccc16",
+        "sha256_in_prefix": "4afb68a9562ec379d7fe2113205c6d9e8240ce4871eaf094d493fd83249ccc16",
+        "size_in_bytes": 26791
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/dNdSResultProcessor.bf",
+        "path_type": "hardlink",
+        "sha256": "c13059c08e112bb1ca99d58f4cc3796c130ffec2089bec0259fdb7d529347dcd",
+        "sha256_in_prefix": "c13059c08e112bb1ca99d58f4cc3796c130ffec2089bec0259fdb7d529347dcd",
+        "size_in_bytes": 32869
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/dSdNTreeTools.ibf",
+        "path_type": "hardlink",
+        "sha256": "d79a875f84b4149e7f1f0b2312c2b581b4d1142fad53bbc4b62c32a7e6cac37b",
+        "sha256_in_prefix": "d79a875f84b4149e7f1f0b2312c2b581b4d1142fad53bbc4b62c32a7e6cac37b",
+        "size_in_bytes": 2661
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/distanceMethodNPBootstrap.bf",
+        "path_type": "hardlink",
+        "sha256": "d542a7f89b97207fd4fb9fdd19ea098c59e39f409e3b139d95e95aae471886d0",
+        "sha256_in_prefix": "d542a7f89b97207fd4fb9fdd19ea098c59e39f409e3b139d95e95aae471886d0",
+        "size_in_bytes": 9696
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/distanceRMethodNPBootstrap.bf",
+        "path_type": "hardlink",
+        "sha256": "3a588a5408491066f8a158b10e5adebbf2a4c2a23fa5df11e02c8e6f0cd1cb22",
+        "sha256_in_prefix": "3a588a5408491066f8a158b10e5adebbf2a4c2a23fa5df11e02c8e6f0cd1cb22",
+        "size_in_bytes": 7859
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/doNNISwap.bf",
+        "path_type": "hardlink",
+        "sha256": "93741e6c597cb47763ed7f2dfabf20e9ac6bafd69f7118d40243d7354fe78715",
+        "sha256_in_prefix": "93741e6c597cb47763ed7f2dfabf20e9ac6bafd69f7118d40243d7354fe78715",
+        "size_in_bytes": 3081
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/doSPRSwap.bf",
+        "path_type": "hardlink",
+        "sha256": "70f6956f586a485b7d38778885330af028df976164f2443c1e800a91e10852dd",
+        "sha256_in_prefix": "70f6956f586a485b7d38778885330af028df976164f2443c1e800a91e10852dd",
+        "size_in_bytes": 2845
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/files.lst",
+        "path_type": "hardlink",
+        "sha256": "0aa49b1e1076a3f279f2b0c1a27e3e6b5f8f0310248a93a3a5757745ee8e6550",
+        "sha256_in_prefix": "0aa49b1e1076a3f279f2b0c1a27e3e6b5f8f0310248a93a3a5757745ee8e6550",
+        "size_in_bytes": 11722
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/globalChecker.ibf",
+        "path_type": "hardlink",
+        "sha256": "791cd04267731c68decf851c815177b1013f2309795432b0a4709ae6dc39e8aa",
+        "sha256_in_prefix": "791cd04267731c68decf851c815177b1013f2309795432b0a4709ae6dc39e8aa",
+        "size_in_bytes": 511
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/heuristicMethodNPBootstrap.bf",
+        "path_type": "hardlink",
+        "sha256": "6d755ebd6f8aab02ca45c0d6a7455707294eaaf638662c82ef77e8f952f66fb0",
+        "sha256_in_prefix": "6d755ebd6f8aab02ca45c0d6a7455707294eaaf638662c82ef77e8f952f66fb0",
+        "size_in_bytes": 5893
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/last.date",
+        "path_type": "hardlink",
+        "sha256": "37bf5916d3e56784d8a18a434a7bc51d83e9a81509f301ef4d9d19dacaa33919",
+        "sha256_in_prefix": "37bf5916d3e56784d8a18a434a7bc51d83e9a81509f301ef4d9d19dacaa33919",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/IOFunctions.bf",
+        "path_type": "hardlink",
+        "sha256": "bcac041074ab622cbda9f43e95ca5ac0b9a3e3f85a71796a49e4415aeeccbb14",
+        "sha256_in_prefix": "bcac041074ab622cbda9f43e95ca5ac0b9a3e3f85a71796a49e4415aeeccbb14",
+        "size_in_bytes": 21427
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/UtilityFunctions.bf",
+        "path_type": "hardlink",
+        "sha256": "55a0ae6798baf9013cc46f0b1b03118f3872134295a9d1747c66669a6dd0f39f",
+        "sha256_in_prefix": "55a0ae6798baf9013cc46f0b1b03118f3872134295a9d1747c66669a6dd0f39f",
+        "size_in_bytes": 33806
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/all-terms.bf",
+        "path_type": "hardlink",
+        "sha256": "04802a9188705665c580b1473d00cc06fbdf7e848f6d712a3f537beec08b0de0",
+        "sha256_in_prefix": "04802a9188705665c580b1473d00cc06fbdf7e848f6d712a3f537beec08b0de0",
+        "size_in_bytes": 17858
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/convenience/math.bf",
+        "path_type": "hardlink",
+        "sha256": "a33198861e23df83347b0dd6edbbc1494d1bb3d51f95d52140836bc0a5289658",
+        "sha256_in_prefix": "a33198861e23df83347b0dd6edbbc1494d1bb3d51f95d52140836bc0a5289658",
+        "size_in_bytes": 5986
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/convenience/matrix.bf",
+        "path_type": "hardlink",
+        "sha256": "9be4d58ec65064458c77609e9513d34aab33fe61e319d4cd6dc0d774f14f878f",
+        "sha256_in_prefix": "9be4d58ec65064458c77609e9513d34aab33fe61e319d4cd6dc0d774f14f878f",
+        "size_in_bytes": 479
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/convenience/random.bf",
+        "path_type": "hardlink",
+        "sha256": "0b94c9de9f16ba611e6bef6d5013b52e3767666525d7cf72de12303cd88545d9",
+        "sha256_in_prefix": "0b94c9de9f16ba611e6bef6d5013b52e3767666525d7cf72de12303cd88545d9",
+        "size_in_bytes": 12477
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/convenience/regexp.bf",
+        "path_type": "hardlink",
+        "sha256": "8cc969d1cae7b7253ae41ec927ec2fef65c900a4cbd8b54491bb464807e72dd0",
+        "sha256_in_prefix": "8cc969d1cae7b7253ae41ec927ec2fef65c900a4cbd8b54491bb464807e72dd0",
+        "size_in_bytes": 4278
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/function-loader.bf",
+        "path_type": "hardlink",
+        "sha256": "ccfe85b2be3c266462ec5d698159494569a8146cdf7976ec69bc630abfa27734",
+        "sha256_in_prefix": "ccfe85b2be3c266462ec5d698159494569a8146cdf7976ec69bc630abfa27734",
+        "size_in_bytes": 711
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/DNA.bf",
+        "path_type": "hardlink",
+        "sha256": "8cb413045c6a73635cbf8257a5964a379a8993f2ace85972225d0019155c897d",
+        "sha256_in_prefix": "8cb413045c6a73635cbf8257a5964a379a8993f2ace85972225d0019155c897d",
+        "size_in_bytes": 3723
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/DNA/GTR-MutSel.bf",
+        "path_type": "hardlink",
+        "sha256": "5cbd0cdf6b03cbf2be506612c142fd9eff2919d8b00a088fca784c9924725506",
+        "sha256_in_prefix": "5cbd0cdf6b03cbf2be506612c142fd9eff2919d8b00a088fca784c9924725506",
+        "size_in_bytes": 3391
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/DNA/GTR.bf",
+        "path_type": "hardlink",
+        "sha256": "08aac9963691b3c1ce66e86783da388c4867a9efccba32e443a01e3a7223b8f6",
+        "sha256_in_prefix": "08aac9963691b3c1ce66e86783da388c4867a9efccba32e443a01e3a7223b8f6",
+        "size_in_bytes": 3457
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/DNA/HKY85.bf",
+        "path_type": "hardlink",
+        "sha256": "11b461ec3a26836e138649f0b94c196b775268c6f58cf1c5c421f3b5601309c3",
+        "sha256_in_prefix": "11b461ec3a26836e138649f0b94c196b775268c6f58cf1c5c421f3b5601309c3",
+        "size_in_bytes": 3851
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/DNA/JC69.bf",
+        "path_type": "hardlink",
+        "sha256": "a54954c2366fde8b4db146c8acc9c41360dd0837974b38a3b1a75091e3d90da2",
+        "sha256_in_prefix": "a54954c2366fde8b4db146c8acc9c41360dd0837974b38a3b1a75091e3d90da2",
+        "size_in_bytes": 2966
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/binary.bf",
+        "path_type": "hardlink",
+        "sha256": "31fc64d0245803e8ca4ee25b29249919fca947c377fd7d314abc5ab3c925ae18",
+        "sha256_in_prefix": "31fc64d0245803e8ca4ee25b29249919fca947c377fd7d314abc5ab3c925ae18",
+        "size_in_bytes": 3382
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/binary/charbinary.bf",
+        "path_type": "hardlink",
+        "sha256": "81a30929d21efd2b206542d5b0853c0dd51f3a2559923941c90fdc1f4c22ade5",
+        "sha256_in_prefix": "81a30929d21efd2b206542d5b0853c0dd51f3a2559923941c90fdc1f4c22ade5",
+        "size_in_bytes": 3518
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/binary/empirical.bf",
+        "path_type": "hardlink",
+        "sha256": "754826db7b2497f372ab1b372698542e3958d01ff914047e18d6f5af1fe68e13",
+        "sha256_in_prefix": "754826db7b2497f372ab1b372698542e3958d01ff914047e18d6f5af1fe68e13",
+        "size_in_bytes": 1107
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/codon.bf",
+        "path_type": "hardlink",
+        "sha256": "034038fc242127794f415442071725d13b6313dddb4e58c70889679c6336004c",
+        "sha256_in_prefix": "034038fc242127794f415442071725d13b6313dddb4e58c70889679c6336004c",
+        "size_in_bytes": 7976
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/codon/BS_REL.bf",
+        "path_type": "hardlink",
+        "sha256": "b21b9cc57087b41858220bd4b4bbf16b93abd3ee0a025166ff921385445acc58",
+        "sha256_in_prefix": "b21b9cc57087b41858220bd4b4bbf16b93abd3ee0a025166ff921385445acc58",
+        "size_in_bytes": 10999
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/codon/MG_REV.bf",
+        "path_type": "hardlink",
+        "sha256": "d5f9c21a0fb516557d6c5728c9e0c9b92ad60df104fe5ab5efb1570f54954520",
+        "sha256_in_prefix": "d5f9c21a0fb516557d6c5728c9e0c9b92ad60df104fe5ab5efb1570f54954520",
+        "size_in_bytes": 12945
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/codon/MG_REV_MH.bf",
+        "path_type": "hardlink",
+        "sha256": "ff00b1b18f90d0087e97ee487bfbff0a35ce3e15de47f85eec4afdf63c55a3f5",
+        "sha256_in_prefix": "ff00b1b18f90d0087e97ee487bfbff0a35ce3e15de47f85eec4afdf63c55a3f5",
+        "size_in_bytes": 4584
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/codon/MG_REV_TRIP.bf",
+        "path_type": "hardlink",
+        "sha256": "e05ada3e766de52c5dede1f644e31a34357c1f124e57aa2039182316d4eafb82",
+        "sha256_in_prefix": "e05ada3e766de52c5dede1f644e31a34357c1f124e57aa2039182316d4eafb82",
+        "size_in_bytes": 5176
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/frequencies.bf",
+        "path_type": "hardlink",
+        "sha256": "0053f8b88f8106c0352fccf6b442d561d6f80f8b3e632bf783732d221e706cea",
+        "sha256_in_prefix": "0053f8b88f8106c0352fccf6b442d561d6f80f8b3e632bf783732d221e706cea",
+        "size_in_bytes": 23681
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/model_functions.bf",
+        "path_type": "hardlink",
+        "sha256": "67e7cc85a6e851d710d7dc1ac18e5f85568366f20beab70e8133072ac3485ec7",
+        "sha256_in_prefix": "67e7cc85a6e851d710d7dc1ac18e5f85568366f20beab70e8133072ac3485ec7",
+        "size_in_bytes": 24570
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/parameters.bf",
+        "path_type": "hardlink",
+        "sha256": "6c32a6c5f24bed335d305b61874f32fa93d170f28a23309f4ffde2bb0f08eff8",
+        "sha256_in_prefix": "6c32a6c5f24bed335d305b61874f32fa93d170f28a23309f4ffde2bb0f08eff8",
+        "size_in_bytes": 24308
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein.bf",
+        "path_type": "hardlink",
+        "sha256": "7e46c894a67a9aa9e96907b7f91831bb17bb4c31288cadc1c182e16dd4b951ce",
+        "sha256_in_prefix": "7e46c894a67a9aa9e96907b7f91831bb17bb4c31288cadc1c182e16dd4b951ce",
+        "size_in_bytes": 5577
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/REV.bf",
+        "path_type": "hardlink",
+        "sha256": "9415635a5b8c75a3791d792243ad35bef0cc32f228e05c584631f8717040c0ce",
+        "sha256_in_prefix": "9415635a5b8c75a3791d792243ad35bef0cc32f228e05c584631f8717040c0ce",
+        "size_in_bytes": 7407
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/empirical.bf",
+        "path_type": "hardlink",
+        "sha256": "fb92f8722332089f7b4e4d6f5f5cbfa8c26a46ef9ddccd71292aa7c53be157c5",
+        "sha256_in_prefix": "fb92f8722332089f7b4e4d6f5f5cbfa8c26a46ef9ddccd71292aa7c53be157c5",
+        "size_in_bytes": 32182
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/HIV.ibf",
+        "path_type": "hardlink",
+        "sha256": "580d865b4f5ce5b5084f5bf88645c563e1d26faf5dec058bd2beff7c9b0b2ee2",
+        "sha256_in_prefix": "580d865b4f5ce5b5084f5bf88645c563e1d26faf5dec058bd2beff7c9b0b2ee2",
+        "size_in_bytes": 13242
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/JC69.ibf",
+        "path_type": "hardlink",
+        "sha256": "bcf28d37192d5aaf4aa1b64573410230c90fbcf2fa9fa5e80230c989eef299a1",
+        "sha256_in_prefix": "bcf28d37192d5aaf4aa1b64573410230c90fbcf2fa9fa5e80230c989eef299a1",
+        "size_in_bytes": 6787
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/JTT.ibf",
+        "path_type": "hardlink",
+        "sha256": "8872dd9aba6f2b602eceaf3a638d3628e510c4e12eeefc9fa51f5c08b3bae5f6",
+        "sha256_in_prefix": "8872dd9aba6f2b602eceaf3a638d3628e510c4e12eeefc9fa51f5c08b3bae5f6",
+        "size_in_bytes": 6996
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/LG.ibf",
+        "path_type": "hardlink",
+        "sha256": "497f0c3d6c19c419dbfa282ba857b4603cb4cb2638bbbceda4f777f27c01f664",
+        "sha256_in_prefix": "497f0c3d6c19c419dbfa282ba857b4603cb4cb2638bbbceda4f777f27c01f664",
+        "size_in_bytes": 7752
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/WAG.ibf",
+        "path_type": "hardlink",
+        "sha256": "21f2ee2a58e4264b8b321bfd9b175cf6d3a71504cfe8512a2de23148f1fd47a7",
+        "sha256_in_prefix": "21f2ee2a58e4264b8b321bfd9b175cf6d3a71504cfe8512a2de23148f1fd47a7",
+        "size_in_bytes": 7922
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/gcpREV.ibf",
+        "path_type": "hardlink",
+        "sha256": "8ab534464aa20434b6e7c93367f555000a033bfa1d99d402acd3db8114e0976f",
+        "sha256_in_prefix": "8ab534464aa20434b6e7c93367f555000a033bfa1d99d402acd3db8114e0976f",
+        "size_in_bytes": 7220
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrices/mt.ibf",
+        "path_type": "hardlink",
+        "sha256": "53aac7fc1ff5a3bd7a14daaf7c608e220d1a38d1f4ff159cd448d79c8a27411f",
+        "sha256_in_prefix": "53aac7fc1ff5a3bd7a14daaf7c608e220d1a38d1f4ff159cd448d79c8a27411f",
+        "size_in_bytes": 25329
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/protein/matrix2dict_aux.bf",
+        "path_type": "hardlink",
+        "sha256": "556b5b19307095668b6f25df1cf3dad19a0a8450b2f5e873d600143304f47afe",
+        "sha256_in_prefix": "556b5b19307095668b6f25df1cf3dad19a0a8450b2f5e873d600143304f47afe",
+        "size_in_bytes": 25890
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/models/rate_variation.bf",
+        "path_type": "hardlink",
+        "sha256": "ebd683a49a04aa87d92badca3f4cf16061630c28807b7122d854a726c78d5ddc",
+        "sha256_in_prefix": "ebd683a49a04aa87d92badca3f4cf16061630c28807b7122d854a726c78d5ddc",
+        "size_in_bytes": 9443
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/stats.bf",
+        "path_type": "hardlink",
+        "sha256": "15f581039673d9caa1fe84e92b379209031ecfc48dc1bebc6f6640fb91201cb6",
+        "sha256_in_prefix": "15f581039673d9caa1fe84e92b379209031ecfc48dc1bebc6f6640fb91201cb6",
+        "size_in_bytes": 1010
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/tasks/alignments.bf",
+        "path_type": "hardlink",
+        "sha256": "e8b745949079989b71729ca61a03e8ec6c4c8c63e03953e69e86cef1ed36c24d",
+        "sha256_in_prefix": "e8b745949079989b71729ca61a03e8ec6c4c8c63e03953e69e86cef1ed36c24d",
+        "size_in_bytes": 35232
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/tasks/ancestral.bf",
+        "path_type": "hardlink",
+        "sha256": "881b1de17224cc307bed06e7a529b2ae9374f3b94b4e1ec4d9bfa086ad7e3b1b",
+        "sha256_in_prefix": "881b1de17224cc307bed06e7a529b2ae9374f3b94b4e1ec4d9bfa086ad7e3b1b",
+        "size_in_bytes": 36689
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/tasks/bayesgraph.ibf",
+        "path_type": "hardlink",
+        "sha256": "54453df3e9607d0eb574cd6ef8dc7821656e4c2dd402888188836fd94d877c4f",
+        "sha256_in_prefix": "54453df3e9607d0eb574cd6ef8dc7821656e4c2dd402888188836fd94d877c4f",
+        "size_in_bytes": 27730
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/tasks/distances.bf",
+        "path_type": "hardlink",
+        "sha256": "0638e1f72da91e3985f58da24beeb59c2f41b35a27c140108e5b3a084112e152",
+        "sha256_in_prefix": "0638e1f72da91e3985f58da24beeb59c2f41b35a27c140108e5b3a084112e152",
+        "size_in_bytes": 3469
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/tasks/estimators.bf",
+        "path_type": "hardlink",
+        "sha256": "d1cd31b12bf6feb61253def8beceb4dce57e3926d151ae5db79c0857d3d2369f",
+        "sha256_in_prefix": "d1cd31b12bf6feb61253def8beceb4dce57e3926d151ae5db79c0857d3d2369f",
+        "size_in_bytes": 47647
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/tasks/genetic_code.bf",
+        "path_type": "hardlink",
+        "sha256": "1972156b3b95f30886417013037ccb5f9c40c990774fe7b9dbe40a37711c88d0",
+        "sha256_in_prefix": "1972156b3b95f30886417013037ccb5f9c40c990774fe7b9dbe40a37711c88d0",
+        "size_in_bytes": 16132
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/tasks/mpi.bf",
+        "path_type": "hardlink",
+        "sha256": "fbaa82aa290f57dae257f3f3dbc8363b7de62e7b9cf973be35366af877a5a6b6",
+        "sha256_in_prefix": "fbaa82aa290f57dae257f3f3dbc8363b7de62e7b9cf973be35366af877a5a6b6",
+        "size_in_bytes": 14133
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/libv3/tasks/trees.bf",
+        "path_type": "hardlink",
+        "sha256": "1a0a2c611df750d8c5cb648758e75b2f91c4ec97a825089728bf2b87e742b8e2",
+        "sha256_in_prefix": "1a0a2c611df750d8c5cb648758e75b2f91c4ec97a825089728bf2b87e742b8e2",
+        "size_in_bytes": 34379
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/molclockBootstrap.bf",
+        "path_type": "hardlink",
+        "sha256": "b12047cf6c2fc1f91191acedcb3c4b1a6209f47137fecc64bade8f8efa047a72",
+        "sha256_in_prefix": "b12047cf6c2fc1f91191acedcb3c4b1a6209f47137fecc64bade8f8efa047a72",
+        "size_in_bytes": 5995
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/pairwiseDistanceEstimator.ibf",
+        "path_type": "hardlink",
+        "sha256": "3597ae5996a9fe0ee0baebe6b1d418540d92ae999b86443928671f7723e168a7",
+        "sha256_in_prefix": "3597ae5996a9fe0ee0baebe6b1d418540d92ae999b86443928671f7723e168a7",
+        "size_in_bytes": 10524
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/pairwiseDistanceEstimatorCounter.ibf",
+        "path_type": "hardlink",
+        "sha256": "f1ec037202b1dc433328d5ba3b4b53deb835ae0568b63ed703a3a44d988e8242",
+        "sha256_in_prefix": "f1ec037202b1dc433328d5ba3b4b53deb835ae0568b63ed703a3a44d988e8242",
+        "size_in_bytes": 180
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/partitionSequences.ibf",
+        "path_type": "hardlink",
+        "sha256": "a291e75445ff37b221e4e8401d8ae966e0b706c6c3f6bd6abe1abe7601dbc4d1",
+        "sha256_in_prefix": "a291e75445ff37b221e4e8401d8ae966e0b706c6c3f6bd6abe1abe7601dbc4d1",
+        "size_in_bytes": 1627
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/posteriors.ibf",
+        "path_type": "hardlink",
+        "sha256": "03e68a87584d309130f509ac600b8f012ac2da324f31ee40704440d30d54b831",
+        "sha256_in_prefix": "03e68a87584d309130f509ac600b8f012ac2da324f31ee40704440d30d54b831",
+        "size_in_bytes": 696
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/qndhelper1.ibf",
+        "path_type": "hardlink",
+        "sha256": "b6f70ee4eae3dcca176c636e8bc74cdca000fbbcd884a1e4b2d9687615bde0c2",
+        "sha256_in_prefix": "b6f70ee4eae3dcca176c636e8bc74cdca000fbbcd884a1e4b2d9687615bde0c2",
+        "size_in_bytes": 36095
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/qndhelper1_mf.ibf",
+        "path_type": "hardlink",
+        "sha256": "058818b5612f523e4883c88080d8b0f9351d5d847718625992f31b794ce01548",
+        "sha256_in_prefix": "058818b5612f523e4883c88080d8b0f9351d5d847718625992f31b794ce01548",
+        "size_in_bytes": 7623
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/qndhelper2.ibf",
+        "path_type": "hardlink",
+        "sha256": "5857bf97bc94dab65b19138d0108b125428039c32366443b2b8b76972abdf83e",
+        "sha256_in_prefix": "5857bf97bc94dab65b19138d0108b125428039c32366443b2b8b76972abdf83e",
+        "size_in_bytes": 13478
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/qndhelper2_mf.ibf",
+        "path_type": "hardlink",
+        "sha256": "c72c7b3fbc2564ae864ae84f5d9994eec2b13a21ccc072772985fb583748f3c2",
+        "sha256_in_prefix": "c72c7b3fbc2564ae864ae84f5d9994eec2b13a21ccc072772985fb583748f3c2",
+        "size_in_bytes": 14146
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/qndhelper3.ibf",
+        "path_type": "hardlink",
+        "sha256": "eb3c6c669f41803cdf522f4eae0bf56df7c44401e563a945c7f62bbc093e38c8",
+        "sha256_in_prefix": "eb3c6c669f41803cdf522f4eae0bf56df7c44401e563a945c7f62bbc093e38c8",
+        "size_in_bytes": 4409
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/qndhelper4.ibf",
+        "path_type": "hardlink",
+        "sha256": "558de1e590bd0a66c87897ec1a7370a9224c6ce044d25981c9980e14aa617d75",
+        "sha256_in_prefix": "558de1e590bd0a66c87897ec1a7370a9224c6ce044d25981c9980e14aa617d75",
+        "size_in_bytes": 4353
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/queryTree.bf",
+        "path_type": "hardlink",
+        "sha256": "f104212bc215bc848079adaadc28c4b9c493981a1776788ba03de8d1c53ad7be",
+        "sha256_in_prefix": "f104212bc215bc848079adaadc28c4b9c493981a1776788ba03de8d1c53ad7be",
+        "size_in_bytes": 2834
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/readIndexFile.bf",
+        "path_type": "hardlink",
+        "sha256": "29458f968dbc333ac39ff63165c865f374e58e33fac32a59455ec0eaab70a918",
+        "sha256_in_prefix": "29458f968dbc333ac39ff63165c865f374e58e33fac32a59455ec0eaab70a918",
+        "size_in_bytes": 448
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/relative_nucleotide_rates.bf",
+        "path_type": "hardlink",
+        "sha256": "432d8de6fafb66d8959bc9b815bfa20a20e505b7a630efe7161ca2fb8bbb6855",
+        "sha256_in_prefix": "432d8de6fafb66d8959bc9b815bfa20a20e505b7a630efe7161ca2fb8bbb6855",
+        "size_in_bytes": 12628
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/relrateBootstrap.bf",
+        "path_type": "hardlink",
+        "sha256": "e0f947222e23c6bc01aa6fcaa2c450dee1537afbb7d727db7a334e60aa06724b",
+        "sha256_in_prefix": "e0f947222e23c6bc01aa6fcaa2c450dee1537afbb7d727db7a334e60aa06724b",
+        "size_in_bytes": 10172
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/relratioBootstrap.bf",
+        "path_type": "hardlink",
+        "sha256": "e748a3a135b68fbfd628a278a9d9fa31356c8379247dbcc0df41a153873d5b3f",
+        "sha256_in_prefix": "e748a3a135b68fbfd628a278a9d9fa31356c8379247dbcc0df41a153873d5b3f",
+        "size_in_bytes": 4502
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/selectModelParameters.bf",
+        "path_type": "hardlink",
+        "sha256": "37725de40656d5f807b4e91037505c0ad021b2778505b212a4a00cd77d7409f2",
+        "sha256_in_prefix": "37725de40656d5f807b4e91037505c0ad021b2778505b212a4a00cd77d7409f2",
+        "size_in_bytes": 449
+      },
+      {
+        "_path": "lib/hyphy/TemplateBatchFiles/simpleBootstrap.bf",
+        "path_type": "hardlink",
+        "sha256": "e7b3b8518df81a0c82915037856207ac7c197631701bb242db5a6cf607a29037",
+        "sha256_in_prefix": "e7b3b8518df81a0c82915037856207ac7c197631701bb242db5a6cf607a29037",
+        "size_in_bytes": 9957
+      },
+      {
+        "_path": "lib/hyphy/data/brown.nuc",
+        "path_type": "hardlink",
+        "sha256": "c9f9fd9ad4ca51c56bbacca499b08b585cbe3820ca95b561548ff9614c5a40c7",
+        "sha256_in_prefix": "c9f9fd9ad4ca51c56bbacca499b08b585cbe3820ca95b561548ff9614c5a40c7",
+        "size_in_bytes": 4680
+      },
+      {
+        "_path": "lib/hyphy/data/integrase_BDA.nex",
+        "path_type": "hardlink",
+        "sha256": "c5a07dc565340a5752cf55b24b23799e25a49ea083d250ac55e3e9e3ef97f5c8",
+        "sha256_in_prefix": "c5a07dc565340a5752cf55b24b23799e25a49ea083d250ac55e3e9e3ef97f5c8",
+        "size_in_bytes": 10605
+      },
+      {
+        "_path": "lib/hyphy/data/p51.aa",
+        "path_type": "hardlink",
+        "sha256": "b9438c0d2d03dba3e0e214751acb9255d425c03aa13f49b12eaa837feb72a220",
+        "sha256_in_prefix": "b9438c0d2d03dba3e0e214751acb9255d425c03aa13f49b12eaa837feb72a220",
+        "size_in_bytes": 4222
+      },
+      {
+        "_path": "lib/hyphy/data/p51.nex",
+        "path_type": "hardlink",
+        "sha256": "71ce7dfe876eae49f84456ce66a2888ec30ecc11d4e4caa2c098c78a6e659e93",
+        "sha256_in_prefix": "71ce7dfe876eae49f84456ce66a2888ec30ecc11d4e4caa2c098c78a6e659e93",
+        "size_in_bytes": 11176
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "hyphy",
+  "sha256": "7ba24012f33ac902e8327bde6e4bc25c297543c0af75f9fe6fbdf3b000942481",
+  "size": 2147157,
+  "subdir": "osx-64",
+  "timestamp": 1572343680025,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/bioconda/osx-64/hyphy-2.5.1-h1dc6549_1.tar.bz2",
+  "version": "2.5.1"
+}
