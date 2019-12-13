@@ -6,8 +6,8 @@ FAM, = glob_wildcards("families/family_{fam}.faa")
 
 rule final:
     input:
-#        "final_results/famsUnderSelection.txt"
         dynamic("families_fubar/{fam}.faa")
+
 rule finalStatistics:
     input:
         log = expand("families/family_{fam}.aln.codon.FUBAR.log", fam=FAM)
