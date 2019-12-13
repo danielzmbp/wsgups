@@ -28,4 +28,3 @@ rule finalStatistics:
 
                                 out.write(currentFile.split(
                                     "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
-
