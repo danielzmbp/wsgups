@@ -1,0 +1,1 @@
+mafft --auto --thread 1 families/family_38041.faa > families/family_38041.aln
