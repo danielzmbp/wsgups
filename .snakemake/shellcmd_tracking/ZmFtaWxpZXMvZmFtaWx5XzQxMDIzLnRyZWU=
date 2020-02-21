@@ -1,1 +1,0 @@
-fasttree -nosupport families/family_41023.aln > families/family_41023.tree || true
