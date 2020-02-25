@@ -51,11 +51,11 @@ rule codonaln:
     output:
         alignment = "families/family_{fam}.aln.codon"
     run:
-        aa_aln = AlignIO.read(input.pro_align, "fasta",alphabet= generic_protein)
-        na_seq = SeqIO.to_dict(SeqIO.parse(input.nucl_seqs, "fasta", alphabet= generic_dna))
+        aa_aln = AlignIO.read(input.pro_align, "fasta", alphabet=generic_protein)
+        na_seq = SeqIO.to_dict(SeqIO.parse(input.nucl_seqs, "fasta", alphabet=generic_dna))
 
         codonalign.default_codon_table.forward_table["NTT"] = "X"
-        codonalign.default_codon_table.forward_table["NNN"] = "X" #quick fix for Ns in the dataset
+        codonalign.default_codon_table.forward_table["NNN"] = "X"  # quick fix for Ns in the dataset
         codonalign.default_codon_table.forward_table["GNN"] = "X"
         codonalign.default_codon_table.forward_table["GGN"] = "G"
         codonalign.default_codon_table.forward_table["GGY"] = "G"
@@ -197,10 +197,10 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["CAY"] = "H"
 
 
-        align = codonalign.build(aa_aln, na_seq, max_score= 20)
+        align = codonalign.build(aa_aln, na_seq, max_score=20)
 
-        for record in range(0,len(align)):
-            align._records[record].description = "" # removes description by looping through the records
+        for record in range(0, len(align)):
+            align._records[record].description = ""  # removes description by looping through the records
 
         SeqIO.write(align, output.alignment, "fasta")
 
@@ -214,7 +214,10 @@ rule hyphy:
     conda:
         "envs/hyphy.yaml"
     shell:
-        "tmpThing=$(find "+ wd +"/.. -name FUBAR.bf|tail -n 1);(echo 1;echo "+wd+"/{input.align}; echo "+wd+"/{input.tree}; echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
+        "tmpThing=$(find " + wd +
+        "/.. -name FUBAR.bf|tail -n 1);(echo 1;echo " +
+        wd + "/{input.align}; echo " + wd +
+        "/{input.tree}; echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
 
 rule finalStatistics:
     input:
