@@ -13,11 +13,15 @@ A pipeline for Whole-genome Screening of Genes Under Positive Selection.
     * `cat *.fna > NT.fna`
 * Use pillars notebook or pillars.py to make all the family files (make sure the column slicing is not masking any species)
     * families/family_*.fna or faa
-* Run snakemake with “fubarsnake.smk" file to align them, make the tree and calculate fubar.
-* Run snakemake with “statfubar.smk” to get the final_results folder with the final stats
-* Run snakemake with "absrelsnake.smk" file to perform absrel
-* Run snakemake with "statabsrel.smk" to get the final statistics
-* Download families and use absrel_results notebooks to analyze the results
+* Perform FUBAR analysis
+    * Run snakemake with “fubarsnake.smk" file to align them, make the tree and calculate fubar.
+    * Run snakemake with “statfubar.smk” to get the final_results folder with the final stats
+    * Run script "fubar.py" in scripts folder in order to move positive reults to a new folder called families_fubar
+* Perform aBSREL analysis
+    * Run snakemake with "absrelsnake.smk" file to perform absrel
+    * Run snakemake with "statabsrel.smk" to get the final statistics
+    * Run script "absrel.py" in scripts folder in order to move positive results to a new folder called families_absrel
+* Use absrel_results notebooks to analyze the results
 * Run interproscan on .faa files
     * Use `interproscansnake` file
 * Run GO enrichment
