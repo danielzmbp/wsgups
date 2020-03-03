@@ -76,6 +76,7 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["CAN"] = "X"
         codonalign.default_codon_table.forward_table["TRS"] = "X"
         codonalign.default_codon_table.forward_table["TRK"] = "X"
+        codonalign.default_codon_table.forward_table["RCA"] = "X"
         codonalign.default_codon_table.forward_table["CAM"] = "X"
         codonalign.default_codon_table.forward_table["MGR"] = "X"
         codonalign.default_codon_table.forward_table["MRC"] = "X"
