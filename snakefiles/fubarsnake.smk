@@ -57,6 +57,7 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["NTT"] = "X"
         codonalign.default_codon_table.forward_table["NNN"] = "X"  # quick fix for Ns in the dataset
         codonalign.default_codon_table.forward_table["GNN"] = "X"
+        codonalign.default_codon_table.forward_table["RTT"] = "X"
         codonalign.default_codon_table.forward_table["GGN"] = "G"
         codonalign.default_codon_table.forward_table["GGY"] = "G"
         codonalign.default_codon_table.forward_table["GGK"] = "G"
