@@ -202,6 +202,7 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["AYA"] = "X"
         codonalign.default_codon_table.forward_table["AYG"] = "X"
         codonalign.default_codon_table.forward_table["CAY"] = "H"
+        codonalign.default_codon_table.forward_table["CAR"] = "Q"
         codonalign.default_codon_table.forward_table["AAR"] = "K"
         codonalign.default_codon_table.forward_table["GCR"] = "A"
         codonalign.default_codon_table.forward_table["CGS"] = "R"
