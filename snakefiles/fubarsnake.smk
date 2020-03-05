@@ -210,7 +210,7 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["GCR"] = "A"
         codonalign.default_codon_table.forward_table["CGS"] = "R"
         codonalign.default_codon_table.forward_table["AAW"] = "X"
-        codonalign.default_codon_table.forward_table["RAT"] = "X"
+        codonalign.default_codon_table.forward_table["RAT"] = "B"
         codonalign.default_codon_table.forward_table["GGM"] = "G"
         codonalign.default_codon_table.forward_table["GGS"] = "G"
         codonalign.default_codon_table.forward_table["CTM"] = "L"
@@ -255,6 +255,17 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["CTY"] = "L"
         codonalign.default_codon_table.forward_table["GGW"] = "G"
         codonalign.default_codon_table.forward_table["KCC"] = "X"
+        codonalign.default_codon_table.forward_table["TYT"] = "X"
+        codonalign.default_codon_table.forward_table["GTW"] = "V"
+        codonalign.default_codon_table.forward_table["WCT"] = "X"
+        codonalign.default_codon_table.forward_table["GGS"] = "G"
+        codonalign.default_codon_table.forward_table["CAS"] = "X"
+        codonalign.default_codon_table.forward_table["GYG"] = "X"
+        codonalign.default_codon_table.forward_table["GCW"] = "A"
+        codonalign.default_codon_table.forward_table["RAT"] = "X"
+        codonalign.default_codon_table.forward_table["MCT"] = "X"
+        codonalign.default_codon_table.forward_table["GMG"] = "X"
+        codonalign.default_codon_table.forward_table["ASA"] = "X"
 
         align = codonalign.build(aa_aln, na_seq, max_score=20)
 
