@@ -238,6 +238,23 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["AAY"] = "N"
         codonalign.default_codon_table.forward_table["AAK"] = "X"
         codonalign.default_codon_table.forward_table["GCS"] = "A"
+        codonalign.default_codon_table.forward_table["KCT"] = "X"
+        codonalign.default_codon_table.forward_table["TTY"] = "F"
+        codonalign.default_codon_table.forward_table["RTG"] = "X"
+        codonalign.default_codon_table.forward_table["GKT"] = "X"
+        codonalign.default_codon_table.forward_table["ARA"] = "X"
+        codonalign.default_codon_table.forward_table["CAK"] = "X"
+        codonalign.default_codon_table.forward_table["MCA"] = "X"
+        codonalign.default_codon_table.forward_table["MGT"] = "X"
+        codonalign.default_codon_table.forward_table["GTS"] = "V"
+        codonalign.default_codon_table.forward_table["CMC"] = "X"
+        codonalign.default_codon_table.forward_table["TGY"] = "C"
+        codonalign.default_codon_table.forward_table["CGM"] = "R"
+        codonalign.default_codon_table.forward_table["GTR"] = "V"
+        codonalign.default_codon_table.forward_table["TYC"] = "X"
+        codonalign.default_codon_table.forward_table["CTY"] = "L"
+        codonalign.default_codon_table.forward_table["GGW"] = "G"
+        codonalign.default_codon_table.forward_table["KCC"] = "X"
 
         align = codonalign.build(aa_aln, na_seq, max_score=20)
 
