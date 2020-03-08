@@ -262,10 +262,24 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["CAS"] = "X"
         codonalign.default_codon_table.forward_table["GYG"] = "X"
         codonalign.default_codon_table.forward_table["GCW"] = "A"
-        codonalign.default_codon_table.forward_table["RAT"] = "X"
         codonalign.default_codon_table.forward_table["MCT"] = "X"
         codonalign.default_codon_table.forward_table["GMG"] = "X"
         codonalign.default_codon_table.forward_table["ASA"] = "X"
+        codonalign.default_codon_table.forward_table["GCB"] = "A"
+        codonalign.default_codon_table.forward_table["WCA"] = "X"
+        codonalign.default_codon_table.forward_table["AYT"] = "X"
+        codonalign.default_codon_table.forward_table["CGH"] = "R"
+        codonalign.default_codon_table.forward_table["RTC"] = "X"
+        codonalign.default_codon_table.forward_table["MAG"] = "X"
+        codonalign.default_codon_table.forward_table["YCG"] = "X"
+        codonalign.default_codon_table.forward_table["RGG"] = "X"
+        codonalign.default_codon_table.forward_table["MAT"] = "X"
+        codonalign.default_codon_table.forward_table["GSA"] = "X"
+        codonalign.default_codon_table.forward_table["AKG"] = "X"
+        codonalign.default_codon_table.forward_table["CSA"] = "X"
+
+        
+        
 
         align = codonalign.build(aa_aln, na_seq, max_score=20)
 
