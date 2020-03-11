@@ -28,9 +28,31 @@ rule clean_fna:
                 new_sequences.append(record)
         SeqIO.write(new_sequences, output[0], "fasta")
 
-rule mafft:
+rule clean_faa:
     input:
         "families/family_{fam}.faa"
+    output:
+        "families/family_{fam}.faa.cleaned"
+    run:
+        new_sequences = []
+        for record in SeqIO.parse(input[0], "fasta"):
+            if record.seq.find("Z")!=-1:
+                position = record.seq.find("Z")
+                record.seq = record.seq.tomutable()
+                record.seq[position] = "X"
+                new_sequences.append(record)
+            elif record.seq.find("J")!=-1:
+                position = record.seq.find("J")
+                record.seq = record.seq.tomutable()
+                record.seq[position] = "X"
+                new_sequences.append(record)
+            else:
+                new_sequences.append(record)
+        SeqIO.write(new_sequences, output[0], "fasta")
+
+rule mafft:
+    input:
+        "families/family_{fam}.faa.cleaned"
     output:
         "families/family_{fam}.aln"
     shell:
@@ -346,8 +368,8 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["CMG"] = "X"
         codonalign.default_codon_table.forward_table["ARM"] = "X"
         codonalign.default_codon_table.forward_table["ACD"] = "T"
-        
-        
+
+
 
         align = codonalign.build(aa_aln, na_seq, max_score=20)
 
