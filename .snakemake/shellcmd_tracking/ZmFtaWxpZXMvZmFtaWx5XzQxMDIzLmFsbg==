@@ -1,1 +1,0 @@
-mafft --auto --thread 1 families/family_41023.faa.cleaned > families/family_41023.aln
