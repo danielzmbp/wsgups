@@ -399,6 +399,17 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["KTY"] = "X"
         codonalign.default_codon_table.forward_table["KTC"] = "X"
         codonalign.default_codon_table.forward_table["WTT"] = "X"
+        codonalign.default_codon_table.forward_table["AGY"] = "S"
+        codonalign.default_codon_table.forward_table["GSG"] = "X"
+        codonalign.default_codon_table.forward_table["GAS"] = "X"
+        codonalign.default_codon_table.forward_table["AAM"] = "X"
+        codonalign.default_codon_table.forward_table["YKG"] = "X"
+        codonalign.default_codon_table.forward_table["CTS"] = "L"
+        codonalign.default_codon_table.forward_table["AGY"] = "S"
+        codonalign.default_codon_table.forward_table["GWW"] = "X"
+        codonalign.default_codon_table.forward_table["GMR"] = "X"
+        codonalign.default_codon_table.forward_table["GRC"] = "X"
+        codonalign.default_codon_table.forward_table["CCW"] = "X"
 
         
         
