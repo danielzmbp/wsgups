@@ -410,6 +410,22 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["GMR"] = "X"
         codonalign.default_codon_table.forward_table["GRC"] = "X"
         codonalign.default_codon_table.forward_table["CCW"] = "X"
+        codonalign.default_codon_table.forward_table["SAC"] = "X"
+        codonalign.default_codon_table.forward_table["GKA"] = "X"
+        codonalign.default_codon_table.forward_table["STC"] = "X"
+        codonalign.default_codon_table.forward_table["AYR"] = "X"
+        codonalign.default_codon_table.forward_table["WTC"] = "X"
+        codonalign.default_codon_table.forward_table["RGM"] = "X"
+        codonalign.default_codon_table.forward_table["KGC"] = "X"
+        codonalign.default_codon_table.forward_table["WTA"] = "X"
+        codonalign.default_codon_table.forward_table["MMS"] = "X"
+        codonalign.default_codon_table.forward_table["AYR"] = "X"
+        codonalign.default_codon_table.forward_table["GRS"] = "X"
+        codonalign.default_codon_table.forward_table["RCR"] = "X"
+        codonalign.default_codon_table.forward_table["GKC"] = "X"
+        codonalign.default_codon_table.forward_table["MGY"] = "X"
+        codonalign.default_codon_table.forward_table["KGA"] = "X"
+        codonalign.default_codon_table.forward_table["YYC"] = "X"
 
         
         
