@@ -426,6 +426,14 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["MGY"] = "X"
         codonalign.default_codon_table.forward_table["KGA"] = "X"
         codonalign.default_codon_table.forward_table["YYC"] = "X"
+        codonalign.default_codon_table.forward_table["GCD"] = "A"
+        codonalign.default_codon_table.forward_table["GYY"] = "X"
+        codonalign.default_codon_table.forward_table["DCC"] = "X"
+        codonalign.default_codon_table.forward_table["GTB"] = "V"
+        codonalign.default_codon_table.forward_table["TMA"] = "X"
+        codonalign.default_codon_table.forward_table["WCS"] = "X"
+        codonalign.default_codon_table.forward_table["MAR"] = "X"
+        codonalign.default_codon_table.forward_table["GRR"] = "X"
 
         
         
