@@ -434,6 +434,11 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["WCS"] = "X"
         codonalign.default_codon_table.forward_table["MAR"] = "X"
         codonalign.default_codon_table.forward_table["GRR"] = "X"
+        codonalign.default_codon_table.forward_table["KYC"] = "X"
+        codonalign.default_codon_table.forward_table["AWG"] = "X"
+        codonalign.default_codon_table.forward_table["CST"] = "X"
+        codonalign.default_codon_table.forward_table["DCC"] = "X"
+        codonalign.default_codon_table.forward_table["TGS"] = "X"
 
         
         
