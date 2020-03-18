@@ -439,6 +439,13 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["CST"] = "X"
         codonalign.default_codon_table.forward_table["DCC"] = "X"
         codonalign.default_codon_table.forward_table["TGS"] = "X"
+        codonalign.default_codon_table.forward_table["GCD"] = "A"
+        codonalign.default_codon_table.forward_table["GYY"] = "X"
+        codonalign.default_codon_table.forward_table["TYK"] = "X"
+        codonalign.default_codon_table.forward_table["TMA"] = "X"
+        codonalign.default_codon_table.forward_table["GRR"] = "X"
+        codonalign.default_codon_table.forward_table["GTB"] = "V"
+        codonalign.default_codon_table.forward_table["WCS"] = "X"
 
         
         
