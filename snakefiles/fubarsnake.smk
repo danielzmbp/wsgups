@@ -446,6 +446,8 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["GRR"] = "X"
         codonalign.default_codon_table.forward_table["GTB"] = "V"
         codonalign.default_codon_table.forward_table["WCS"] = "X"
+        codonalign.default_codon_table.forward_table["SRM"] = "X"
+        codonalign.default_codon_table.forward_table["ARY"] = "X"
 
         
         
