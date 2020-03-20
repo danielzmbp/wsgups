@@ -448,6 +448,16 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["WCS"] = "X"
         codonalign.default_codon_table.forward_table["SRM"] = "X"
         codonalign.default_codon_table.forward_table["ARY"] = "X"
+        codonalign.default_codon_table.forward_table["CWG"] = "X"
+        codonalign.default_codon_table.forward_table["SAT"] = "X"
+        codonalign.default_codon_table.forward_table["AYY"] = "X"
+        codonalign.default_codon_table.forward_table["GYW"] = "X"
+        codonalign.default_codon_table.forward_table["RWG"] = "X"
+        codonalign.default_codon_table.forward_table["YTY"] = "X"
+        codonalign.default_codon_table.forward_table["RSM"] = "X"
+        codonalign.default_codon_table.forward_table["TST"] = "X"
+        codonalign.default_codon_table.forward_table["CYK"] = "X"
+        codonalign.default_codon_table.forward_table["SMS"] = "X"
 
         
         
