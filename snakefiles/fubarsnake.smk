@@ -458,6 +458,7 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["TST"] = "X"
         codonalign.default_codon_table.forward_table["CYK"] = "X"
         codonalign.default_codon_table.forward_table["SMS"] = "X"
+        codonalign.default_codon_table.forward_table["MRA"] = "X"
 
         
         
