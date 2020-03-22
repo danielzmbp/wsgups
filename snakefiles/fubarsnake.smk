@@ -459,6 +459,16 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["CYK"] = "X"
         codonalign.default_codon_table.forward_table["SMS"] = "X"
         codonalign.default_codon_table.forward_table["MRA"] = "X"
+        codonalign.default_codon_table.forward_table["CRW"] = "X"
+        codonalign.default_codon_table.forward_table["GBC"] = "X"
+        codonalign.default_codon_table.forward_table["RAR"] = "X"
+        codonalign.default_codon_table.forward_table["ARR"] = "X"
+        codonalign.default_codon_table.forward_table["GRW"] = "X"
+        codonalign.default_codon_table.forward_table["RAY"] = "B"
+        codonalign.default_codon_table.forward_table["SAW"] = "X"
+        codonalign.default_codon_table.forward_table["AMR"] = "X"
+        codonalign.default_codon_table.forward_table["GWS"] = "X"
+        codonalign.default_codon_table.forward_table["YKT"] = "X"
 
         
         
