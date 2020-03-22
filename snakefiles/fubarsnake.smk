@@ -469,6 +469,10 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["AMR"] = "X"
         codonalign.default_codon_table.forward_table["GWS"] = "X"
         codonalign.default_codon_table.forward_table["YKT"] = "X"
+        codonalign.default_codon_table.forward_table["GWK"] = "X"
+        codonalign.default_codon_table.forward_table["KMT"] = "X"
+        codonalign.default_codon_table.forward_table["YCK"] = "X"
+        codonalign.default_codon_table.forward_table["MGS"] = "X"
 
         
         
