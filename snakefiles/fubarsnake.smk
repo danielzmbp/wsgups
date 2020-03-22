@@ -473,6 +473,8 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["KMT"] = "X"
         codonalign.default_codon_table.forward_table["YCK"] = "X"
         codonalign.default_codon_table.forward_table["MGS"] = "X"
+        codonalign.default_codon_table.forward_table["SSS"] = "X"
+        codonalign.default_codon_table.forward_table["AWK"] = "X"
 
         
         
