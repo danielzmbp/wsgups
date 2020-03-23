@@ -480,6 +480,9 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["RSG"] = "X"
         codonalign.default_codon_table.forward_table["AMM"] = "X"
         codonalign.default_codon_table.forward_table["WMG"] = "X"
+        codonalign.default_codon_table.forward_table["RSA"] = "X"
+        codonalign.default_codon_table.forward_table["AAH"] = "X"
+        codonalign.default_codon_table.forward_table["CSW"] = "X"
 
         
         
