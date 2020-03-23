@@ -483,6 +483,11 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["RSA"] = "X"
         codonalign.default_codon_table.forward_table["AAH"] = "X"
         codonalign.default_codon_table.forward_table["CSW"] = "X"
+        codonalign.default_codon_table.forward_table["MSM"] = "X"
+        codonalign.default_codon_table.forward_table["RAK"] = "X"
+        codonalign.default_codon_table.forward_table["WRC"] = "X"
+        codonalign.default_codon_table.forward_table["RGW"] = "X"
+        codonalign.default_codon_table.forward_table["RKC"] = "X"
 
         
         
