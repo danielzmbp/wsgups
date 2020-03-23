@@ -475,6 +475,8 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["MGS"] = "X"
         codonalign.default_codon_table.forward_table["SSS"] = "X"
         codonalign.default_codon_table.forward_table["AWK"] = "X"
+        codonalign.default_codon_table.forward_table["ASM"] = "X"
+        codonalign.default_codon_table.forward_table["SSM"] = "X"
 
         
         
