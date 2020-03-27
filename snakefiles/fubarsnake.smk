@@ -510,6 +510,14 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["WRC"] = "X"
         codonalign.default_codon_table.forward_table["RGW"] = "X"
         codonalign.default_codon_table.forward_table["RKC"] = "X"
+        codonalign.default_codon_table.forward_table["RWC"] = "X"
+        codonalign.default_codon_table.forward_table["GWR"] = "X"
+        codonalign.default_codon_table.forward_table["RRY"] = "X"
+        codonalign.default_codon_table.forward_table["GWY"] = "X"
+        codonalign.default_codon_table.forward_table["RWS"] = "X"
+        codonalign.default_codon_table.forward_table["RMC"] = "X"
+        codonalign.default_codon_table.forward_table["SRW"] = "X"
+        codonalign.default_codon_table.forward_table["TSG"] = "X"
 
         
         
