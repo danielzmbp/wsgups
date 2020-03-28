@@ -518,6 +518,14 @@ rule codonaln:
         codonalign.default_codon_table.forward_table["RMC"] = "X"
         codonalign.default_codon_table.forward_table["SRW"] = "X"
         codonalign.default_codon_table.forward_table["TSG"] = "X"
+        codonalign.default_codon_table.forward_table["WCY"] = "X"
+        codonalign.default_codon_table.forward_table["SCG"] = "X"
+        codonalign.default_codon_table.forward_table["RRS"] = "X"
+        codonalign.default_codon_table.forward_table["GSM"] = "X"
+        codonalign.default_codon_table.forward_table["RCS"] = "X"
+        codonalign.default_codon_table.forward_table["RGY"] = "X"
+        codonalign.default_codon_table.forward_table["RSC"] = "X"
+        codonalign.default_codon_table.forward_table["GRG"] = "X"
 
         
         
