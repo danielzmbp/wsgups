@@ -5,8 +5,6 @@ from Bio.Alphabet import generic_dna
 from Bio.Alphabet import generic_protein
 import os
 
-wd = os.getcwd()
-
 FAM, = glob_wildcards("families/family_{fam}.fna")
 
 rule final:
@@ -153,10 +151,10 @@ rule hyphy:
     conda:
         "envs/hyphy.yaml"
     shell:
-        "tmpThing=$(find " + wd +
-        "/.. -name FUBAR.bf|tail -n 1);(echo 1;echo " +
-        wd + "/{input.align}; echo " + wd +
-        "/{input.tree}; echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
+        """
+        tmpThing=$(find /.. -name FUBAR.bf|tail -n 1);(echo 1;echo {input.align}; echo {input.tree};
+        echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json}
+        """
 
 rule finalStatistics:
     input:
