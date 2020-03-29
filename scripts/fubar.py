@@ -13,6 +13,8 @@ families_in_dir = os.listdir("families")
 
 families_in_dir[2].split(".")[0]
 
+os.mkdir("families_fubar/")
+
 for i in range(0, len(families_in_dir)):
     if families_in_dir[i].split(".")[0] in list(families):
         copyfile("families/" + families_in_dir[i],
