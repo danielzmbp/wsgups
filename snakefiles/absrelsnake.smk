@@ -1,9 +1,3 @@
-import os
-
-wd = os.getcwd()
-
-# hyphy_dir=  "/home-link/bbpgo01/.conda/envs/python3/lib/hyphy"
-
 FAM, = glob_wildcards("families_fubar/family_{fam}.faa")
 
 rule final:
@@ -20,7 +14,7 @@ rule hyphy:
     conda:
         "envs/hyphy.yaml"
     shell:
-        "tmpThing=$(find " + wd +
-        " -name aBSREL.bf|tail -n 1);(echo " + wd +
-        "{input.align}; echo " + wd +
-        "{input.tree})|hyphy $tmpThing > {output.log} || touch {output.log} {output.json} "
+        """
+        tmpThing=$(find /.. -name aBSREL.bf|tail -n 1);(echo {input.align}; echo {input.tree};|
+        hyphy $tmpThing > {output.log} || touch {output.log} {output.json}
+        """

@@ -1,10 +1,29 @@
-# # Remove families not in famsUnderSelection
-
-import os
 from shutil import copyfile
 import pandas as pd
+import os
+import re
+import glob
 
-fams = pd.read_csv("final_results/famsUnderSelection.txt", r"\s+",
+# makes final_stats file
+
+os.mkdir("final")
+output_file = "final/final_stats.txt"
+
+logs = glob.glob("families/*.log")
+
+with open(output_file, "w") as out:
+  out.write("family number_SUS\n")
+  for log in logs:
+    with open(log) as f:
+      for line in f:
+          if "## FUBAR" in line:
+              if "no" not in line:
+                  result = re.search("inferred(.*)sites", line)
+                  out.write(log.split("/")[-1].split(".")[0] + " " + result.group(1) + "\n")
+
+# copy all positive files to new folder
+
+fams = pd.read_csv("final/final_stats.txt", r"\s+",
                    index_col=False)
 
 families = fams["family"]

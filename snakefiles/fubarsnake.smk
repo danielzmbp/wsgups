@@ -167,21 +167,3 @@ rule hyphy:
         tmpThing=$(find /.. -name FUBAR.bf|tail -n 1);(echo 1;echo {input.align}; echo {input.tree};
         echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json}
         """
-
-rule finalStatistics:
-    input:
-        json = dynamic("families/family_{fam}.aln.codon.FUBAR.json"),
-        log = dynamic("families/family_{fam}.aln.codon.FUBAR.log")
-    output:
-        "final_results/famsUnderSelection.txt"
-    run:
-        with open(output[0], "w") as out:
-            out.write("family numSitesUnderSelection\n")
-            for currentFile in input.log:
-                with open(currentFile) as f:
-                    for line in f:
-                        if "## FUBAR" in line:
-                            if "no" not in line:
-                                result = re.search('inferred(.*)sites', line)
-                                out.write(currentFile.split(
-                                    "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
