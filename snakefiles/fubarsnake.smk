@@ -119,7 +119,7 @@ rule codonaln:
         "RRC":"X","KAG":"X","MKG":"X","AGW":"X","TSC":"X","ART":"X","STG":"X","CYT":"X",
         "WTG":"X","WYC":"X","RTS":"X","TMT":"X","KTY":"X","KTC":"X","WTT":"X","AGY":"S",
         "GSG":"X","GAS":"X","AAM":"X","YKG":"X","CTS":"L","AGY":"S","GWW":"X","GMR":"X",
-        "GRC":"X","CCW":"X","SAC":"X","GKA":"X","STC":"X","AYR":"X","WTC":"X","RGM":"X",
+        "GRC":"X","CCW":"P","SAC":"X","GKA":"X","STC":"X","AYR":"X","WTC":"X","RGM":"X",
         "KGC":"X","WTA":"X","MMS":"X","AYR":"X","GRS":"X","RCR":"X","GKC":"X","MGY":"X",
         "KGA":"X","YYC":"X","GCD":"A","GYY":"X","DCC":"X","GTB":"V","TMA":"X","WCS":"X",
         "MAR":"X","GRR":"X","KYC":"X","AWG":"X","CST":"X","DCC":"X","TGS":"X","GCD":"A",
@@ -130,7 +130,19 @@ rule codonaln:
         "MGS":"X","SSS":"X","AWK":"X","ASM":"X","SSM":"X","RSG":"X","AMM":"X","WMG":"X",
         "RSA":"X","AAH":"X","CSW":"X","MSM":"X","RAK":"X","WRC":"X","RGW":"X","RKC":"X",
         "RWC":"X","GWR":"X","RRY":"X","GWY":"X","RWS":"X","RMC":"X","SRW":"X","TSG":"X",
-        "WCY":"X","SCG":"X","RRS":"X","GSM":"X","RCS":"X","RGY":"X","RSC":"X","GRG":"X"})
+        "WCY":"X","SCG":"X","RRS":"X","GSM":"X","RCS":"X","RGY":"X","RSC":"X","GRG":"X",
+        "CKS":"X","SWY":"X","RAS":"X","RYC":"X","MRG":"X","TGW":"X","SGC":"X","RMG":"X",
+    	"GAH":"X","CCB":"P","GWG":"X","YTK":"X","KCS":"X","RKA":"X","CAW":"X","TKC":"X",
+	    "KYT":"X","WMT":"X","MGC":"X","ASG":"X","WGT":"X","RMA":"X","MKC":"X","SMG":"X",
+    	"AKY":"X","WMA":"X","SMR":"X","SCW":"X","AAB":"X","KAA":"X","YKC":"X","ASY":"X",
+	    "TMG":"X","RKT":"X","ARW":"X","AYM":"X","TYS":"X","SYT":"X","RAM":"X","MYA":"X",
+    	"WMC":"X","WMM":"X","YRT":"X","CKK":"X","SRR":"X","SKM":"X","WKG":"X","SGS":"X",
+    	"WYA":"X","AMK":"X","CWT":"X","TSY":"X","WAG":"X","SKT":"X","AMW":"X","RKS":"X",
+    	"GMW":"X","MAK":"X","YSS":"X","TRY":"X","TYY":"X","SRG":"X","SCS":"X","SRX":"X",
+    	"SMC":"X","YCY":"X","KWA":"X","AYW":"X","KCK":"X","YMM":"X","MRM":"X","ARK":"X",
+    	"AMS":"X","TAM":"X","KYG":"X","AKM":"X","SRC":"X","MRS":"X","WYW":"X","DGG":"X",
+	    "KKG":"X","GSR":"X","MRS":"X","WWC":"X","GKM":"X","TTH":"X","GTD":"V","CTH":"L",
+    	"CYS":"X","MYG":"X","CYM":"X","CRR":"X","GGH":"X"})
 
 
 
