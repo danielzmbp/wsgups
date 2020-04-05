@@ -133,15 +133,15 @@ rule codonaln:
         "WCY":"X","SCG":"X","RRS":"X","GSM":"X","RCS":"X","RGY":"X","RSC":"X","GRG":"X",
         "CKS":"X","SWY":"X","RAS":"X","RYC":"X","MRG":"X","TGW":"X","SGC":"X","RMG":"X",
     	"GAH":"X","CCB":"P","GWG":"X","YTK":"X","KCS":"X","RKA":"X","CAW":"X","TKC":"X",
-	    "KYT":"X","WMT":"X","MGC":"X","ASG":"X","WGT":"X","RMA":"X","MKC":"X","SMG":"X",
+	"KYT":"X","WMT":"X","MGC":"X","ASG":"X","WGT":"X","RMA":"X","MKC":"X","SMG":"X",
     	"AKY":"X","WMA":"X","SMR":"X","SCW":"X","AAB":"X","KAA":"X","YKC":"X","ASY":"X",
-	    "TMG":"X","RKT":"X","ARW":"X","AYM":"X","TYS":"X","SYT":"X","RAM":"X","MYA":"X",
+	"TMG":"X","RKT":"X","ARW":"X","AYM":"X","TYS":"X","SYT":"X","RAM":"X","MYA":"X",
     	"WMC":"X","WMM":"X","YRT":"X","CKK":"X","SRR":"X","SKM":"X","WKG":"X","SGS":"X",
     	"WYA":"X","AMK":"X","CWT":"X","TSY":"X","WAG":"X","SKT":"X","AMW":"X","RKS":"X",
     	"GMW":"X","MAK":"X","YSS":"X","TRY":"X","TYY":"X","SRG":"X","SCS":"X","SRX":"X",
     	"SMC":"X","YCY":"X","KWA":"X","AYW":"X","KCK":"X","YMM":"X","MRM":"X","ARK":"X",
     	"AMS":"X","TAM":"X","KYG":"X","AKM":"X","SRC":"X","MRS":"X","WYW":"X","DGG":"X",
-	    "KKG":"X","GSR":"X","MRS":"X","WWC":"X","GKM":"X","TTH":"X","GTD":"V","CTH":"L",
+	"KKG":"X","GSR":"X","MRS":"X","WWC":"X","GKM":"X","TTH":"X","GTD":"V","CTH":"L",
     	"CYS":"X","MYG":"X","CYM":"X","CRR":"X","GGH":"X"})
 
 
