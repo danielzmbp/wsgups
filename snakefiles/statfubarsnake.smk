@@ -1,5 +1,5 @@
 import os
-from shutil import copyfile
+from shutil import move
 import pandas as pd
 import re
 
@@ -41,4 +41,4 @@ rule move_files:
 
         for i in range(0,len(families_in_dir)):
             if families_in_dir[i].split(".")[0] in list(families):
-                copyfile("families/"+families_in_dir[i], "families_fubar/"+families_in_dir[i])
+                move("families/"+families_in_dir[i], "families_fubar/"+families_in_dir[i])
