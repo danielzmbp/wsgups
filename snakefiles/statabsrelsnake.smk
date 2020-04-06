@@ -2,7 +2,7 @@ import os
 from shutil import move
 import pandas as pd
 
-FAM, = glob_wildcards("families_absrel/family_{fam}.faa")
+FAM, = glob_wildcards("families_absrel/family_{fam}.aln.codon.ABSREL.log")
 
 rule final:
     input:
@@ -39,6 +39,7 @@ rule move_files:
         fams = pd.read_csv(input[0],"\s+",index_col=False)
         families = fams["family"]
         families_in_dir = os.listdir("families")
+        os.mkdir("families_absrel/")
 
         for i in range(0,len(families_in_dir)):
             if families_in_dir[i].split(".")[0] in list(families):
