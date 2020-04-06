@@ -27,7 +27,7 @@ rule finalStatistics:
                                 out.write(currentFile.split(
                                     "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
                             else:
-                                for files in glob.glob(currentFile.split(".")[0] + ".*"):
+                                for file in glob.glob(currentFile.split(".")[0] + ".*"):
                                     os.remove(file)
 
 rule move_files:
