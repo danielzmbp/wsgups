@@ -17,7 +17,6 @@ rule finalStatistics:
         "final_results/fams_selection.txt",
     run:
         with open(output[0], "w") as out:
-            out.write("family num_SUS\n")
             for currentFile in input.log:
                 with open(currentFile) as f:
                     for line in f:
@@ -36,7 +35,7 @@ rule move_files:
     output:
         dynamic("families_fubar/{fam}.faa")
     run:
-        fams = pd.read_csv(input[0],"\s+",index_col=False)
+        fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
         families = fams["family"]
         families_in_dir = os.listdir("families")
 
