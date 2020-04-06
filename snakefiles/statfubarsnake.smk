@@ -24,7 +24,7 @@ rule finalStatistics:
                             if "no" not in line:
                                 result = re.search('inferred(.*)sites', line)
                                 out.write(currentFile.split(
-                                    "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
+                                    "/")[-1].split(".")[0] + " " + result.group(1) + "\n") # family num_selected_sites
                             else:
                                 for file in glob.glob(currentFile.split(".")[0] + ".*"):
                                     os.remove(file)
