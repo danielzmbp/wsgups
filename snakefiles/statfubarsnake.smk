@@ -2,6 +2,7 @@ import os
 from shutil import move
 import pandas as pd
 import re
+import glob
 
 FAM, = glob_wildcards("families/family_{fam}.aln.codon.FUBAR.log")
 
