@@ -3,7 +3,7 @@ from shutil import move
 import pandas as pd
 import re
 
-FAM, = glob_wildcards("families/family_{fam}.faa")
+FAM, = glob_wildcards("families/family_{fam}.aln.codon.FUBAR.log")
 
 rule final:
     input:
