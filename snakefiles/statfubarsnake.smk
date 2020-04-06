@@ -1,8 +1,8 @@
-import os
 from shutil import move
 import pandas as pd
 import re
 import glob
+import os
 
 FAM, = glob_wildcards("families/family_{fam}.aln.codon.FUBAR.log")
 
@@ -36,7 +36,7 @@ rule move_files:
         dynamic("families_fubar/{fam}.faa")
     run:
         fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
-        families = fams["family"]
+        families = fams.iloc[:,0]
         families_in_dir = os.listdir("families")
 
         for i in range(0,len(families_in_dir)):
