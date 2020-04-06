@@ -5,7 +5,7 @@ rule final:
         expand("annotations/{tax}.tsv", tax= TAX)
 rule interpro:
     input:
-        "../notrans/{tax}.faa"
+        "../tsvs/{tax}.faa"
     output:
         "annotations/{tax}.tsv"
     shell:
