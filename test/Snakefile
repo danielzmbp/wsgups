@@ -3,18 +3,25 @@ from Bio import codonalign
 from Bio import AlignIO
 from Bio.Alphabet import generic_dna
 from Bio.Alphabet import generic_protein
+from shutil import move
+import pandas as pd
+import re
+import glob
+import os
+import numpy as np
+import phyphy
 
 FAM, = glob_wildcards("families/family_{fam}.fna")
 
 rule final:
     input:
-        expand("families/family_{fam}.aln.codon.FUBAR.json", fam= FAM)
+        "final_results/fams_absrel.txt"
 
 rule clean_fna:
     input:
-        "families/family_{fam}.fna"
+        expand("families/family_{fam}.fna", fam=FAM)
     output:
-        "families/family_{fam}.fna.cleaned"
+        temp("families/family_{fam}.fna.cleaned")
     run:
         new_sequences = []
         for record in SeqIO.parse(input[0], "fasta"):
@@ -29,7 +36,7 @@ rule clean_faa:
     input:
         "families/family_{fam}.faa"
     output:
-        "families/family_{fam}.faa.cleaned"
+        temp("families/family_{fam}.faa.cleaned")
     run:
         new_sequences = []
         for record in SeqIO.parse(input[0], "fasta"):
@@ -51,7 +58,7 @@ rule mafft:
     input:
         "families/family_{fam}.faa.cleaned"
     output:
-        "families/family_{fam}.aln"
+        temp("families/family_{fam}.aln")
     conda:
         "envs/mafft.yaml"
     shell:
@@ -142,17 +149,103 @@ rule codonaln:
 
         SeqIO.write(align, output.alignment, "fasta")
 
-rule hyphy:
+rule fubar:
     input:
         tree = "families/family_{fam}.tree",
         align = "families/family_{fam}.aln.codon"
     output:
         json = "families/family_{fam}.aln.codon.FUBAR.json",
-        log = "families/family_{fam}.aln.codon.FUBAR.log"
+        log = "families/family_{fam}.aln.codon.FUBAR.log",
+        cache = temp("families/family_{fam}.aln.codon.FUBAR.cache")
     conda:
         "envs/hyphy.yaml"
     shell:
         """
-        tmpThing=$(find /.. -name FUBAR.bf|tail -n 1);(echo 1;echo {input.align}; echo {input.tree};
+        tmpThing=$(find .snakemake/conda/ -name FUBAR.bf|tail -n 1);(echo 1;echo {input.align}; echo {input.tree};
         echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json}
         """
+
+rule fubar_stats:
+    input:
+        log = expand("families/family_{fam}.aln.codon.FUBAR.log", fam=FAM)
+    output:
+        "final_results/fams_fubar.txt",
+    run:
+        with open(output[0], "w") as out:
+            for currentFile in input.log:
+                with open(currentFile) as f:
+                    for line in f:
+                        if "## FUBAR" in line:
+                            if "no" not in line:
+                                result = re.search('inferred(.*)sites', line)
+                                out.write(currentFile.split(
+                                    "/")[-1].split(".")[0] + " " + result.group(1) + "\n") # family num_selected_sites
+
+checkpoint move_fubar:
+    input:
+        "final_results/fams_fubar.txt"
+    output:
+        directory("families_fubar/")
+    run:
+        fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
+        families = fams.iloc[:,0]
+        families_in_dir = os.listdir("families")
+
+        for i in range(0,len(families_in_dir)):
+            if families_in_dir[i].split(".")[0] in list(families):
+                move("families/"+families_in_dir[i], "families_fubar/"+families_in_dir[i])
+
+rule absrel:
+    input:
+        tree = "families_fubar/family_{i}.tree",
+        align = "families_fubar/family_{i}.aln.codon"
+    output:
+        json = "families_fubar/family_{i}.aln.codon.ABSREL.json",
+        log = "families_fubar/family_{i}.aln.codon.ABSREL.log"
+    conda:
+        "envs/hyphy.yaml"
+    shell:
+        """
+        tmpThing=$(find .snakemake/conda -name aBSREL.bf|tail -n 1);(echo {input.align}; echo {input.tree};|
+        hyphy $tmpThing > {output.log} || touch {output.log} {output.json}
+        """
+def aggregate_input(wildcards):
+    checkpoint_output = checkpoints.move_fubar.get(**wildcards).output[0]
+    return expand("families_fubar/family_{i}.aln.codon.ABSREL.log",
+           i=glob_wildcards(os.path.join(checkpoint_output, "{i}.log")).i)
+
+rule absrel_stats:
+    input:
+        aggregate_input
+    output:
+        "final_results/fams_absrel.txt"
+    run:
+        with open(output[0], "w") as out:
+            out.write("family numSitesUnderSelection\n")
+            for currentFile in input:
+                with open(currentFile) as f:
+                    for line in f:
+                        if "Likelihood" in line:
+                            if "**0**" not in line:
+                                result = re.search('found(.*)branches', line)
+                                out.write(currentFile.split(
+                                    "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
+                            else:
+                                for files in glob.glob(currentFile.split(".")[0] + ".*"):
+                                    os.remove(file)
+"""
+rule move_absrel:
+    input:
+        "final_results/fams_absrel.txt"
+    output:
+        dynamic("families_absrel/{fam}.faa")
+    run:
+        fams = pd.read_csv(input[0],"\s+",index_col=False)
+        families = fams["family"]
+        families_in_dir = os.listdir("families")
+        os.mkdir("families_absrel/")
+
+        for i in range(0,len(families_in_dir)):
+            if families_in_dir[i].split(".")[0] in list(families):
+                move("families_fubar/"+families_in_dir[i], "families_absrel/"+families_in_dir[i])
+"""
