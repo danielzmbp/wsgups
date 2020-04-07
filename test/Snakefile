@@ -3,7 +3,7 @@ from Bio import codonalign
 from Bio import AlignIO
 from Bio.Alphabet import generic_dna
 from Bio.Alphabet import generic_protein
-from shutil import move
+from shutil import copyfile
 import pandas as pd
 import re
 import glob
@@ -193,7 +193,7 @@ checkpoint move_fubar:
 
         for i in range(0,len(families_in_dir)):
             if families_in_dir[i].split(".")[0] in list(families):
-                move("families/"+families_in_dir[i], "families_fubar/"+families_in_dir[i])
+                copyfile("families/"+families_in_dir[i], "families_fubar/"+families_in_dir[i])
 
 rule absrel:
     input:
@@ -206,13 +206,13 @@ rule absrel:
         "envs/hyphy.yaml"
     shell:
         """
-        tmpThing=$(find .snakemake/conda -name aBSREL.bf|tail -n 1);(echo {input.align}; echo {input.tree};|
-        hyphy $tmpThing > {output.log} || touch {output.log} {output.json}
+        tmpThing=$(find .snakemake/conda -name aBSREL.bf|tail -n 1);(echo {input.align};
+        echo {input.tree})|hyphy $tmpThing > {output.log} || touch {output.log} {output.json}
         """
 def aggregate_input(wildcards):
     checkpoint_output = checkpoints.move_fubar.get(**wildcards).output[0]
     return expand("families_fubar/family_{i}.aln.codon.ABSREL.log",
-           i=glob_wildcards(os.path.join(checkpoint_output, "{i}.log")).i)
+           i=glob_wildcards(os.path.join(checkpoint_output, "family_{i}.tree")).i)
 
 rule absrel_stats:
     input:
@@ -222,7 +222,7 @@ rule absrel_stats:
     run:
         with open(output[0], "w") as out:
             out.write("family numSitesUnderSelection\n")
-            for currentFile in input:
+            for currentFile in input[0]:
                 with open(currentFile) as f:
                     for line in f:
                         if "Likelihood" in line:
@@ -230,9 +230,6 @@ rule absrel_stats:
                                 result = re.search('found(.*)branches', line)
                                 out.write(currentFile.split(
                                     "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
-                            else:
-                                for files in glob.glob(currentFile.split(".")[0] + ".*"):
-                                    os.remove(file)
 """
 rule move_absrel:
     input:
