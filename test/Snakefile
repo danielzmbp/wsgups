@@ -6,10 +6,7 @@ from Bio.Alphabet import generic_protein
 from shutil import copyfile
 import pandas as pd
 import re
-import glob
 import os
-import numpy as np
-import phyphy
 
 FAM, = glob_wildcards("families/family_{fam}.fna")
 
@@ -209,19 +206,19 @@ rule absrel:
         tmpThing=$(find .snakemake/conda -name aBSREL.bf|tail -n 1);(echo {input.align};
         echo {input.tree})|hyphy $tmpThing > {output.log} || touch {output.log} {output.json}
         """
-def aggregate_input(wildcards):
+
+def aggregate_fubar(wildcards):
     checkpoint_output = checkpoints.move_fubar.get(**wildcards).output[0]
     return expand("families_fubar/family_{i}.aln.codon.ABSREL.log",
            i=glob_wildcards(os.path.join(checkpoint_output, "family_{i}.tree")).i)
 
 rule absrel_stats:
     input:
-        aggregate_input
+        aggregate_fubar
     output:
         "final_results/fams_absrel.txt"
     run:
         with open(output[0], "w") as out:
-            out.write("family numSitesUnderSelection\n")
             for currentFile in input[0]:
                 with open(currentFile) as f:
                     for line in f:
@@ -231,18 +228,29 @@ rule absrel_stats:
                                 out.write(currentFile.split(
                                     "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
 """
-rule move_absrel:
+checkpoint move_absrel:
     input:
         "final_results/fams_absrel.txt"
     output:
-        dynamic("families_absrel/{fam}.faa")
+        directory("families_absrel/")
     run:
-        fams = pd.read_csv(input[0],"\s+",index_col=False)
+        fams = pd.read_csv(input[0],"\s+",index_col=False,header=False)
         families = fams["family"]
-        families_in_dir = os.listdir("families")
-        os.mkdir("families_absrel/")
+        families_in_dir = os.listdir("families_fubar")
 
         for i in range(0,len(families_in_dir)):
             if families_in_dir[i].split(".")[0] in list(families):
-                move("families_fubar/"+families_in_dir[i], "families_absrel/"+families_in_dir[i])
+                    copyfile("families_fubar/"+families_in_dir[i], "families_absrel/"+families_in_dir[i])
+
+def aggregate_absrel(wildcards):
+    checkpoint_output = checkpoints.move_fubar.get(**wildcards).output[0]
+    return expand("families_absrel/family_{j}.aln.codon.ABSREL.log",
+           j=glob_wildcards(os.path.join(checkpoint_output, "family_{j}.tree")).j)
+
+rule final_stats:
+    input:
+        aggregate_fubar
+    output:
 """
+
+
