@@ -10,7 +10,7 @@ localrules: final, clean_fna, clean_faa,mafft,fasttree,codonaln, hyphy
 
 rule final:
     input:
-        expand("families/jsons/{fam}.aln.codon.FUBAR.json", fam= FAM)
+        expand("families/codon_alns/{fam}.aln.codon.FUBAR.json", fam= FAM)
 
 rule clean_fna:
     input:
