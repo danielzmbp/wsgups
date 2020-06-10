@@ -4,15 +4,15 @@ import re
 import glob
 import os
 
-FAM, = glob_wildcards("families/family_{fam}.aln.codon.FUBAR.log")
+FAM, = glob_wildcards("families/logs/{fam}.aln.codon.FUBAR.log")
 
 rule final:
     input:
-        dynamic("families_fubar/{fam}.faa")
+        dynamic("families_fubar/faas/{fam}.faa")
 
 rule finalStatistics:
     input:
-        log = expand("families/family_{fam}.aln.codon.FUBAR.log", fam=FAM)
+        log = expand("families/logs/{fam}.aln.codon.FUBAR.log", fam=FAM)
     output:
         "final_results/fams_selection.txt",
     run:
@@ -33,7 +33,7 @@ rule move_files:
     input:
         "final_results/fams_selection.txt"
     output:
-        dynamic("families_fubar/{fam}.faa")
+        dynamic("families_fubar/faas/{fam}.faa")
     run:
         fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
         families = fams.iloc[:,0]
@@ -41,4 +41,6 @@ rule move_files:
 
         for i in range(0,len(families_in_dir)):
             if families_in_dir[i].split(".")[0] in list(families):
-                move("families/"+families_in_dir[i], "families_fubar/"+families_in_dir[i])
+                for folder in glob.glob("families/*"):
+                    move("families/" + folder + families_in_dir[i],
+                         "families_fubar/" + folder + families_in_dir[i])

@@ -4,17 +4,19 @@ from Bio import AlignIO
 from Bio.Alphabet import generic_dna
 from Bio.Alphabet import generic_protein
 
-FAM, = glob_wildcards("families/family_{fam}.fna")
+FAM, = glob_wildcards("families/fnas/{fam}.fna")
+
+localrules: final, clean_fna, clean_faa,mafft,fasttree,codonaln, hyphy
 
 rule final:
     input:
-        expand("families/family_{fam}.aln.codon.FUBAR.json", fam= FAM)
+        expand("families/jsons/{fam}.aln.codon.FUBAR.json", fam= FAM)
 
 rule clean_fna:
     input:
-        "families/family_{fam}.fna"
+        "families/fnas/{fam}.fna"
     output:
-        "families/family_{fam}.fna.cleaned"
+        "families/cleaned_fnas/{fam}.fna.cleaned"
     run:
         new_sequences = []
         for record in SeqIO.parse(input[0], "fasta"):
@@ -27,9 +29,9 @@ rule clean_fna:
 
 rule clean_faa:
     input:
-        "families/family_{fam}.faa"
+        "families/faas/{fam}.faa"
     output:
-        "families/family_{fam}.faa.cleaned"
+        "families/cleaned_faas/{fam}.faa.cleaned"
     run:
         new_sequences = []
         for record in SeqIO.parse(input[0], "fasta"):
@@ -49,28 +51,28 @@ rule clean_faa:
 
 rule mafft:
     input:
-        "families/family_{fam}.faa.cleaned"
+        "families/cleaned_faas/{fam}.faa.cleaned"
     output:
-        "families/family_{fam}.aln"
+        "families/alns/{fam}.aln"
     conda:
         "envs/mafft.yaml"
     shell:
-        "mafft --auto --thread 1 {input} > {output}"
+        "mafft --auto --anysymbol --thread 1 {input} > {output}"
 rule fasttree:
     input:
-        "families/family_{fam}.aln"
+        "families/alns/{fam}.aln"
     output:
-        "families/family_{fam}.tree"
+        "families/trees/{fam}.tree"
     conda:
         "envs/fasttree.yaml"
     shell:
         "fasttree -nosupport {input} > {output} || true"
 rule codonaln:
     input:
-        pro_align = "families/family_{fam}.aln",
-        nucl_seqs = "families/family_{fam}.fna.cleaned"
+        pro_align = "families/alns/{fam}.aln",
+        nucl_seqs = "families/cleaned_fnas/{fam}.fna.cleaned"
     output:
-        alignment = "families/family_{fam}.aln.codon"
+        alignment = "families/codon_alns/{fam}.aln.codon"
     run:
         aa_aln = AlignIO.read(input.pro_align, "fasta", alphabet=generic_protein)
         na_seq = SeqIO.to_dict(SeqIO.parse(input.nucl_seqs, "fasta", alphabet=generic_dna))
@@ -144,15 +146,15 @@ rule codonaln:
 
 rule hyphy:
     input:
-        tree = "families/family_{fam}.tree",
-        align = "families/family_{fam}.aln.codon"
+        tree = "families/trees/{fam}.tree",
+        align = "families/codon_alns/{fam}.aln.codon"
     output:
-        json = "families/family_{fam}.aln.codon.FUBAR.json",
-        log = "families/family_{fam}.aln.codon.FUBAR.log"
+        json = "families/codon_alns/{fam}.aln.codon.FUBAR.json",
+        log = "families/logs/{fam}.aln.codon.FUBAR.log"
     conda:
         "envs/hyphy.yaml"
     shell:
         """
-        tmpThing=$(find /.. -name FUBAR.bf|tail -n 1);(echo 1;echo {input.align}; echo {input.tree};
-        echo 20;echo 5;echo 3;echo 0.5 )|hyphy $tmpThing > {output.log} || touch {output.log} {output.json}
+        hyphy fubar --alignment {input.align} --tree {input.tree} --output {output.json} > {output.log} || 
+        touch {output.log} {output.json}
         """
