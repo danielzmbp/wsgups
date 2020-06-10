@@ -72,6 +72,10 @@ na_file = "NT.fna"
 
 famDict = {}
 
+os.mkdir("families")
+os.mkdir("families/fnas")
+os.mkdir("families/faas")
+
 with open(node_file) as f:
     for line in f:
         row = line.split()
@@ -83,7 +87,7 @@ with open(node_file) as f:
 naseqDict = SeqIO.to_dict(SeqIO.parse(na_file, "fasta"))
 
 for i in famDict.keys():
-    file = "families/family_" + i + ".fna"
+    file = "families/fnas/" + i + ".fna"
     with open(file, "w") as out:
         for j in famDict[i]:
             out.write('>' + j + '\n')
@@ -91,23 +95,12 @@ for i in famDict.keys():
 
 # # Make files for the amino acid sequences
 
-node_file = "fam_dup.txt"
 aa_file = "AA.faa"
-
-famDict = {}
-
-with open(node_file) as f:
-    for line in f:
-        row = line.split()
-        if row[0] not in famDict:
-            famDict[row[0]] = [row[1]]
-        else:
-            famDict[row[0]].append(row[1])
 
 aaseqDict = SeqIO.to_dict(SeqIO.parse(aa_file, "fasta"))
 
 for i in famDict.keys():
-    file = "families/family_" + i + ".faa"
+    file = "families/faas/" + i + ".faa"
     with open(file, "w") as out:
         for j in famDict[i]:
             out.write('>' + j + '\n')
