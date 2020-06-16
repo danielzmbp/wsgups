@@ -38,11 +38,13 @@ rule move_files:
     run:
         fams = pd.read_csv(input[0],"\s+",index_col=False)
         families = fams["family"]
-        families_in_dir = os.listdir("families")
+        families_in_dir = os.listdir("families/**/*")    # not sure if this would work
         os.mkdir("families_absrel/")
+        folders = ["faas/","fnas/","codon_alns/", "alns/", "jsons/",
+                   "logs/", "trees/", "cleaned_faas/", "cleaned_fnas/"]
 
         for i in range(0,len(families_in_dir)):
-            if families_in_dir[i].split(".")[0] in list(families):
-                for folder in glob.glob("families_fubar/*"):
-                move("families_fubar/" + folder + families_in_dir[i],
-                     "families_absrel/" + folder + families_in_dir[i])
+            if families_in_dir[i].split(".")[0] in list(map(str, families)):
+                for folder in folders:
+                    move("families_fubar/" + folder + families_in_dir[i],
+                         "families_absrel/" + folder + families_in_dir[i])
