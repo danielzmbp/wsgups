@@ -24,10 +24,6 @@ pillars = pillars.iloc[:, 3:]
 
 pillars["count"] = pillars.count(1)
 
-aa_all = SeqIO.index("AA.faa", "fasta", IUPAC.protein)
-na_all = SeqIO.index("NT.fna", "fasta", IUPAC.ambiguous_dna)
-
-
 pillars["family"] = pillars.index
 
 melted = pillars.melt(["family", "count"])
