@@ -10,6 +10,8 @@ import os
 
 FAM, = glob_wildcards("families/faas/{fam}.faa")
 
+localrules: final, clean_fna, clean_faa,mafft,fasttree,codonaln, fubar, fubar_stats, absrel_stats
+
 rule final:
     input:
         "final_results/fams_absrel.txt"
@@ -58,7 +60,7 @@ rule clean_faa:
 
 rule mafft:
     input:
-        "families/cleaned_fnas/{fam}.faa.cleaned"
+        "families/cleaned_faas/{fam}.faa.cleaned"
     output:
         temp("families/alns/{fam}.aln")
     conda:
