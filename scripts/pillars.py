@@ -14,6 +14,8 @@ from Bio import AlignIO
 from Bio.Alphabet import generic_dna
 from Bio.Alphabet import generic_protein
 
+import os
+
 poff_tsv = "fungi.poff.tsv"  # replace with your file name
 
 pillars = pd.read_csv(poff_tsv, "\t")
