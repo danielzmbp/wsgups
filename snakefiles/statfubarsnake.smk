@@ -1,4 +1,4 @@
-from shutil import move
+from shutil import copyfile
 import pandas as pd
 import re
 import glob
@@ -37,10 +37,8 @@ rule move_files:
     run:
         fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
         families = fams.iloc[:,0]
-        families_in_dir = os.listdir("families")
+        families_in_dir = glob.glob("families/**/*")
 
         for i in range(0,len(families_in_dir)):
             if families_in_dir[i].split(".")[0] in list(families):
-                for folder in glob.glob("families/*"):
-                    move("families/" + folder + families_in_dir[i],
-                         "families_fubar/" + folder + families_in_dir[i])
+                copyfile(" families_in_dir[i], "families_fubar/" + families_in_dir[i].split("/",2)[1])
