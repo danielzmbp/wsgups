@@ -25,9 +25,6 @@ rule finalStatistics:
                                 result = re.search('inferred(.*)sites', line)
                                 out.write(currentFile.split(
                                     "/")[-1].split(".")[0] + " " + result.group(1) + "\n") # family num_selected_sites
-                            else:
-                                for file in glob.glob(currentFile.split(".")[0] + ".*"):
-                                    os.remove(file)
 
 rule move_files:
     input:
@@ -39,6 +36,12 @@ rule move_files:
         families = fams.iloc[:,0]
         families_in_dir = glob.glob("families/**/*")
 
+        os.mkdir("families_fubar")
+        os.mkdir("families_fubar/codon_alns")
+        os.mkdir("families_fubar/faas")
+        os.mkdir("families_fubar/fnas")
+        os.mkdir("families_fubar/logs")
+        
         for i in range(0,len(families_in_dir)):
-            if families_in_dir[i].split(".")[0] in list(families):
+            if families_in_dir[i].split(".")[0].split("/")[-1] in list(families):
                 copyfile(families_in_dir[i], "families_fubar/" + families_in_dir[i].split("/",1)[-1])
