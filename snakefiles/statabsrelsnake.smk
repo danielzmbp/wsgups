@@ -1,8 +1,12 @@
-import os
-from shutil import move
+from shutil import copyfile
 import pandas as pd
+import re
+import glob
+import os
 
-FAM, = glob_wildcards("families_absrel/family_{fam}.aln.codon.ABSREL.log")
+FAM, = glob_wildcards("families/logs/{fam}.aln.codon.ABSREL.log")
+
+localrules: final, finalStatistics, move_files
 
 rule final:
     input:
@@ -10,15 +14,11 @@ rule final:
 
 rule finalStatistics:
     input:
-        json = dynamic(
-            "families_fubar/codon_alns/{fam}.aln.codon.ABSREL.json"),
-        log = dynamic(
-            "families_fubar/logs/{fam}.aln.codon.ABSREL.log")
+        log = expand("families_fubar/logs/{fam}.aln.codon.ABSREL.log", fam=FAM)
     output:
-        "final_results/absrel_selection.txt"
+        "final_results/absrel_selection.txt",
     run:
         with open(output[0], "w") as out:
-            out.write("family numSitesUnderSelection\n")
             for currentFile in input.log:
                 with open(currentFile) as f:
                     for line in f:
@@ -27,24 +27,24 @@ rule finalStatistics:
                                 result = re.search('found(.*)branches', line)
                                 out.write(currentFile.split(
                                     "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
-                            else:
-                                for files in glob.glob(currentFile.split(".")[0] + ".*"):
-                                    os.remove(file)
 rule move_files:
     input:
         "final_results/absrel_selection.txt"
     output:
         dynamic("families_absrel/faas/{fam}.faa")
     run:
-        fams = pd.read_csv(input[0],"\s+",index_col=False)
-        families = fams["family"]
-        families_in_dir = os.listdir("families/**/*")    # not sure if this would work
-        os.mkdir("families_absrel/")
-        folders = ["faas/","fnas/","codon_alns/", "alns/", "jsons/",
-                   "logs/", "trees/", "cleaned_faas/", "cleaned_fnas/"]
+        fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
+        families = fams.iloc[:,0]
+        families_in_dir = glob.glob("families_fubar/**/*")
+
+        os.mkdir("families_absrel")
+        os.mkdir("families_absrel/codon_alns")
+        os.mkdir("families_absrel/faas")
+        os.mkdir("families_absrel/fnas")
+        os.mkdir("families_absrel/logs")
+	os.mkdir("families_absrel/alns")
+	os.mkdir("families_absrel/trees")
 
         for i in range(0,len(families_in_dir)):
-            if families_in_dir[i].split(".")[0] in list(map(str, families)):
-                for folder in folders:
-                    move("families_fubar/" + folder + families_in_dir[i],
-                         "families_absrel/" + folder + families_in_dir[i])
+            if families_in_dir[i].split(".")[0].split("/")[-1] in list(map(str,families)):
+                copyfile(families_in_dir[i], "families_absrel/" + families_in_dir[i].split("/",1)[-1])
