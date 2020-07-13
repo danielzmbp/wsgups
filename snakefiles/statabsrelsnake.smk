@@ -4,7 +4,7 @@ import re
 import glob
 import os
 
-FAM, = glob_wildcards("families/logs/{fam}.aln.codon.ABSREL.log")
+FAM, = glob_wildcards("families_fubar/logs/{fam}.aln.codon.ABSREL.log")
 
 localrules: final, finalStatistics, move_files
 
