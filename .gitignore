@@ -10,3 +10,5 @@ test/.snakemake/
 .idea/other.xml
 .idea/vcs.xml
 .idea/wsgups.iml
+.idea/shelf/
+venv/
