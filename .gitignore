@@ -12,3 +12,4 @@ test/.snakemake/
 .idea/wsgups.iml
 .idea/shelf/
 venv/
+/test/proteinortho/

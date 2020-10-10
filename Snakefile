@@ -1,24 +1,127 @@
+import pandas as pd
+import numpy as np
 from Bio import SeqIO
+from Bio.Alphabet import IUPAC
+import glob
+
 from Bio import codonalign
 from Bio import AlignIO
 from Bio.Alphabet import generic_dna
 from Bio.Alphabet import generic_protein
 from shutil import copyfile
-import pandas as pd
-import re
+
 import os
 
-FAM, = glob_wildcards("families/faas/{fam}.faa")
-
-localrules: final, clean_fna, clean_faa,mafft,fasttree,codonaln, fubar, fubar_stats, absrel_stats
+G, = glob_wildcards("samples/{g}.faa")
 
 rule final:
-    input:
-        "final_results/fams_absrel.txt"
+    input: "final_results/fams_absrel.txt"
+
+rule proteinortho:
+    input: expand("samples/{g}.faa",g=G)
+    output: "proteinortho/protein_families.proteinortho.tsv"
+    conda: "envs/proteinortho.yaml"
+    shell:
+        "proteinortho -clean -project=protein_families samples/*.faa && "
+        "mv protein_families* proteinortho/ && cat samples/*.faa > AA.faa && "
+        "cat samples/*.fna > NT.fna"
+
+checkpoint make_families:
+    input: "proteinortho/protein_families.proteinortho.tsv"
+    output: directory("families/faas")
+    run:
+        poff_tsv = input[0]  # replace with your file name
+
+        pillars = pd.read_csv(poff_tsv, "\t")
+
+        pillars = pillars.replace("*", np.nan)
+
+        pillars = pillars.iloc[:, 3:]
+
+        pillars["count"] = pillars.count(1)
+
+        pillars["family"] = pillars.index
+
+        melted = pillars.melt(["family", "count"])
+
+        melted[melted["count"] > 0].dropna()[["family", "value"]].to_csv("fam.txt",     # change filter value to select cutoff
+                                                                         "\t",          # for min number of family members
+                                                                         index=False,
+                                                                         header=False)
+
+
+        # # Modify fam.txt to put duplications in the same family
+
+        fam = pd.read_csv("fam.txt", "\t", header=None)
+
+        # separate the second column by the comma.
+
+        fam_separated = fam[1].str.split(",", expand=True)
+
+
+        # merge the separated dataframe with the regular one so that I get
+        # the family names
+
+        fam[1] = np.nan
+
+        merged = fam.merge(fam_separated, left_index=True, right_index=True).melt(
+                "0_x")
+
+        # replace none in dataframe
+
+        merged.replace(to_replace=[None], value=np.nan, inplace=True)
+
+        merged["value"].dropna().str.contains(",").value_counts()
+
+
+        merged[["0_x", "value"]].dropna().to_csv("fam_dup.txt", "\t", index=False,
+                                                 header=False)
+
+        # # Make files for the nucleotide sequences
+
+        node_file = "fam_dup.txt"
+        na_file = "NT.fna"
+
+        famDict = {}
+
+        if not os.path.exists('families/fnas'):
+            os.makedirs("families/fnas")
+        if not os.path.exists('families/faas'):
+            os.makedirs("families/faas")
+
+        with open(node_file) as f:
+            for line in f:
+                row = line.split()
+                if row[0] not in famDict:
+                    famDict[row[0]] = [row[1]]
+                else:
+                    famDict[row[0]].append(row[1])
+
+        naseqDict = SeqIO.to_dict(SeqIO.parse(na_file, "fasta"))
+
+        for i in famDict.keys():
+            file = "families/fnas/" + i + ".fna"
+            with open(file, "w") as out:
+                for j in famDict[i]:
+                    out.write('>' + j + '\n')
+                    out.write(str(naseqDict[j].seq) + '\n')
+
+        # # Make files for the amino acid sequences
+
+        aa_file = "AA.faa"
+
+        aaseqDict = SeqIO.to_dict(SeqIO.parse(aa_file, "fasta"))
+
+        for i in famDict.keys():
+            file = "families/faas/" + i + ".faa"
+            with open(file, "w") as out:
+                for j in famDict[i]:
+                    out.write('>' + j + '\n')
+                    out.write(str(aaseqDict[j].seq) + '\n')
 
 rule clean_fna:
     input:
-        expand("families/fnas/{fam}.fna", fam=FAM)
+        "families/fnas/{fam}.fna"
     output:
         temp("families/cleaned_fnas/{fam}.fna.cleaned")
     run:
@@ -145,7 +248,7 @@ rule codonaln:
              'KCK': "X", 'YMM': "X", 'MRM': "X", 'ARK': "X", 'AMS': "X", 'TAM': "X", 'KYG': "X", 'AKM': "X", 'SRC': "X",
              'MRS': "X", 'WYW': "X", 'DGG': "X", 'KKG': "X", 'GSR': "X", 'WWC': "X", 'GKM': "X", 'TTH': "X", 'GTD': "V",
              'CTH': "L", 'CYS': "X", 'MYG': "X", 'CYM': "X", 'CRR': "X", 'GGH': "X", 'GYR': "X", 'GYM': "X", 'RGR': "X",
-             'MMA': "X", 'RYG': "X", 'GRK': "X", 'GKW': "X", 'RWT': "X", 'SKC': "X", 'AWY': "X", 'GRM': "X", 'MWG': "X"})
+             'MMA': "X", 'RYG': "X", 'GRK': "X", 'GKW': "X", 'RWT': "sX", 'SKC': "X", 'AWY': "X", 'GRM': "X", 'MWG': "X"})
 
         align = codonalign.build(aa_aln, na_seq, max_score=20)
 
@@ -167,14 +270,19 @@ rule fubar:
     shell:
         "hyphy fubar --alignment {input.align} --tree {input.tree} --output {output.json} > {output.log} || touch {output.log} {output.json}"
 
-rule fubar_stats:
+def aggregate_fams(wildcards):
+    checkpoint_output = checkpoints.make_families.get(**wildcards).output[0]
+    return expand("families/logs/{fam}.aln.codon.FUBAR.log",
+           fam=glob_wildcards(os.path.join(checkpoint_output, "{fam}.faa")).fam)
+
+rule aggregate_fams:
     input:
-        log = expand("families/logs/{fam}.aln.codon.FUBAR.log", fam=FAM)
+        aggregate_fams
     output:
         "final_results/fams_fubar.txt",
     run:
         with open(output[0], "w") as out:
-            for currentFile in input.log:
+            for currentFile in input:
                 with open(currentFile) as f:
                     for line in f:
                         if "## FUBAR" in line:
@@ -192,9 +300,18 @@ checkpoint move_fubar:
         fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
         families = fams.iloc[:,0]
         families_in_dir = glob.glob("families/**/*")
-
+        if not os.path.exists('families_fubar/fnas'):
+            os.makedirs('families_fubar/fnas')
+        if not os.path.exists('families_fubar/faas'):
+            os.makedirs('families_fubar/faas')
+        if not os.path.exists('families_fubar/logs'):
+            os.makedirs('families_fubar/logs')
+        if not os.path.exists('families_fubar/trees'):
+            os.makedirs('families_fubar/trees')
+        if not os.path.exists('families_fubar/codon_alns'):
+            os.makedirs('families_fubar/codon_alns')
         for i in range(0,len(families_in_dir)):
-            if families_in_dir[i].split(".")[0] in list(families):
+            if int(families_in_dir[i].split(".")[0].split("/")[-1]) in list(families):
                 copyfile(families_in_dir[i], "families_fubar/"+families_in_dir[i].split("/",1)[1])
 
 rule absrel:
@@ -230,6 +347,8 @@ rule absrel_stats:
                                 result = re.search('found(.*)branches', line)
                                 out.write(currentFile.split(
                                     "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
+
+
 """
 checkpoint move_absrel:
     input:
@@ -255,5 +374,4 @@ rule final_stats:
         aggregate_fubar
     output:
 """
-
 
