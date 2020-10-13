@@ -1,8 +1,8 @@
 .DS_Store
 families/
 families_fubar/
+families_absrel/
 .snakemake/
-test/.snakemake/
 .idea/.gitignore
 .idea/inspectionProfiles/
 .idea/misc.xml
@@ -19,5 +19,6 @@ fam.txt
 fam_dup.txt
 proteinortho/
 families/
-/final_results/fams_fubar.txt
+final_results/
 /errors.log
+.gitignore
