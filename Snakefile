@@ -1,21 +1,22 @@
 import pandas as pd
 import numpy as np
 from Bio import SeqIO
-from Bio.Alphabet import IUPAC
 import glob
+import os
 
+import re
 from Bio import codonalign
 from Bio import AlignIO
 from Bio.Alphabet import generic_dna
 from Bio.Alphabet import generic_protein
 from shutil import copyfile
 
-import os
+import phyphy
 
 G, = glob_wildcards("samples/{g}.faa")
 
 rule final:
-    input: "final_results/fams_absrel.txt"
+    input: "all_ann.csv"
 
 rule proteinortho:
     input: expand("samples/{g}.faa",g=G)
@@ -35,11 +36,7 @@ checkpoint make_families:
     run:
         poff_tsv = input[0]  # replace with your file name
 
-        pillars = pd.read_csv(poff_tsv, "\t")
-
-        pillars = pillars.replace("*", np.nan)
-
-        pillars = pillars.iloc[:, 3:]
+        pillars = pd.read_csv(poff_tsv, "\t").replace("*", np.nan).iloc[:, 3:]
 
         pillars["count"] = pillars.count(1)
 
@@ -342,59 +339,168 @@ rule absrel_stats:
         "final_results/fams_absrel.txt"
     run:
         with open(output[0], "w") as out:
-            for currentFile in input[0]:
+            for currentFile in input:
                 with open(currentFile) as f:
                     for line in f:
                         if "Likelihood" in line:
-                            if "**0**" not in line:
-                                result = re.search('found(.*)branches', line)
+                            if "**0** branches" not in line:
                                 out.write(currentFile.split(
-                                    "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
+                                    "/")[-1].split(".")[0] + "\n")
 
-
-"""
 checkpoint move_absrel:
     input:
         "final_results/fams_absrel.txt"
     output:
         directory("families_absrel")
     run:
-        fams = pd.read_csv(input[0],"\s+",index_col=False,header=False)
-        families = fams["family"]
+        fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
+        families = fams[0]
         families_in_dir = glob.glob("families_fubar/**/*")
-        if not os.path.exists('families_fubar/fnas'):
+        if not os.path.exists('families_absrel/fnas'):
             os.makedirs('families_absrel/fnas')
-        if not os.path.exists('families_fubar/faas'):
+        if not os.path.exists('families_absrel/faas'):
             os.makedirs('families_absrel/faas')
-        if not os.path.exists('families_fubar/logs'):
+        if not os.path.exists('families_absrel/logs'):
             os.makedirs('families_absrel/logs')
         if not os.path.exists('families_absrel/trees'):
             os.makedirs('families_absrel/trees')
         if not os.path.exists('families_absrel/codon_alns'):
-            os.makedirs('families_fubar/codon_alns')
+            os.makedirs('families_absrel/codon_alns')
         for i in range(0,len(families_in_dir)):
             if int(families_in_dir[i].split(".")[0].split("/")[-1]) in list(families):
                 copyfile(families_in_dir[i], "families_absrel/"+families_in_dir[i].split("/",1)[1])
 
 def aggregate_absrel(wildcards):
-    checkpoint_output = checkpoints.move_fubar.get(**wildcards).output[0]
-    return expand("families_absrel/logs/family_{j}.aln.codon.ABSREL.log",
-           j=glob_wildcards(os.path.join(checkpoint_output, "family_{j}.tree")).j)
+    checkpoint_output = checkpoints.move_absrel.get(**wildcards).output[0]
+    return expand("families_absrel/logs/{j}.aln.codon.ABSREL.log",
+           j=glob_wildcards(os.path.join(checkpoint_output, "trees/{j}.tree")).j)
 
 rule final_stats:
     input:
         aggregate_absrel
     output:
-        "final_results/fams_absrel.txt"
+        "ps.csv",
+        "r_dd.csv",
+        "all_ann.csv",
+        "dups.txt"
     run:
-        with open(output[0], "w") as out:
-            for currentFile in input[0]:
-                with open(currentFile) as f:
-                    for line in f:
-                        if "Likelihood" in line:
-                            if "**0**" not in line:
-                                result = re.search('found(.*)branches', line)
-                                out.write(currentFile.split(
-                                    "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
-"""
+        absrel = glob.glob("families_absrel/logs/*.ABSREL.log")
+
+        family_list = []
+        branch_list = []
+        pvalue_list = []
+
+        for file in absrel:
+            with open(file) as myfile:
+                for line in myfile:
+                    if re.search(r'^\* \w.+ p-value',line):
+                        family, branch, pvalue = file[16:].split(".")[0], line[2:].split(",")[0],line.split()[-1]
+                        family_list.append(family)
+                        branch_list.append(branch)
+                        pvalue_list.append(pvalue)
+
+        ps = pd.DataFrame({"family": family_list,'branch': branch_list, 'p-value': pvalue_list})
+
+        absrel_json = glob.glob("families_absrel/*.ABSREL.json")
+
+        tree_list=[]
+        family_list=[]
+
+        for file in absrel_json:
+            tree,family = phyphy.Extractor(file).extract_input_tree(),file[16:].split(".")[0]
+            tree_list.append(tree)
+            family_list.append(family)
+
+        tdf = pd.DataFrame({"tree":tree_list,"family":family_list})
+
+        ps = ps.merge(tdf)
+
+        ps.to_csv("ps.csv")
+
+        lst_col = 'children'
+
+        r = pd.DataFrame({
+              col:np.repeat(ps[col].values, ps[lst_col].str.len())
+              for col in ps.columns.drop(lst_col)}
+            ).assign(**{lst_col:np.concatenate(ps[lst_col].values)})[ps.columns]
+
+        r_dd = r.drop_duplicates(subset=['family', 'children'])
+
+        files = os.listdir("samples/")
+
+        taxa=[]
+        for file in files:
+            if file.endswith(".faa"):
+                taxa.append(file.split(".")[0])
+        empty_dict={}
+        for t in taxa:
+            test = SeqIO.to_dict(SeqIO.parse("samples/"+t+".faa","fasta"))
+            for key,value in test.items():
+                test[key] = t
+                empty_dict.update(test)
+
+        spec_name= pd.DataFrame.from_dict(empty_dict,orient='index',
+               columns=["species"])
+
+        spec_name["children"] = spec_name.index
+
+        r_dd = r_dd.merge(spec_name)
+
+        proteome = glob.glob("tsv/*.tsv")
+
+        col_names = ["protein_accession","md5","length","analysis", "signature_accession",
+                     "signature_description", "start","stop","score","status","date",
+                     "ip_accesion","ip_description","go","pathway"]
+
+        annotations = []
+
+        for infile in proteome:
+            data = pd.read_csv(infile, sep='\t',names=col_names)
+            data["family"] = infile[4:].split(".")[0]
+            annotations.append(data)
+
+        all_annotations = pd.concat(annotations).reset_index()
+
+        all_annotations["protein_accession"] = all_annotations["protein_accession"].replace("\.","_",regex=True)
+
+        r_dd.to_csv("r_dd.csv")
+
+        all_annotations["ps"] = np.where(all_annotations["protein_accession"].isin(r_dd["children"]), 1, 0)
+
+        families = pd.read_csv("fam.txt","\s+",header=None)
+
+        families = families[1].str.split(",",expand=True)
+
+        families.fillna(value=pd.np.nan, inplace=True)
+
+        families = families.dropna(subset=[1]).melt().dropna()
+
+        families["value"].to_csv("dups.txt",index=False,header=False)
+
+        dups = families["value"]
+
+        all_annotations["dups"] = np.where(all_annotations["protein_accession"].isin(dups), 1, 0)
+
+        # Make GO associations file
+
+        all_annotations["go"] = all_annotations["go"].str.replace("|",",")
+
+        all_annotations[["protein_accession","go"]].dropna().to_csv("go_mapping.csv", sep="\t", index= False)
+
+        # Write annotations to file
+
+        all_annotations.to_csv("all_ann.csv")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
