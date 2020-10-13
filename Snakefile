@@ -19,7 +19,10 @@ rule final:
 
 rule proteinortho:
     input: expand("samples/{g}.faa",g=G)
-    output: "proteinortho/protein_families.proteinortho.tsv"
+    output:
+        "proteinortho/protein_families.proteinortho.tsv",
+        "AA.faa",
+        "NT.fna",
     conda: "envs/proteinortho.yaml"
     shell:
         "proteinortho -clean -project=protein_families samples/*.faa && "
@@ -262,13 +265,13 @@ rule fubar:
         tree = "families/trees/{fam}.tree",
         align = "families/codon_alns/{fam}.aln.codon"
     output:
-        json = "families/codon_alns/{fam}.aln.codon.FUBAR.json",
+        json = temp("families/codon_alns/{fam}.aln.codon.FUBAR.json"),
         log = "families/logs/{fam}.aln.codon.FUBAR.log",
         cache = temp("families/codon_alns/{fam}.aln.codon.FUBAR.cache")
     conda:
         "envs/hyphy.yaml"
     shell:
-        "hyphy fubar --alignment {input.align} --tree {input.tree} --output {output.json} > {output.log} || touch {output.log} {output.json}"
+        "hyphy fubar --alignment {input.align} --tree {input.tree} --output {output.json} > {output.log} || touch {output.log} {output.json} {output.cache}"
 
 def aggregate_fams(wildcards):
     checkpoint_output = checkpoints.make_families.get(**wildcards).output[0]
@@ -295,7 +298,7 @@ checkpoint move_fubar:
     input:
         "final_results/fams_fubar.txt"
     output:
-        directory("families_fubar/")
+        directory("families_fubar")
     run:
         fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
         families = fams.iloc[:,0]
@@ -316,7 +319,7 @@ checkpoint move_fubar:
 
 rule absrel:
     input:
-        tree = "families_fubar/codon_absrel/{i}.tree",
+        tree = "families_fubar/trees/{i}.tree",
         align = "families_fubar/codon_alns/{i}.aln.codon"
     output:
         json = "families_fubar/codon_alns/{i}.aln.codon.ABSREL.json",
@@ -329,8 +332,8 @@ rule absrel:
 
 def aggregate_fubar(wildcards):
     checkpoint_output = checkpoints.move_fubar.get(**wildcards).output[0]
-    return expand("families_fubar/faas/{i}.aln.codon.ABSREL.log",
-           i=glob_wildcards(os.path.join(checkpoint_output, "/trees/{i}.tree")).i)
+    return expand("families_fubar/logs/{i}.aln.codon.ABSREL.log",
+           i=glob_wildcards(os.path.join(checkpoint_output, "trees/{i}.tree")).i)
 
 rule absrel_stats:
     input:
@@ -354,24 +357,44 @@ checkpoint move_absrel:
     input:
         "final_results/fams_absrel.txt"
     output:
-        directory("families_absrel/")
+        directory("families_absrel")
     run:
         fams = pd.read_csv(input[0],"\s+",index_col=False,header=False)
         families = fams["family"]
-        families_in_dir = os.listdir("families_fubar")
-
+        families_in_dir = glob.glob("families_fubar/**/*")
+        if not os.path.exists('families_fubar/fnas'):
+            os.makedirs('families_absrel/fnas')
+        if not os.path.exists('families_fubar/faas'):
+            os.makedirs('families_absrel/faas')
+        if not os.path.exists('families_fubar/logs'):
+            os.makedirs('families_absrel/logs')
+        if not os.path.exists('families_absrel/trees'):
+            os.makedirs('families_absrel/trees')
+        if not os.path.exists('families_absrel/codon_alns'):
+            os.makedirs('families_fubar/codon_alns')
         for i in range(0,len(families_in_dir)):
-            if families_in_dir[i].split(".")[0] in list(families):
-                    copyfile("families_fubar/"+families_in_dir[i], "families_absrel/"+families_in_dir[i])
+            if int(families_in_dir[i].split(".")[0].split("/")[-1]) in list(families):
+                copyfile(families_in_dir[i], "families_absrel/"+families_in_dir[i].split("/",1)[1])
 
 def aggregate_absrel(wildcards):
     checkpoint_output = checkpoints.move_fubar.get(**wildcards).output[0]
-    return expand("families_absrel/family_{j}.aln.codon.ABSREL.log",
+    return expand("families_absrel/logs/family_{j}.aln.codon.ABSREL.log",
            j=glob_wildcards(os.path.join(checkpoint_output, "family_{j}.tree")).j)
 
 rule final_stats:
     input:
-        aggregate_fubar
+        aggregate_absrel
     output:
+        "final_results/fams_absrel.txt"
+    run:
+        with open(output[0], "w") as out:
+            for currentFile in input[0]:
+                with open(currentFile) as f:
+                    for line in f:
+                        if "Likelihood" in line:
+                            if "**0**" not in line:
+                                result = re.search('found(.*)branches', line)
+                                out.write(currentFile.split(
+                                    "/")[-1].split(".")[0] + " " + result.group(1) + "\n")
 """
 
