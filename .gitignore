@@ -13,3 +13,11 @@ test/.snakemake/
 .idea/shelf/
 venv/
 /test/proteinortho/
+/AA.faa
+NT.fna
+fam.txt
+fam_dup.txt
+proteinortho/
+families/
+/final_results/fams_fubar.txt
+/errors.log
