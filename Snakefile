@@ -26,12 +26,12 @@ rule proteinortho:
         "NT.fna",
     conda: "envs/proteinortho.yaml"
     shell:
-        "proteinortho -clean -project=protein_families samples/*.faa && "
+        "proteinortho -clean -synteny -singles -nograph -project=protein_families samples/*.faa && "
         "mv protein_families* proteinortho/ && cat samples/*.faa > AA.faa && "
         "cat samples/*.fna > NT.fna"
 
 checkpoint make_families:
-    input: "proteinortho/protein_families.proteinortho.tsv"
+    input: "proteinortho/protein_families.poff.tsv"
     output: directory("families/faas")
     run:
         poff_tsv = input[0]  # replace with your file name
@@ -44,7 +44,7 @@ checkpoint make_families:
 
         melted = pillars.melt(["family", "count"])
 
-        melted[melted["count"] > 0].dropna()[["family", "value"]].to_csv("fam.txt",     # change filter value to select cutoff
+        melted[melted["count"] > 0].dropna()[["family", "value"]].to_csv("fam.txt",    # change filter value to select cutoff
                                                                          "\t",          # for min number of family members
                                                                          index=False,
                                                                          header=False)
@@ -324,7 +324,8 @@ rule absrel:
     conda:
         "envs/hyphy.yaml"
     shell:
-        "hyphy absrel --alignment {input.align} --tree {input.tree} --output {output.json} > {output.log} || touch {output.log} {output.json}"
+        "hyphy absrel --alignment {input.align} --tree {input.tree} --output {output.json} > {output.log} || "
+        "touch {output.log} {output.json}"
 
 
 def aggregate_fubar(wildcards):
@@ -394,22 +395,23 @@ rule final_stats:
             with open(file) as myfile:
                 for line in myfile:
                     if re.search(r'^\* \w.+ p-value',line):
-                        family, branch, pvalue = file[16:].split(".")[0], line[2:].split(",")[0],line.split()[-1]
+                        family, branch, pvalue = file[21:].split(".")[0], line[2:].split(",")[0],line.split()[-1]
                         family_list.append(family)
                         branch_list.append(branch)
                         pvalue_list.append(pvalue)
 
         ps = pd.DataFrame({"family": family_list,'branch': branch_list, 'p-value': pvalue_list})
 
-        absrel_json = glob.glob("families_absrel/*.ABSREL.json")
+        absrel_json = glob.glob("families_absrel/codon_alns/*.ABSREL.json")
 
         tree_list=[]
         family_list=[]
 
         for file in absrel_json:
-            tree,family = phyphy.Extractor(file).extract_input_tree(),file[16:].split(".")[0]
-            tree_list.append(tree)
-            family_list.append(family)
+            if os.stat(file).st_size > 0:
+                tree,family = phyphy.Extractor(file).extract_input_tree(),file[27:].split(".")[0]
+                tree_list.append(tree)
+                family_list.append(family)  # the problem is that there are empty json files and the script files
 
         tdf = pd.DataFrame({"tree":tree_list,"family":family_list})
 
@@ -446,7 +448,7 @@ rule final_stats:
 
         r_dd = r_dd.merge(spec_name)
 
-        proteome = glob.glob("tsv/*.tsv")
+        proteome = glob.glob("samples/*.tsv")
 
         col_names = ["protein_accession","md5","length","analysis", "signature_accession",
                      "signature_description", "start","stop","score","status","date",
