@@ -7,13 +7,15 @@ import os
 import re
 from Bio import codonalign
 from Bio import AlignIO
-from Bio.Alphabet import generic_dna
-from Bio.Alphabet import generic_protein
+
 from shutil import copyfile
 
 import phyphy
 
 G, = glob_wildcards("samples/{g}.faa")
+
+localrules: final, proteinortho, make_families, clean_faa, clean_fna, mafft,
+localrules: fasttree, fubar, move_fubar, final_stats, absrel_stats
 
 rule final:
     input: "all_ann.csv"
@@ -186,8 +188,8 @@ rule codonaln:
     output:
         alignment = "families/codon_alns/{fam}.aln.codon"
     run:
-        aa_aln = AlignIO.read(input.pro_align, "fasta", alphabet=generic_protein)
-        na_seq = SeqIO.to_dict(SeqIO.parse(input.nucl_seqs, "fasta", alphabet=generic_dna))
+        aa_aln = AlignIO.read(input.pro_align, "fasta")
+        na_seq = SeqIO.to_dict(SeqIO.parse(input.nucl_seqs, "fasta")
 
         codonalign.default_codon_table.forward_table.update(
             {'NTT': "X", 'NNN': "X", 'GNN': "X", 'RTT': "X", 'GGN': "G", 'GGY': "G", 'GGK': "G", 'GGR': "G", 'CCS': "P",
@@ -492,17 +494,3 @@ rule final_stats:
         # Write annotations to file
 
         all_annotations.to_csv("all_ann.csv")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
