@@ -7,22 +7,11 @@
 import pandas as pd
 import numpy as np
 from Bio import SeqIO
-from Bio.Alphabet import IUPAC
-
-from Bio import codonalign
-from Bio import AlignIO
-from Bio.Alphabet import generic_dna
-from Bio.Alphabet import generic_protein
-
 import os
 
-poff_tsv = "fungi.poff.tsv"  # replace with your file name
+poff_tsv = snakemake.input[0]  # replace with your file name
 
-pillars = pd.read_csv(poff_tsv, "\t")
-
-pillars = pillars.replace("*", np.nan)
-
-pillars = pillars.iloc[:, 3:]
+pillars = pd.read_csv(poff_tsv, "\t").replace("*", np.nan).iloc[:, 3:]
 
 pillars["count"] = pillars.count(1)
 
@@ -30,11 +19,10 @@ pillars["family"] = pillars.index
 
 melted = pillars.melt(["family", "count"])
 
-melted[melted["count"] > 4].dropna()[["family", "value"]].to_csv("fam.txt",
-                                                                 "\t",
+melted[melted["count"] > 0].dropna()[["family", "value"]].to_csv("fam.txt",  # change filter value to select cutoff
+                                                                 "\t",  # for min number of family members
                                                                  index=False,
                                                                  header=False)
-
 
 # # Modify fam.txt to put duplications in the same family
 
@@ -44,21 +32,19 @@ fam = pd.read_csv("fam.txt", "\t", header=None)
 
 fam_separated = fam[1].str.split(",", expand=True)
 
-
 # merge the separated dataframe with the regular one so that I get
 # the family names
 
 fam[1] = np.nan
 
 merged = fam.merge(fam_separated, left_index=True, right_index=True).melt(
-        "0_x")
+    "0_x")
 
 # replace none in dataframe
 
 merged.replace(to_replace=[None], value=np.nan, inplace=True)
 
 merged["value"].dropna().str.contains(",").value_counts()
-
 
 merged[["0_x", "value"]].dropna().to_csv("fam_dup.txt", "\t", index=False,
                                          header=False)
@@ -70,9 +56,10 @@ na_file = "NT.fna"
 
 famDict = {}
 
-os.mkdir("families")
-os.mkdir("families/fnas")
-os.mkdir("families/faas")
+if not os.path.exists('families/fnas'):
+    os.makedirs("families/fnas")
+if not os.path.exists('families/faas'):
+    os.makedirs("families/faas")
 
 with open(node_file) as f:
     for line in f:
