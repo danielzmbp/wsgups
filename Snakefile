@@ -8,6 +8,7 @@ from Bio import codonalign
 from Bio import AlignIO
 from shutil import copyfile
 import phyphy
+from ete3 import Tree
 
 G, = glob_wildcards("samples/{g}.faa")
 
@@ -235,10 +236,9 @@ rule final_stats:
     input:
         aggregate_absrel
     output:
-        "ps.csv",
-        "r_dd.csv",
-        "all_ann.csv",
-        "dups.txt"
+        "gene_species_assoc.csv",
+        "go_mapping",
+        "all_ann.csv"
     run:
         absrel = glob.glob("families_absrel/logs/*.ABSREL.log")
 
@@ -272,7 +272,14 @@ rule final_stats:
 
         ps = ps.merge(tdf)
 
-        ps.to_csv("ps.csv")
+        children_list=[]
+
+        for i in range(0,len(ps)):
+            t = Tree(ps.tree[i], format=1)
+            node = t.search_nodes(name=ps.branch[i])[0]
+            children_list.append(node.get_leaf_names())
+
+        ps["children"] = children_list
 
         lst_col = 'children'
 
@@ -301,7 +308,9 @@ rule final_stats:
 
         spec_name["children"] = spec_name.index
 
-        r_dd = r_dd.merge(spec_name)
+        spec_name.replace("\.","_",regex=True,inplace=True)
+
+        spec_name.to_csv("gene_species_assoc.csv",index=None)
 
         proteome = glob.glob("samples/*.tsv")
 
@@ -313,7 +322,7 @@ rule final_stats:
 
         for infile in proteome:
             data = pd.read_csv(infile, sep='\t',names=col_names)
-            data["family"] = infile[4:].split(".")[0]
+            data["family"] = infile[8:].split(".")[0]
             annotations.append(data)
 
         all_annotations = pd.concat(annotations).reset_index()
@@ -326,13 +335,9 @@ rule final_stats:
 
         families = pd.read_csv("fam.txt","\s+",header=None)
 
-        families = families[1].str.split(",",expand=True)
-
-        families.fillna(value=pd.np.nan, inplace=True)
+        families = families[1].str.split(",",expand=True).fillna(value=np.nan, inplace=True)
 
         families = families.dropna(subset=[1]).melt().dropna()
-
-        families["value"].to_csv("dups.txt",index=False,header=False)
 
         dups = families["value"]
 

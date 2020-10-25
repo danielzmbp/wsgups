@@ -1,5 +1,0 @@
-channels:
- - bioconda
- - anaconda
-dependencies:
- - hyphy
