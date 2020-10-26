@@ -12,7 +12,7 @@ from ete3 import Tree
 
 G, = glob_wildcards("samples/{g}.faa")
 
-localrules: final, proteinortho, make_families, clean_faa, clean_fna, mafft,
+localrules: final, proteinortho, make_families, clean_fna, mafft # clean_faa
 localrules: fasttree, fubar, move_fubar, final_stats, absrel_stats
 
 rule final:
@@ -51,32 +51,32 @@ rule clean_fna:
                 new_sequences.append(record)
         SeqIO.write(new_sequences, output[0], "fasta")
 
-rule clean_faa:
-    input:
-        "families/faas/{fam}.faa"
-    output:
-        temp("families/cleaned_faas/{fam}.faa.cleaned")
-    run:
-        new_sequences = []
-        for record in SeqIO.parse(input[0], "fasta"):
-            if record.seq.find("Z")!=-1:
-                position = record.seq.find("Z")
-                record.seq = record.seq.tomutable()
-                record.seq[position] = "X"
-                new_sequences.append(record)
-            elif record.seq.find("J")!=-1:
-                position = record.seq.find("J")
-                record.seq = record.seq.tomutable()
-                record.seq[position] = "X"
-                new_sequences.append(record)
-            elif record.seq.find("U")!=-1:
-                position = record.seq.find("U")
-                record.seq = record.seq.tomutable()
-                record.seq[position] = "X"
-                new_sequences.append(record)
-            else:
-                new_sequences.append(record)
-        SeqIO.write(new_sequences, output[0], "fasta")
+# rule clean_faa:
+#     input:
+#         "families/faas/{fam}.faa"
+#     output:
+#         temp("families/cleaned_faas/{fam}.faa.cleaned")
+#     run:
+#         new_sequences = []
+#         for record in SeqIO.parse(input[0], "fasta"):
+#             if record.seq.find("Z")!=-1:
+#                 position = record.seq.find("Z")
+#                 record.seq = record.seq.tomutable()
+#                 record.seq[position] = "X"
+#                 new_sequences.append(record)
+#             elif record.seq.find("J")!=-1:
+#                 position = record.seq.find("J")
+#                 record.seq = record.seq.tomutable()
+#                 record.seq[position] = "X"
+#                 new_sequences.append(record)
+#             elif record.seq.find("U")!=-1:
+#                 position = record.seq.find("U")
+#                 record.seq = record.seq.tomutable()
+#                 record.seq[position] = "X"
+#                 new_sequences.append(record)
+#             else:
+#                 new_sequences.append(record)
+#         SeqIO.write(new_sequences, output[0], "fasta")
 
 rule mafft:
     input:
@@ -87,6 +87,7 @@ rule mafft:
         "envs/mafft.yaml"
     shell:
         "mafft --auto --thread 1 {input} > {output}"
+
 rule fasttree:
     input:
         "families/alns/{fam}.aln"
@@ -96,6 +97,7 @@ rule fasttree:
         "envs/fasttree.yaml"
     shell:
         "fasttree -nosupport {input} > {output} || true"
+
 rule codonaln:
     input:
         pro_align = "families/alns/{fam}.aln",
@@ -109,7 +111,8 @@ rule codonaln:
         align = codonalign.build(aa_aln, na_seq, max_score=20)
 
         for record in range(0, len(align)):
-            align._records[record].description = ""  # removes description by looping through the records
+            align._records[record].description = ""
+        # removes description by looping through the records
 
         SeqIO.write(align, output.alignment, "fasta")
 
@@ -154,19 +157,14 @@ checkpoint move_fubar:
     output:
         directory("families_fubar")
     run:
-        fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
-        families = fams.iloc[:,0]
+        families = pd.read_csv(input[0],"\s+",index_col=False,header=None).iloc[:,0]
         families_in_dir = glob.glob("families/**/*")
-        if not os.path.exists('families_fubar/fnas'):
-            os.makedirs('families_fubar/fnas')
-        if not os.path.exists('families_fubar/faas'):
-            os.makedirs('families_fubar/faas')
-        if not os.path.exists('families_fubar/logs'):
-            os.makedirs('families_fubar/logs')
-        if not os.path.exists('families_fubar/trees'):
-            os.makedirs('families_fubar/trees')
-        if not os.path.exists('families_fubar/codon_alns'):
-            os.makedirs('families_fubar/codon_alns')
+        dirs = ["fnas","faas","logs","trees","codon_alns"]
+
+        for d in dirs:
+            if not os.path.exists('families_fubar/' + d):
+                os.makedirs('families_fubar/' + d)
+
         for i in range(0,len(families_in_dir)):
             if int(families_in_dir[i].split(".")[0].split("/")[-1]) in list(families):
                 copyfile(families_in_dir[i], "families_fubar/"+families_in_dir[i].split("/",1)[1])
@@ -210,19 +208,14 @@ checkpoint move_absrel:
     output:
         directory("families_absrel")
     run:
-        fams = pd.read_csv(input[0],"\s+",index_col=False,header=None)
-        families = fams[0]
+        families = pd.read_csv(input[0],"\s+",index_col=False,header=None)[0]
         families_in_dir = glob.glob("families_fubar/**/*")
-        if not os.path.exists('families_absrel/fnas'):
-            os.makedirs('families_absrel/fnas')
-        if not os.path.exists('families_absrel/faas'):
-            os.makedirs('families_absrel/faas')
-        if not os.path.exists('families_absrel/logs'):
-            os.makedirs('families_absrel/logs')
-        if not os.path.exists('families_absrel/trees'):
-            os.makedirs('families_absrel/trees')
-        if not os.path.exists('families_absrel/codon_alns'):
-            os.makedirs('families_absrel/codon_alns')
+        dirs = ["fnas","faas","logs","trees","codon_alns"]
+
+        for d in dirs:
+            if not os.path.exists('families_absrel/' + d):
+                os.makedirs('families_absrel/' + d)
+
         for i in range(0,len(families_in_dir)):
             if int(families_in_dir[i].split(".")[0].split("/")[-1]) in list(families):
                 copyfile(families_in_dir[i], "families_absrel/"+families_in_dir[i].split("/",1)[1])
@@ -266,7 +259,7 @@ rule final_stats:
             if os.stat(file).st_size > 0:
                 tree,family = phyphy.Extractor(file).extract_input_tree(),file[27:].split(".")[0]
                 tree_list.append(tree)
-                family_list.append(family)  # the problem is that there are empty json files and the script files
+                family_list.append(family)
 
         tdf = pd.DataFrame({"tree":tree_list,"family":family_list})
 
@@ -316,7 +309,7 @@ rule final_stats:
 
         col_names = ["protein_accession","md5","length","analysis", "signature_accession",
                      "signature_description", "start","stop","score","status","date",
-                     "ip_accesion","ip_description","go","pathway"]
+                     "ip_accession","ip_description","go","pathway"]
 
         annotations = []
 
@@ -328,8 +321,6 @@ rule final_stats:
         all_annotations = pd.concat(annotations).reset_index()
 
         all_annotations["protein_accession"] = all_annotations["protein_accession"].replace("\.","_",regex=True)
-
-        r_dd.to_csv("r_dd.csv")
 
         all_annotations["ps"] = np.where(all_annotations["protein_accession"].isin(r_dd["children"]), 1, 0)
 
