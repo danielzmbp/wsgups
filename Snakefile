@@ -4,15 +4,13 @@ from Bio import SeqIO
 import glob
 import os
 import re
-from Bio import codonalign
-from Bio import AlignIO
 from shutil import copyfile
 import phyphy
 from ete3 import Tree
 
 G, = glob_wildcards("samples/{g}.faa")
 
-localrules: final, proteinortho, make_families, clean_fna, mafft # clean_faa
+localrules: final, proteinortho, make_families, clean_fna, mafft, codonaln,aggregate_fams
 localrules: fasttree, fubar, move_fubar, final_stats, absrel_stats
 
 rule final:
@@ -101,20 +99,13 @@ rule fasttree:
 rule codonaln:
     input:
         pro_align = "families/alns/{fam}.aln",
-        nucl_seqs = "families/cleaned_fnas/{fam}.fna.cleaned"
+        nucl_seq = "families/cleaned_fnas/{fam}.fna.cleaned"
     output:
         alignment = "families/codon_alns/{fam}.aln.codon"
-    run:
-        aa_aln = AlignIO.read(input.pro_align, "fasta")
-        na_seq = SeqIO.to_dict(SeqIO.parse(input.nucl_seqs, "fasta"))
-
-        align = codonalign.build(aa_aln, na_seq, max_score=20)
-
-        for record in range(0, len(align)):
-            align._records[record].description = ""
-        # removes description by looping through the records
-
-        SeqIO.write(align, output.alignment, "fasta")
+    conda:
+        "envs/pal2nal.yaml"
+    shell:
+        "pal2nal.pl {input.pro_align} {input.nucl_seq} -output fasta > {output.alignment}"
 
 rule fubar:
     input:
