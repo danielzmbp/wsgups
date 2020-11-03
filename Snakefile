@@ -10,8 +10,8 @@ from ete3 import Tree
 
 G, = glob_wildcards("samples/{g}.faa")
 
-localrules: final, proteinortho, make_families, clean_fna, mafft, codonaln,aggregate_fams
-localrules: fasttree, fubar, move_fubar, final_stats, absrel_stats
+localrules: final, proteinortho, make_families, clean_fna, mafft, codonaln, aggregate_fams
+localrules: fasttree, fubar, move_fubar, final_stats, absrel_stats, absrel
 
 rule final:
     input: "all_ann.csv"
@@ -48,33 +48,6 @@ rule clean_fna:
             else:
                 new_sequences.append(record)
         SeqIO.write(new_sequences, output[0], "fasta")
-
-# rule clean_faa:
-#     input:
-#         "families/faas/{fam}.faa"
-#     output:
-#         temp("families/cleaned_faas/{fam}.faa.cleaned")
-#     run:
-#         new_sequences = []
-#         for record in SeqIO.parse(input[0], "fasta"):
-#             if record.seq.find("Z")!=-1:
-#                 position = record.seq.find("Z")
-#                 record.seq = record.seq.tomutable()
-#                 record.seq[position] = "X"
-#                 new_sequences.append(record)
-#             elif record.seq.find("J")!=-1:
-#                 position = record.seq.find("J")
-#                 record.seq = record.seq.tomutable()
-#                 record.seq[position] = "X"
-#                 new_sequences.append(record)
-#             elif record.seq.find("U")!=-1:
-#                 position = record.seq.find("U")
-#                 record.seq = record.seq.tomutable()
-#                 record.seq[position] = "X"
-#                 new_sequences.append(record)
-#             else:
-#                 new_sequences.append(record)
-#         SeqIO.write(new_sequences, output[0], "fasta")
 
 rule mafft:
     input:
@@ -150,7 +123,7 @@ checkpoint move_fubar:
     run:
         families = pd.read_csv(input[0],"\s+",index_col=False,header=None).iloc[:,0]
         families_in_dir = glob.glob("families/**/*")
-        dirs = ["fnas","faas","logs","trees","codon_alns"]
+        dirs = ["fnas","faas","logs","trees","codon_alns","alns","cleaned_fnas"]
 
         for d in dirs:
             if not os.path.exists('families_fubar/' + d):
@@ -171,7 +144,6 @@ rule absrel:
         "envs/hyphy.yaml"
     shell:
         "hyphy absrel --alignment {input.align} --tree {input.tree} --output {output.json} > {output.log}"
-
 
 def aggregate_fubar(wildcards):
     checkpoint_output = checkpoints.move_fubar.get(**wildcards).output[0]
@@ -201,7 +173,7 @@ checkpoint move_absrel:
     run:
         families = pd.read_csv(input[0],"\s+",index_col=False,header=None)[0]
         families_in_dir = glob.glob("families_fubar/**/*")
-        dirs = ["fnas","faas","logs","trees","codon_alns"]
+        dirs = ["fnas","faas","logs","trees","codon_alns","alns","cleaned_fnas"]
 
         for d in dirs:
             if not os.path.exists('families_absrel/' + d):

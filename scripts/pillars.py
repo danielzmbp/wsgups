@@ -4,10 +4,11 @@
 # Use this groups to create protein families than can be alined and tested for
 # positive selection later.
 
+import os
 import pandas as pd
 import numpy as np
 from Bio import SeqIO
-import os
+
 
 poff_tsv = snakemake.input[0]  # replace with your file name
 
@@ -19,8 +20,11 @@ pillars["family"] = pillars.index
 
 melted = pillars.melt(["family", "count"])
 
-melted[melted["count"] > 0].dropna()[["family", "value"]].to_csv("fam.txt",  # change filter value to select cutoff
-                                                                 "\t",  # for min number of family members
+# change filter value to select cutoff
+# for min number of family members
+
+melted[melted["count"] > 0].dropna()[["family", "value"]].to_csv("fam.txt",
+                                                                 "\t",
                                                                  index=False,
                                                                  header=False)
 
