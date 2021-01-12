@@ -43,7 +43,7 @@ rule clean_fna:
         new_sequences = []
         for record in SeqIO.parse(input[0], "fasta"):
             if len(record.seq) % 3 != 0:
-                record.seq = record.seq + "N"
+                record.seq += "N"
                 new_sequences.append(record)
             else:
                 new_sequences.append(record)
@@ -213,6 +213,8 @@ rule final_stats:
 
         ps = pd.DataFrame({"family": family_list,'branch': branch_list, 'p-value': pvalue_list})
 
+        # ps: dataframe that includes all families, branches and pvalues of the ABSREL analysis
+
         absrel_json = glob.glob("families_absrel/codon_alns/*.ABSREL.json")
 
         tree_list=[]
@@ -226,6 +228,8 @@ rule final_stats:
 
         tdf = pd.DataFrame({"tree":tree_list,"family":family_list})
 
+        #tdf: dataframe that includes all trees from ABSREL positives and their family
+
         ps = ps.merge(tdf)
 
         children_list=[]
@@ -236,6 +240,8 @@ rule final_stats:
             children_list.append(node.get_leaf_names())
 
         ps["children"] = children_list
+
+        #children list includes all children from the nodes under selection
 
         lst_col = 'children'
 
@@ -266,7 +272,7 @@ rule final_stats:
 
         spec_name.replace("\.","_",regex=True,inplace=True)
 
-        spec_name.to_csv("gene_species_assoc.csv",index=None)
+        spec_name.to_csv("gene_species_assoc.csv",index=False)
 
         proteome = glob.glob("samples/*.tsv")
 
@@ -283,17 +289,17 @@ rule final_stats:
 
         all_annotations = pd.concat(annotations).reset_index()
 
-        all_annotations["protein_accession"] = all_annotations["protein_accession"].replace("\.","_",regex=True)
+        all_annotations["protein_accession"].replace("\.","_",regex=True)
 
         all_annotations["ps"] = np.where(all_annotations["protein_accession"].isin(r_dd["children"]), 1, 0)
 
         families = pd.read_csv("fam.txt","\s+",header=None)
 
-        families = families[1].str.split(",",expand=True).fillna(value=np.nan, inplace=True)
+        families = families[1].str.split(",",expand=True).fillna(value=np.nan)
 
         families = families.dropna(subset=[1]).melt().dropna()
 
-        dups = families["value"]
+        dups = families["value"].replace("\.","_",regex=True)
 
         all_annotations["dups"] = np.where(all_annotations["protein_accession"].isin(dups), 1, 0)
 
