@@ -15,13 +15,12 @@ them in the folder samples
 * Use absrel_results notebook to analyze the results
 
 ### Optional
-* Optionally, to run proteinortho using the -synteny parameter to get more accurate orthogroups add 
-.gff3 files to the samples folder with the same for each taxa.
-* To do the GO enrichment you need the annotated proteins in .tsv in the interproscan output format
-    * To run de novo annotation use the interproscansnake file
-* Run GO enrichment
-    * Using goatools notebook
-    
+* Optionally, you can run proteinortho using the -synteny parameter to get more accurate orthogroups. Include 
+.gff3 files in the samples folder with the same name for each taxa.
+* Run GO enrichment.
+    * Add InterProScan annotated *.tsv files to samples folder with the same name for each taxa.
+    * Using notebooks/goatools.ipynb. 
+  
 ## License
 This pipeline is licensed under the terms of the [MIT license](https://opensource.org/licenses/MIT).
 
