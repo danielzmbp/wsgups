@@ -25,4 +25,4 @@ them in the folder samples
 This pipeline is licensed under the terms of the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Preprint
-Please find the preprint [here](https://www.biorxiv.org/content/10.1101/2021.01.12.426341v1)
+Please find the preprint [here](https://www.biorxiv.org/content/10.1101/2021.01.12.426341v1).
