@@ -24,3 +24,5 @@ them in the folder samples
 ## License
 This pipeline is licensed under the terms of the [MIT license](https://opensource.org/licenses/MIT).
 
+## Preprint
+Please find the preprint [here](https://www.biorxiv.org/content/10.1101/2021.01.12.426341v1)
