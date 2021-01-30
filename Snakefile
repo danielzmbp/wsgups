@@ -51,7 +51,7 @@ rule clean_fna:
 
 rule mafft:
     input:
-        "families/cleaned_faas/{fam}.faa.cleaned"
+        "families/faas/{fam}.faa"
     output:
         temp("families/alns/{fam}.aln")
     conda:
