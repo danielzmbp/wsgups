@@ -10,7 +10,7 @@ from ete3 import Tree
 
 G, = glob_wildcards("samples/{g}.faa")
 
-localrules: final, proteinortho, make_families, clean_fna, mafft, codonaln, aggregate_fams
+localrules: final, proteinortho, make_families, clean_fna, mafft, codonaln, aggregate_fams, move_absrel
 localrules: fasttree, fubar, move_fubar, final_stats, absrel_stats, absrel
 
 rule final:
