@@ -17,7 +17,7 @@ them in the folder samples
 * Use absrel_results notebook to analyze the results
 
 ## Output files
-* `all_ann.tsv`: the main result file. It's tab separated table which include all annotations with annotated positive selection resuls
+* `all_ann.tsv`: the main result file. It's a tab separated table which include all annotations with annotated positive selection resuls
 * `gene_species_assoc.csv`: gene and species in csv format.
 * `go_mapping.csv`: GO associations file.
 
