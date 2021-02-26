@@ -20,10 +20,7 @@ pillars["family"] = pillars.index
 
 melted = pillars.melt(["family", "count"])
 
-# change filter value to select cutoff
-# for min number of family members
-
-melted[melted["count"] > 0].dropna()[["family", "value"]].to_csv("fam.txt",
+melted[melted["count"] >= snakemake.params[0]].dropna()[["family", "value"]].to_csv("fam.txt",
                                                                  "\t",
                                                                  index=False,
                                                                  header=False)

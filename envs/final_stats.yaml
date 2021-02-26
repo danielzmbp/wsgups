@@ -1,0 +1,6 @@
+channels:
+ - bioconda
+ - anaconda
+dependencies:
+ - phyphy
+ - pandas
