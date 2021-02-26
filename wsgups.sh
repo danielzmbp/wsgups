@@ -12,4 +12,4 @@ cd $PBS_O_WORKDIR
 
 source activate base
 
-snakemake --cluster "qsub -q short" --use-conda --local-cores 28 -j 28
+snakemake --cluster "qsub -q short" --use-conda --local-cores 28 -j 28 -k
