@@ -14,7 +14,7 @@ localrules: final, proteinortho, make_families, clean_fna, mafft, codonaln, aggr
 localrules: fasttree, fubar, move_fubar, final_stats, absrel_stats, absrel
 
 rule final:
-    input: "all_ann.csv"
+    input: "final_results/all_ann.csv"
 
 rule proteinortho:
     input: expand("samples/{g}.faa",g=G)
