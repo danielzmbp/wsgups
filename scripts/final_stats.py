@@ -75,13 +75,15 @@ for t in taxa:
     with open("samples/" + t + ".faa",'r') as file:
         for line in file:
             if line.startswith(">"):
-                spec_name_list.append([line[1:].strip(),t])
+                spec_name_list.append([line[1:].strip(), t])
 
-spec_name = pd.DataFrame(spec_name_list,columns=["index","species"]).set_index("index")
+spec_name = pd.DataFrame(spec_name_list, columns=["index", "species"]).set_index("index")
 
 spec_name["children"] = spec_name.index
 
 spec_name.replace(r"\.", "_", regex=True, inplace=True)
+
+spec_name["ps"] = spec_name["children"].isin(r_dd["children"])
 
 spec_name.to_csv(snakemake.output[0], index=False)
 
@@ -100,7 +102,7 @@ for infile in proteome:
 
 all_annotations = pd.concat(annotations).reset_index()
 
-all_annotations["protein_accession"].replace(r"\.", "_", regex=True)
+all_annotations["protein_accession"].replace(r"\.", "_", regex=True, inplace=True)
 
 all_annotations["ps"] = np.where(all_annotations["protein_accession"].isin(r_dd["children"]), 1, 0)
 
@@ -123,4 +125,4 @@ all_annotations[["protein_accession", "go"]].dropna().to_csv(
 
 # Write annotations to file
 
-all_annotations.to_csv(snakemake.output[2])
+all_annotations.to_csv(snakemake.output[2], index=False)
