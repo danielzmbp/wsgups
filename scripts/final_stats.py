@@ -83,6 +83,8 @@ spec_name["children"] = spec_name.index
 
 spec_name.replace(r"\.", "_", regex=True, inplace=True)
 
+spec_name.replace(r"-", "_", regex=True, inplace=True)
+
 spec_name["ps"] = spec_name["children"].isin(r_dd["children"])
 
 spec_name.to_csv(snakemake.output[0], index=False)
