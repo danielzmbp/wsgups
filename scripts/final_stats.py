@@ -106,6 +106,8 @@ all_annotations = pd.concat(annotations).reset_index()
 
 all_annotations["protein_accession"].replace(r"\.", "_", regex=True, inplace=True)
 
+all_annotations["protein_accession"].replace(r"-", "_", regex=True, inplace=True)
+
 all_annotations["ps"] = np.where(all_annotations["protein_accession"].isin(r_dd["children"]), 1, 0)
 
 families = pd.read_csv("fam.txt", r"\s+", header=None)
