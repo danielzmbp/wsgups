@@ -19,9 +19,6 @@ localrules:
     mafft,
     codonaln,
     aggregate_fams,
-
-
-localrules:
     fasttree,
     fubar,
     move_fubar,

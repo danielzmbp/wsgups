@@ -12,7 +12,7 @@ from Bio import SeqIO
 
 poff_tsv = snakemake.input[0]  # replace with your file name
 
-pillars = pd.read_csv(poff_tsv, "\t").replace("*", np.nan).iloc[:, 3:]
+pillars = pd.read_csv(poff_tsv, sep="\t").replace("*", np.nan).iloc[:, 3:]
 
 pillars["count"] = pillars.count(1)
 
@@ -20,14 +20,13 @@ pillars["family"] = pillars.index
 
 melted = pillars.melt(["family", "count"])
 
-melted[melted["count"] >= snakemake.params[0]].dropna()[["family", "value"]].to_csv("fam.txt",
-                                                                 "\t",
-                                                                 index=False,
-                                                                 header=False)
+melted[melted["count"] >= snakemake.params[0]].dropna()[["family", "value"]].to_csv(
+    "fam.txt", "\t", index=False, header=False
+)
 
 # # Modify fam.txt to put duplications in the same family
 
-fam = pd.read_csv("fam.txt", "\t", header=None)
+fam = pd.read_csv("fam.txt", sep="\t", header=None)
 
 # separate the second column by the comma.
 
@@ -38,8 +37,7 @@ fam_separated = fam[1].str.split(",", expand=True)
 
 fam[1] = np.nan
 
-merged = fam.merge(fam_separated, left_index=True, right_index=True).melt(
-    "0_x")
+merged = fam.merge(fam_separated, left_index=True, right_index=True).melt("0_x")
 
 # replace none in dataframe
 
@@ -47,8 +45,7 @@ merged.replace(to_replace=[None], value=np.nan, inplace=True)
 
 merged["value"].dropna().str.contains(",").value_counts()
 
-merged[["0_x", "value"]].dropna().to_csv("fam_dup.txt", "\t", index=False,
-                                         header=False)
+merged[["0_x", "value"]].dropna().to_csv("fam_dup.txt", "\t", index=False, header=False)
 
 # # Make files for the nucleotide sequences
 
@@ -57,9 +54,9 @@ na_file = "NT.fna"
 
 famDict = {}
 
-if not os.path.exists('families/fnas'):
+if not os.path.exists("families/fnas"):
     os.makedirs("families/fnas")
-if not os.path.exists('families/faas'):
+if not os.path.exists("families/faas"):
     os.makedirs("families/faas")
 
 with open(node_file) as f:
@@ -76,8 +73,8 @@ for i in famDict.keys():
     file = "families/fnas/" + i + ".fna"
     with open(file, "w") as out:
         for j in famDict[i]:
-            out.write('>' + j + '\n')
-            out.write(str(naseqDict[j].seq) + '\n')
+            out.write(">" + j + "\n")
+            out.write(str(naseqDict[j].seq) + "\n")
 
 # # Make files for the amino acid sequences
 
@@ -89,5 +86,5 @@ for i in famDict.keys():
     file = "families/faas/" + i + ".faa"
     with open(file, "w") as out:
         for j in famDict[i]:
-            out.write('>' + j + '\n')
-            out.write(str(aaseqDict[j].seq) + '\n')
+            out.write(">" + j + "\n")
+            out.write(str(aaseqDict[j].seq) + "\n")
