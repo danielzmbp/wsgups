@@ -1,7 +1,6 @@
 # coding: utf-8
 
-# ## Homology groups OGOB study
-# Use this groups to create protein families than can be alined and tested for
+# Use this script to create protein families than can be aligned and tested for
 # positive selection later.
 
 import os
