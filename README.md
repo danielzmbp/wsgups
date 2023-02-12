@@ -4,6 +4,7 @@ A snakemake pipeline for Whole-genome Screening of Genes Under Positive Selectio
 ## Requirements
 * Conda
 * Snakemake > 5.0
+* Biopython
 
 ## Instructions
 * Clone this repository to your local computer:
