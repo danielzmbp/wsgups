@@ -158,7 +158,7 @@ checkpoint move_fubar:
     output:
         directory("families_fubar"),
     run:
-        families = pd.read_csv(input[0], "\s+", index_col=False, header=None).iloc[:, 0]
+        families = pd.read_csv(input[0], sep="\s+", index_col=False, header=None).iloc[:, 0]
         families_in_dir = glob.glob("families/**/*")
         dirs = ["fnas", "faas", "logs", "trees", "codon_alns", "alns", "cleaned_fnas"]
 
@@ -218,7 +218,7 @@ checkpoint move_absrel:
     output:
         directory("families_absrel"),
     run:
-        families = pd.read_csv(input[0], "\s+", index_col=False, header=None)[0]
+        families = pd.read_csv(input[0], sep="\s+", index_col=False, header=None)[0]
         families_in_dir = glob.glob("families_fubar/**/*")
         dirs = ["fnas", "faas", "logs", "trees", "codon_alns", "alns", "cleaned_fnas"]
 
